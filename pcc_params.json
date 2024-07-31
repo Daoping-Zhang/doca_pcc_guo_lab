@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) 2022-2023 NVIDIA CORPORATION & AFFILIATES, ALL RIGHTS RESERVED.
+ *
+ * This software product is a proprietary product of NVIDIA CORPORATION &
+ * AFFILIATES (the "Company") and all right, title, and interest in and to the
+ * software product, including all associated intellectual property rights, are
+ * and shall remain exclusively with the Company.
+ *
+ * This software product is governed by the End User License Agreement
+ * provided with the software product.
+ *
+ */
+{
+	"doca_general_flags": {
+		// -l - Set the (numeric) log level for the program <10=DISABLE, 20=CRITICAL, 30=ERROR, 40=WARNING, 50=INFO, 60=DEBUG, 70=TRACE>
+		"log-level": 60
+	},
+	"doca_program_flags": {
+		// IB device name that supports PCC (mandatory).
+		"device": "",
+		// Notification Point NIC Telemetry
+		"np-nic-telemetry": false,
+		// PCC threads numbers
+		"threads": "176 177 178 179 180 181 182 183 184 185 186 187 192 193 194 195 196 197 198 199 200 201 202 203 208 209 210 211 212 213 214 215 216 217 218 219 224 225 226 227 228 229 230 231 232 233 234 235 240",
+		// Wait time for DOCA PCC. Default is -1 (infinity)
+		"wait-time": -1,
+		// PCC probe packet format
+		"probe-packet-format": 0,
+		// CCMAD remote SW handler
+		"remote-sw-handler": false,
+		// IFA2 probe packet global namespace
+		"global-namespace": 0xF,
+		// IFA2 probe packet global namespace ignore mask
+		"global-namespace-ignore-mask": 0,
+		// IFA2 probe packet global namespace ignore value
+		"global-namespace-ignore-value": 0,
+		// PCC device coredump file
+		"coredump-file": "/tmp/doca_pcc_coredump.txt",
+		// Physical port ID
+		"port-id": 0,
+	}
+}
