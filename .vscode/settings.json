@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "random": "c",
+        "algorithm": "c",
+        "cstdint": "c",
+        "compare": "c"
+    }
+}

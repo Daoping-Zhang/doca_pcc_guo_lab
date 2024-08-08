@@ -13,6 +13,7 @@
 
 #ifndef RTT_TEMPLATE_H
 #define RTT_TEMPLATE_H
+#define DOCA_PCC_SAMPLE_TX_BYTES 1
 
 /*
  * Entry point to rtt template (example) user algorithm (reference code)

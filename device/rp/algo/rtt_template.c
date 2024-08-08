@@ -25,6 +25,11 @@
 /* Algorithm parameters are defined in rtt_template_algo_params.h */
 
 /* Define the constants */
+#define SCALE 65536 // 定点数的比例因子
+#define FIXED_POINT_SCALE 1048576  // 1 << 20
+#define GIGABIT_SCALE 100          // To scale Gbps to percentage of 100Gbps
+
+
 #define FF32BIT (0xffffffff)
 #define DEC_FACTOR ((1 << 16) - param[RTT_TEMPLATE_UPDATE_FACTOR])	    /* Rate decrease factor */
 #define CNP_DEC_FACTOR ((1 << 16) - 2 * param[RTT_TEMPLATE_UPDATE_FACTOR])  /* CNP rate decrease factor */
@@ -41,6 +46,7 @@
 #define HIGH_UTIL_NACK_DEC_FACTOR \
 	((1 << 16) - 10 * param[RTT_TEMPLATE_UPDATE_FACTOR]) /* NACK rate decrease factor in high port utilization \
 								mode */
+
 
 typedef enum {
 	RTT_TEMPLATE_UPDATE_FACTOR = 0, /* configurable parameter of update factor */
@@ -67,6 +73,8 @@ static const volatile char rtt_template_param_min_rate_desc[] = "MIN_RATE, min r
 static const volatile char rtt_template_param_max_delay_desc[] = "MAX_DELAY, max delay";
 static const volatile char rtt_template_counter_tx_desc[] = "COUNTER_TX_EVENT, number of tx events handled";
 static const volatile char rtt_template_counter_rtt_desc[] = "COUNTER_RTT_EVENT, number of rtt events handled";
+
+int rtt_times = 50;
 
 void rtt_template_init(uint32_t algo_idx)
 {
@@ -161,6 +169,79 @@ void rtt_template_init(uint32_t algo_idx)
  * @norm_np_rx_rate [in]: Notification Point RX rate normalized in fxp
  * @return: The new calculated rate value
  */
+uint32_t calculate_cur_rate(uint32_t sent_32bytes, uint32_t start_time_ns, uint32_t end_time_ns) {
+    // Calculate total bytes sent
+    uint32_t total_bytes_sent = sent_32bytes * 32;
+
+    // Calculate total bits sent
+    uint64_t total_bits_sent = (uint64_t)total_bytes_sent * 8;
+
+    // Calculate time interval in nanoseconds
+    uint32_t time_interval_ns = end_time_ns - start_time_ns;
+
+    // Calculate the actual send rate in bps (bits per second)
+    // Use integer arithmetic: (bits * 1,000,000,000) / nanoseconds
+    uint64_t send_rate_bps = (total_bits_sent * 1000000000ULL) / time_interval_ns;
+
+    // Convert the actual send rate to Mbps for understanding
+    uint32_t send_rate_mbps = (uint32_t)(send_rate_bps / 1000000);
+
+    // Calculate the virtual rate using fixed-point scaling
+    uint32_t cur_rate = (send_rate_mbps * FIXED_POINT_SCALE) / (GIGABIT_SCALE * 1000);
+
+    return cur_rate;
+}
+
+
+static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
+				      uint32_t rtt,
+				      uint32_t cur_rate,
+				      uint32_t *param)
+{
+
+	
+	
+
+
+
+	int32_t new_rtt_diff = rtt - ccctx->last_rtt;
+
+    
+    int64_t gradient_fixed = ((int64_t)new_rtt_diff * SCALE) / ccctx->min_rtt;
+
+	if( gradient_fixed <= 0)
+	{
+		ccctx->pro_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
+		ccctx->last_rate = cur_rate;
+		cur_rate += param[RTT_TEMPLATE_AI];
+
+		//doca_pcc_dev_printf("%s, up min_rtt: %d rtt: %d gradient_fixed: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+
+
+	} else if (gradient_fixed > 0 && rtt <= 2*ccctx->min_rtt) {
+		
+		ccctx->last_rate = cur_rate;
+		cur_rate += param[RTT_TEMPLATE_AI];
+
+	} else 
+	{
+		ccctx->con_rate = ccctx->last_rate >= cur_rate ? ccctx->last_rate : cur_rate;
+		ccctx->last_rate = cur_rate;
+		//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+		cur_rate = (ccctx->pro_rate + cur_rate)/2;
+
+	}
+
+	if(rtt_times>0)
+	{	
+		//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+		//rtt_times--;
+	}
+
+	//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+
+	return cur_rate;
+}
 static inline uint32_t algorithm_core(cc_ctxt_rtt_template_t *ccctx,
 				      uint32_t rtt,
 				      uint32_t cur_rate,
@@ -173,14 +254,18 @@ static inline uint32_t algorithm_core(cc_ctxt_rtt_template_t *ccctx,
 	/* Example */
 	if (ccctx->flags.was_nack && (rtt >= param[RTT_TEMPLATE_MAX_DELAY])) {
 		/* NACK */
-		cur_rate = doca_pcc_dev_fxp_mult(is_high_util ? HIGH_UTIL_NACK_DEC_FACTOR : NACK_DEC_FACTOR, cur_rate);
+		//cur_rate = doca_pcc_dev_fxp_mult(is_high_util ? HIGH_UTIL_NACK_DEC_FACTOR : NACK_DEC_FACTOR, cur_rate);
 		ccctx->flags.was_nack = 0;
 	} else if (ccctx->flags.was_cnp || (rtt >= param[RTT_TEMPLATE_MAX_DELAY])) {
 		/* CNP */
-		cur_rate = doca_pcc_dev_fxp_mult(is_high_util ? HIGH_UTIL_CNP_DEC_FACTOR : CNP_DEC_FACTOR, cur_rate);
+		//cur_rate = doca_pcc_dev_fxp_mult(is_high_util ? HIGH_UTIL_CNP_DEC_FACTOR : CNP_DEC_FACTOR, cur_rate);
 		ccctx->flags.was_cnp = 0;
 	} else {
-		/* RTT */
+
+
+		cur_rate = new_rate_rtt(ccctx,rtt, cur_rate, param);
+
+		/* RTT 
 		if (rtt > param[RTT_TEMPLATE_BASE_RTT])
 			cur_rate = doca_pcc_dev_fxp_mult(is_high_util ? HIGH_UTIL_DEC_FACTOR : DEC_FACTOR, cur_rate);
 		else {
@@ -194,6 +279,9 @@ static inline uint32_t algorithm_core(cc_ctxt_rtt_template_t *ccctx,
 			cur_rate += param[RTT_TEMPLATE_AI];
 #endif
 		}
+
+		*/
+
 	}
 
 	if (cur_rate > DOCA_PCC_DEV_MAX_RATE)
@@ -203,7 +291,7 @@ static inline uint32_t algorithm_core(cc_ctxt_rtt_template_t *ccctx,
 	{cur_rate = param[RTT_TEMPLATE_MIN_RATE];}
 	/* End of example */
 
-	cur_rate = param[RTT_TEMPLATE_MIN_RATE];
+	cur_rate = 10000;
 
 	return cur_rate;
 }
@@ -281,6 +369,8 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	 */
 	uint32_t rtt_meas_psn = ccctx->rtt_meas_psn;
 
+
+
 	if (unlikely(((rtt_meas_psn == 0) && (ccctx->rtt_req_to_rtt_sent == 0)))) {
 		results->rate = cur_rate;
 		results->rtt_req = 0;
@@ -305,6 +395,23 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	if (unlikely(end_rtt < start_rtt))
 		rtt += UINT32_MAX;
 	ccctx->rtt = rtt;
+	
+	
+
+	if(ccctx->min_rtt == 0)
+	{
+		ccctx->min_rtt = param[RTT_TEMPLATE_BASE_RTT] <= ccctx->rtt ? param[RTT_TEMPLATE_BASE_RTT] : ccctx->rtt;
+		ccctx->last_rtt = ccctx->rtt;
+
+		ccctx->rtt_req_to_rtt_sent = 1;
+		ccctx->cur_rate = cur_rate;
+		results->rate = cur_rate;
+		results->rtt_req = 1;
+		doca_pcc_dev_printf("%s, min_rtt: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+		return;
+	}
+
+	ccctx->min_rtt = ccctx->min_rtt <= ccctx->rtt ? ccctx->min_rtt : ccctx->rtt;
 
 	/* Call to the core of the CC algorithm */
 
@@ -342,8 +449,17 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 
 	if (np_rx_rate < BW_MB_DEFAULT_FXP16)
 		norm_np_rx_rate = doca_pcc_dev_mult(np_rx_rate, doca_pcc_dev_fxp_recip(BW_MB_DEFAULT)) >> 32;
+	
+
+	//doca_pcc_dev_printf("NP RX Rate: %u MBps\n", np_rx_rate);
+
+
+	
+
+	
 #else
 	uint32_t norm_np_rx_rate = (1 << 16);
+	doca_pcc_dev_printf("no rx_rate\n");
 #endif
 
 	cur_rate = algorithm_core(ccctx, rtt, cur_rate, param, is_high_tx_util, norm_np_rx_rate);
@@ -352,6 +468,12 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	ccctx->cur_rate = cur_rate;
 	results->rate = cur_rate;
 	results->rtt_req = 1;
+	if(rtt_times>0)
+	{	
+		//doca_pcc_dev_printf("%s, rtt: %d np_rx_rate: %u current norm_np_rx_rate: %u cur_rate: %u \n", __func__,rtt, np_rx_rate*8/(65536), norm_np_rx_rate, cur_rate);
+		rtt_times--;
+	}
+	
 }
 
 /*
@@ -418,14 +540,28 @@ static inline void rtt_template_handle_new_flow(doca_pcc_dev_event_t *event,
 						cc_ctxt_rtt_template_t *ccctx,
 						doca_pcc_dev_results_t *results)
 {
+	rtt_times = 1000;
 	ccctx->cur_rate = param[RTT_TEMPLATE_NEW_FLOW_RATE];
 	ccctx->start_delay = doca_pcc_dev_get_timestamp(event);
 	ccctx->rtt_meas_psn = 0;
 	ccctx->rtt_req_to_rtt_sent = 1;
 	ccctx->abort_cnt = 0;
 	ccctx->flags.was_nack = 0;
+
+	ccctx->cur_rate = 10000;
+
 	results->rate = param[RTT_TEMPLATE_NEW_FLOW_RATE];
+
+	results->rate = 10000;
+	
 	results->rtt_req = 1;
+
+
+
+	ccctx->last_rtt = 0;
+	ccctx->min_rtt = 0;
+	ccctx->pro_rate = param[RTT_TEMPLATE_MIN_RATE];
+	ccctx->con_rate = DOCA_PCC_DEV_MAX_RATE;
 }
 
 void rtt_template_algo(doca_pcc_dev_event_t *event,
@@ -440,8 +576,28 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 	uint32_t cur_rate = rtt_template_ctx->cur_rate;
 
 	if (unlikely(cur_rate == 0)) {
+		//PRINT_INFO("Info: new flow \n");
+		
+		    uint32_t mb = (BW_MB_DEFAULT_FXP16 / 65536) *8;
+
+
+    	doca_pcc_dev_printf("%s, new flow BW in MB: %u Mb\n", __func__, mb);
+
 		rtt_template_handle_new_flow(event, cur_rate, param, rtt_template_ctx, results);
 	} else if (ev_type == DOCA_PCC_DEV_EVNT_ROCE_TX) {
+
+		doca_pcc_dev_roce_tx_cntrs_t tx_cntrs;
+		uint32_t start_time;
+		tx_cntrs = doca_pcc_dev_get_roce_tx_cntrs (event);
+		start_time = doca_pcc_dev_get_roce_first_timestamp(event);
+
+		if(rtt_times>0)
+		{	
+			doca_pcc_dev_printf("%s, tx_cntrs.sent_32bytes: %u tx_cntrs.sent_pkts: %u start time: %u ns \n", __func__, tx_cntrs.sent_32bytes, tx_cntrs.sent_pkts, start_time);
+		}
+
+		//cur_rate = calculate_cur_rate( tx_cntrs.sent_32bytes, start_time, start_time);
+
 		rtt_template_handle_roce_tx(event, cur_rate, rtt_template_ctx, results);
 		/* Example code to update counter */
 		if (counter != NULL)
@@ -455,7 +611,14 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 		rtt_template_handle_roce_cnp(event, cur_rate, rtt_template_ctx, results);
 	} else if (ev_type == DOCA_PCC_DEV_EVNT_ROCE_NACK) {
 		rtt_template_handle_roce_nack(event, cur_rate, rtt_template_ctx, results);
-	} else {
+	} 
+	else if (ev_type == DOCA_PCC_DEV_EVNT_ROCE_ACK) {
+		
+		//doca_pcc_dev_printf("%s, ack \n", __func__);
+
+		
+	} 
+	else {
 		results->rate = cur_rate;
 		results->rtt_req = 0;
 	}

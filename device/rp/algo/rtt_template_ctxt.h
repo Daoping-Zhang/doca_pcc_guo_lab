@@ -13,7 +13,7 @@
 
 #ifndef RTT_TEMPLATE_CTXT_H_
 #define RTT_TEMPLATE_CTXT_H_
-
+//#define DOCA_PCC_NP_RX_RATE 1
 typedef struct {
 	uint8_t was_nack : 1; /* Signal the reception of a NACK */
 	uint8_t was_cnp : 1;  /* Signal the reception of a CNP */
@@ -32,9 +32,26 @@ typedef struct {
 #ifdef DOCA_PCC_NP_RX_RATE
 	uint32_t last_np_rx_bytes;		/* Last received NP RX bytes */
 	uint32_t last_np_rx_bytes_timestamp_us; /* Last received NP RX timestamp (usec) */
-	uint32_t reserved[6];			/* Reserved bits */
+	
+	uint32_t last_rate;
+	uint32_t pro_rate;
+	uint32_t con_rate;
+	uint32_t min_rtt;
+	uint32_t last_rtt;	
+
+	uint32_t reserved[1];/* Reserved bits */
 #else
-	uint32_t reserved[8]; /* Reserved bits */
+	uint32_t last_rate;
+	uint32_t pro_rate;
+	uint32_t con_rate;
+	uint32_t min_rtt;
+	uint32_t last_rtt;
+
+
+
+
+
+	uint32_t reserved[2]; /* Reserved bits */
 #endif
 } cc_ctxt_rtt_template_t;
 

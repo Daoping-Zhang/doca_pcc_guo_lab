@@ -18,10 +18,12 @@
 #include "utils.h"
 
 #define __unused __attribute__((__unused__))
-#define DOCA_PCC_DEV_EVNT_ROCE_ACK_MASK (1 << DOCA_PCC_DEV_EVNT_ROCE_ACK)
+#define DOCA_PCC_DEV_EVNT_ROCE_NACK_MASK (1 << DOCA_PCC_DEV_EVNT_ROCE_NACK)
 #define SAMPLER_THREAD_RANK (0)
 #define COUNTERS_SAMPLE_WINDOW_IN_MICROSEC (10)
 #define NUM_AVAILABLE_PORTS (4)
+
+uint32_t times = 0;
 
 /**< Counters IDs to configure and read from */
 uint32_t counter_ids[NUM_AVAILABLE_PORTS] = {DOCA_PCC_DEV_NIC_COUNTER_PORT0_TX_BYTES,
@@ -67,6 +69,15 @@ FORCE_INLINE uint32_t diff_with_wrap32(uint32_t greater_num, uint32_t smaller_nu
  */
 FORCE_INLINE void thread0_calc_ports_utilization(void)
 {
+	if(times==0)
+	{
+		times = 10000;
+	}else
+	{
+		times--;
+	}
+
+
 	uint32_t tx_bytes_delta[NUM_AVAILABLE_PORTS], current_bw[NUM_AVAILABLE_PORTS], ts_delta, current_ts;
 
 	if ((doca_pcc_dev_thread_rank() == SAMPLER_THREAD_RANK) && mailbox_done) {
@@ -81,10 +92,18 @@ FORCE_INLINE void thread0_calc_ports_utilization(void)
 				current_bw[i] =
 					(doca_pcc_dev_fxp_mult(tx_bytes_delta[i], doca_pcc_dev_fxp_recip(ts_delta)) >>
 					 16);
+				
+				
+
 				g_utilized_bw[i] = (1 << 16);
 				if (current_bw[i] < ports_bw[i])
 					g_utilized_bw[i] = doca_pcc_dev_fxp_mult(current_bw[i],
 										 doca_pcc_dev_fxp_recip(ports_bw[i]));
+
+				if(times == 0)
+				{
+					//doca_pcc_dev_printf("port: %d current_bw %u totoal_bw %u g_utilized_bw: %u \n", i, current_bw[i], ports_bw[i], g_utilized_bw[i]);
+				}
 			}
 			last_sample_ts = current_ts;
 		}
@@ -165,7 +184,7 @@ void doca_pcc_dev_user_init(uint32_t *disable_event_bitmask)
 	for (int port_num = 0; port_num < DOCA_PCC_DEV_MAX_NUM_PORTS; ++port_num) {
 		/* Slot 0 will use algo_idx 0, default enabled */
 		doca_pcc_dev_init_algo_slot(port_num, 0, algo_idx, 1);
-		doca_pcc_dev_trace_5(0, port_num, 0, algo_idx, 1, DOCA_PCC_DEV_EVNT_ROCE_ACK_MASK);
+		doca_pcc_dev_trace_5(0, port_num, 0, algo_idx, 1, DOCA_PCC_DEV_EVNT_ROCE_NACK_MASK);
 	}
 
 #ifdef DOCA_PCC_SAMPLE_TX_BYTES
@@ -173,7 +192,7 @@ void doca_pcc_dev_user_init(uint32_t *disable_event_bitmask)
 #endif
 
 	/* disable events of below type */
-	*disable_event_bitmask = DOCA_PCC_DEV_EVNT_ROCE_ACK_MASK;
+	*disable_event_bitmask = DOCA_PCC_DEV_EVNT_ROCE_NACK_MASK;
 	doca_pcc_dev_printf("%s, disable_event_bitmask=0x%x\n", __func__, *disable_event_bitmask);
 	doca_pcc_dev_trace_flush();
 }

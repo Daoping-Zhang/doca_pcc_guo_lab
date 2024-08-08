@@ -30,9 +30,13 @@ pcc_app_dev_src_dir = meson.project_source_root() + '/' + APP_NAME + '/device/'
 # check user option to enable TX bytes counter sampling
 if get_option('enable_pcc_application_tx_counter_sampling')
 	enable_tx_counter_sampling = 'true'
+	message('TX counter sampling is enabled.')
 else
 	enable_tx_counter_sampling = 'false'
+	message('TX counter sampling is disabled.')
 endif
+
+
 
 # check user option to enable NP RX rate update
 if get_option('enable_pcc_application_np_rx_rate')
@@ -40,6 +44,9 @@ if get_option('enable_pcc_application_np_rx_rate')
 else
 	enable_np_rx_rate = 'false'
 endif
+
+#enable_tx_counter_sampling = 'true'
+enable_np_rx_rate = 'true'
 
 # Compile DOCA PCC Reaction Point DPA program
 pcc_rp_app_name = 'pcc_rp_app'

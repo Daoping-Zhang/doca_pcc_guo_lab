@@ -66,6 +66,7 @@ DEVICE_CC_FLAGS="-Wno-deprecated-declarations -Werror -Wall -Wextra ${DEV_CC_EXT
 
 # App flags
 
+
 DOCA_PCC_SAMPLE_TX_BYTES=""
 if [ ${ENABLE_TX_COUNTER_SAMPLING} = "true" ]
 then
