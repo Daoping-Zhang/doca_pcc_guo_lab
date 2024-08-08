@@ -38,14 +38,16 @@ typedef struct {
 	uint32_t con_rate;
 	uint32_t min_rtt;
 	uint32_t last_rtt;	
+	uint32_t last_rx_time;
 
-	uint32_t reserved[1];/* Reserved bits */
+	uint32_t reserved[0];/* Reserved bits */
 #else
 	uint32_t last_rate;
 	uint32_t pro_rate;
 	uint32_t con_rate;
 	uint32_t min_rtt;
 	uint32_t last_rtt;
+	uint32_t last_rx_time;
 
 
 

@@ -171,23 +171,31 @@ void rtt_template_init(uint32_t algo_idx)
  */
 uint32_t calculate_cur_rate(uint32_t sent_32bytes, uint32_t start_time_ns, uint32_t end_time_ns) {
     // Calculate total bytes sent
-    uint32_t total_bytes_sent = sent_32bytes * 32;
+  
 
     // Calculate total bits sent
-    uint64_t total_bits_sent = (uint64_t)total_bytes_sent * 8;
+    uint64_t total_bits_sent = (uint64_t)sent_32bytes * 32 * 8;
+	uint32_t time_interval_ns;
 
     // Calculate time interval in nanoseconds
-    uint32_t time_interval_ns = end_time_ns - start_time_ns;
+	if (unlikely(start_time_ns > end_time_ns))
+	{
+		time_interval_ns = end_time_ns + (UINT32_MAX - start_time_ns);
+
+	}else{
+		time_interval_ns = end_time_ns - start_time_ns;
+	}
+			
+    
 
     // Calculate the actual send rate in bps (bits per second)
-    // Use integer arithmetic: (bits * 1,000,000,000) / nanoseconds
+    // 计算实际发送速率（bps）
+    // 使用整数算术： (比特数 * 1,000,000,000) / 纳秒
     uint64_t send_rate_bps = (total_bits_sent * 1000000000ULL) / time_interval_ns;
 
-    // Convert the actual send rate to Mbps for understanding
-    uint32_t send_rate_mbps = (uint32_t)(send_rate_bps / 1000000);
-
-    // Calculate the virtual rate using fixed-point scaling
-    uint32_t cur_rate = (send_rate_mbps * FIXED_POINT_SCALE) / (GIGABIT_SCALE * 1000);
+    // 转换为虚拟速率，使用定点缩放
+    // 确保以Mbps为基础，将速率与虚拟比例关联
+    uint32_t cur_rate = (send_rate_bps * FIXED_POINT_SCALE) / (GIGABIT_SCALE * 1000000000ULL);
 
     return cur_rate;
 }
@@ -201,8 +209,6 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	
 	
-
-
 
 	int32_t new_rtt_diff = rtt - ccctx->last_rtt;
 
@@ -218,7 +224,7 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		//doca_pcc_dev_printf("%s, up min_rtt: %d rtt: %d gradient_fixed: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 
 
-	} else if (gradient_fixed > 0 && rtt <= 2*ccctx->min_rtt) {
+	} else if (gradient_fixed > 0 && rtt <= param[RTT_TEMPLATE_BASE_RTT]) {
 		
 		ccctx->last_rate = cur_rate;
 		cur_rate += param[RTT_TEMPLATE_AI];
@@ -234,11 +240,13 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	if(rtt_times>0)
 	{	
-		//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+		doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 		//rtt_times--;
 	}
 
 	//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+
+	ccctx->last_rtt = rtt;
 
 	return cur_rate;
 }
@@ -291,7 +299,6 @@ static inline uint32_t algorithm_core(cc_ctxt_rtt_template_t *ccctx,
 	{cur_rate = param[RTT_TEMPLATE_MIN_RATE];}
 	/* End of example */
 
-	cur_rate = 10000;
 
 	return cur_rate;
 }
@@ -324,8 +331,11 @@ static inline void rtt_template_handle_roce_tx(doca_pcc_dev_event_t *event,
 		/* Calculate rtt_till_now */
 		uint32_t rtt_till_now = (timestamp - ccctx->start_delay);
 
-		if (unlikely(ccctx->start_delay > timestamp))
+		if (unlikely(ccctx->start_delay > timestamp)){
 			rtt_till_now += UINT32_MAX;
+			
+		}
+			
 		/* Abort RTT request flow - for cases event or packet was dropped */
 		if (rtt_meas_psn == 0) {
 			rtt_till_now = 0;
@@ -392,8 +402,12 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 #endif /* TIME_SYNC */
 	int32_t rtt = end_rtt - start_rtt;
 
-	if (unlikely(end_rtt < start_rtt))
+	if (unlikely(end_rtt < start_rtt)){
 		rtt += UINT32_MAX;
+		//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+	}
+
+		
 	ccctx->rtt = rtt;
 	
 	
@@ -470,7 +484,7 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	results->rtt_req = 1;
 	if(rtt_times>0)
 	{	
-		//doca_pcc_dev_printf("%s, rtt: %d np_rx_rate: %u current norm_np_rx_rate: %u cur_rate: %u \n", __func__,rtt, np_rx_rate*8/(65536), norm_np_rx_rate, cur_rate);
+		//doca_pcc_dev_printf("%s, min_rtt: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 		rtt_times--;
 	}
 	
@@ -547,12 +561,10 @@ static inline void rtt_template_handle_new_flow(doca_pcc_dev_event_t *event,
 	ccctx->rtt_req_to_rtt_sent = 1;
 	ccctx->abort_cnt = 0;
 	ccctx->flags.was_nack = 0;
-
-	ccctx->cur_rate = 10000;
+	ccctx->last_rx_time = doca_pcc_dev_get_timestamp(event);
 
 	results->rate = param[RTT_TEMPLATE_NEW_FLOW_RATE];
 
-	results->rate = 10000;
 	
 	results->rtt_req = 1;
 
@@ -587,18 +599,23 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 	} else if (ev_type == DOCA_PCC_DEV_EVNT_ROCE_TX) {
 
 		doca_pcc_dev_roce_tx_cntrs_t tx_cntrs;
-		uint32_t start_time;
+		uint32_t end_time;
 		tx_cntrs = doca_pcc_dev_get_roce_tx_cntrs (event);
-		start_time = doca_pcc_dev_get_roce_first_timestamp(event);
+		end_time = doca_pcc_dev_get_roce_first_timestamp(event);
+
+		uint32_t rx_rate = calculate_cur_rate( tx_cntrs.sent_32bytes, rtt_template_ctx->last_rx_time, end_time);
 
 		if(rtt_times>0)
 		{	
-			doca_pcc_dev_printf("%s, tx_cntrs.sent_32bytes: %u tx_cntrs.sent_pkts: %u start time: %u ns \n", __func__, tx_cntrs.sent_32bytes, tx_cntrs.sent_pkts, start_time);
+			//doca_pcc_dev_printf("%s, tx_cntrs.sent_32bytes: %u tx_cntrs.sent_pkts: %u start time: %u ns rx_rate: %u\n", __func__, tx_cntrs.sent_32bytes, tx_cntrs.sent_pkts, end_time, rx_rate);
 		}
+		
+		rtt_template_ctx->last_rx_time = end_time;
+		rtt_template_ctx->pro_rate = rtt_template_ctx->pro_rate <= rx_rate ? rtt_template_ctx->pro_rate : rx_rate;
 
-		//cur_rate = calculate_cur_rate( tx_cntrs.sent_32bytes, start_time, start_time);
+		rtt_template_handle_roce_tx(event, cur_rate, rtt_template_ctx , results);
+		
 
-		rtt_template_handle_roce_tx(event, cur_rate, rtt_template_ctx, results);
 		/* Example code to update counter */
 		if (counter != NULL)
 			counter[RTT_TEMPLATE_COUNTER_TX_EVENT]++;
