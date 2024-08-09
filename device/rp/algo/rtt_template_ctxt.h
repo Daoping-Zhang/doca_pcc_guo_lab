@@ -33,7 +33,7 @@ typedef struct {
 	uint32_t last_np_rx_bytes;		/* Last received NP RX bytes */
 	uint32_t last_np_rx_bytes_timestamp_us; /* Last received NP RX timestamp (usec) */
 	
-	uint32_t last_rate;
+	uint32_t rx_rate;
 	uint32_t pro_rate;
 	uint32_t con_rate;
 	uint32_t min_rtt;
@@ -42,12 +42,12 @@ typedef struct {
 
 	uint32_t reserved[0];/* Reserved bits */
 #else
-	uint32_t last_rate;
 	uint32_t pro_rate;
 	uint32_t con_rate;
 	uint32_t min_rtt;
 	uint32_t last_rtt;
 	uint32_t last_rx_time;
+	uint32_t rx_rate;
 
 
 

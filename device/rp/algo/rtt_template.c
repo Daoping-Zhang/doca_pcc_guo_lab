@@ -76,6 +76,26 @@ static const volatile char rtt_template_counter_rtt_desc[] = "COUNTER_RTT_EVENT,
 
 int rtt_times = 50;
 
+#define FRACTIONAL_BITS 20
+#define ALPHA_FIXED_POINT (734003) // 0.3 * (1 << 20) 预计算后的结果
+
+
+int32_t update_rx_rate_with_alpha(int32_t rx_rate, int32_t new_rate) {
+    // 使用定点数计算加权平均
+    int32_t fixed_alpha = ALPHA_FIXED_POINT;
+    int32_t fixed_one_minus_alpha = (1 << FRACTIONAL_BITS) - fixed_alpha;
+
+    // 使用 int64_t 来避免溢出
+    int64_t weighted_rx_rate = (int64_t)fixed_alpha * rx_rate;
+    int64_t weighted_new_rate = (int64_t)fixed_one_minus_alpha * new_rate;
+
+    // 计算更新后的速率，并进行位移操作
+    int32_t updated_rate = (int32_t)((weighted_rx_rate + weighted_new_rate) >> FRACTIONAL_BITS);
+
+    return updated_rate;
+}
+
+
 void rtt_template_init(uint32_t algo_idx)
 {
 	struct doca_pcc_dev_algo_meta_data algo_def = {0};
@@ -217,8 +237,8 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	if( gradient_fixed <= 0)
 	{
-		ccctx->pro_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
-		ccctx->last_rate = cur_rate;
+		ccctx->pro_rate = ccctx->rx_rate <= cur_rate ? ccctx->rx_rate : cur_rate;
+		ccctx->rx_rate = cur_rate;
 		cur_rate += param[RTT_TEMPLATE_AI];
 
 		//doca_pcc_dev_printf("%s, up min_rtt: %d rtt: %d gradient_fixed: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, ccctx->pro_rate, ccctx->con_rate, cur_rate);
@@ -226,13 +246,13 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	} else if (gradient_fixed > 0 && rtt <= param[RTT_TEMPLATE_BASE_RTT]) {
 		
-		ccctx->last_rate = cur_rate;
+		ccctx->rx_rate = cur_rate;
 		cur_rate += param[RTT_TEMPLATE_AI];
 
 	} else 
 	{
-		ccctx->con_rate = ccctx->last_rate >= cur_rate ? ccctx->last_rate : cur_rate;
-		ccctx->last_rate = cur_rate;
+		ccctx->con_rate = ccctx->rx_rate >= cur_rate ? ccctx->rx_rate : cur_rate;
+		ccctx->rx_rate = cur_rate;
 		//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 		cur_rate = (ccctx->pro_rate + cur_rate)/2;
 
@@ -603,6 +623,8 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 		tx_cntrs = doca_pcc_dev_get_roce_tx_cntrs (event);
 		end_time = doca_pcc_dev_get_roce_first_timestamp(event);
 
+		
+
 		uint32_t rx_rate = calculate_cur_rate( tx_cntrs.sent_32bytes, rtt_template_ctx->last_rx_time, end_time);
 
 		if(rtt_times>0)
@@ -611,7 +633,10 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 		}
 		
 		rtt_template_ctx->last_rx_time = end_time;
-		rtt_template_ctx->pro_rate = rtt_template_ctx->pro_rate <= rx_rate ? rtt_template_ctx->pro_rate : rx_rate;
+		
+		//rtt_template_ctx->pro_rate = rtt_template_ctx->pro_rate <= rx_rate ? rtt_template_ctx->pro_rate : rx_rate;
+
+		rtt_template_ctx->rx_rate = update_rx_rate_with_alpha(rtt_template_ctx->rx_rate, rx_rate);
 
 		rtt_template_handle_roce_tx(event, cur_rate, rtt_template_ctx , results);
 		
