@@ -513,7 +513,7 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	
 #else
 	uint32_t norm_np_rx_rate = (1 << 16);
-	doca_pcc_dev_printf("no rx_rate\n");
+	//doca_pcc_dev_printf("no rx_rate\n");
 #endif
 
 	cur_rate = algorithm_core(ccctx, rtt, cur_rate, param, is_high_tx_util, norm_np_rx_rate);
