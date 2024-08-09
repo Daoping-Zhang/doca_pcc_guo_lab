@@ -604,7 +604,7 @@ static inline void rtt_template_handle_new_flow(doca_pcc_dev_event_t *event,
 						cc_ctxt_rtt_template_t *ccctx,
 						doca_pcc_dev_results_t *results)
 {
-	rtt_times = 1000;
+	rtt_times = 100;
 	ccctx->cur_rate = param[RTT_TEMPLATE_NEW_FLOW_RATE];
 	ccctx->start_delay = doca_pcc_dev_get_timestamp(event);
 	ccctx->rtt_meas_psn = 0;
