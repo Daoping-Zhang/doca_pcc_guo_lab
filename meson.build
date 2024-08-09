@@ -46,7 +46,7 @@ else
 endif
 
 #enable_tx_counter_sampling = 'true'
-enable_np_rx_rate = 'true'
+#enable_np_rx_rate = 'true'
 
 # Compile DOCA PCC Reaction Point DPA program
 pcc_rp_app_name = 'pcc_rp_app'
