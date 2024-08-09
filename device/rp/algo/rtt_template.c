@@ -245,7 +245,7 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 			//ccctx->rx_rate = cur_rate;
 			ccctx->last_rate = cur_rate;
 
-			ccctx ->flags->protect_token = 0;
+			ccctx->flags.protect_token = 0;
 
 			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
 
@@ -278,12 +278,12 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		cur_rate = (ccctx->pro_rate + cur_rate)/2;
 
 		
-		ccctx ->flags->protect_token++;
+		ccctx ->flags.protect_token++;
 
-		if(ccctx ->flags->protect_tocken>=10)
+		if(ccctx ->flags.protect_token>=10)
 		{
 			ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_AI] : 0;
-			ccctx ->flags->protect_token = 0;
+			ccctx ->flags.protect_token = 0;
 		}
 
 	}

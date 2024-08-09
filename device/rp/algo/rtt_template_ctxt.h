@@ -18,7 +18,7 @@ typedef struct {
 	uint8_t was_nack : 1; /* Signal the reception of a NACK */
 	uint8_t was_cnp : 1;  /* Signal the reception of a CNP */
 	uint8_t protect_token;
-	uint8_t reserved : 6; /* Reserved bits */
+	uint8_t reserved : 5; /* Reserved bits */
 } rtt_template_flags_t;
 
 typedef struct {
