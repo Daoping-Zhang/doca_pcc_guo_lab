@@ -245,6 +245,8 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 			//ccctx->rx_rate = cur_rate;
 			ccctx->last_rate = cur_rate;
 
+			ccctx ->flags->protect_tocken = 0;
+
 			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
 
 		}else
@@ -275,7 +277,13 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 		cur_rate = (ccctx->pro_rate + cur_rate)/2;
 
-		ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_AI] : 0;
+		
+		ccctx ->flags->protect_tocken++;
+		if(ccctx ->flags->protect_tocken>=10)
+		{
+			ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_AI] : 0;
+			ccctx ->flags->protect_tocken = 0;
+		}
 
 	}
 
