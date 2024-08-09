@@ -263,30 +263,32 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		//doca_pcc_dev_printf("%s, up min_rtt: %d rtt: %d gradient_fixed: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 
 
-	} else if (gradient_fixed > 0 && rtt <= param[RTT_TEMPLATE_BASE_RTT]) {
+	} else{
 		
 		//ccctx->rx_rate = cur_rate;
-
-		ccctx->last_rate = cur_rate;
-		cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
-
-	} else 
-	{
-		ccctx->con_rate = ccctx->last_rate >= cur_rate ? ccctx->last_rate : cur_rate;
-		ccctx->last_rate = cur_rate;
-		//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-		cur_rate = (ccctx->pro_rate + cur_rate)/2;
-
-		
-		ccctx ->flags.protect_token++;
-
-		if(ccctx ->flags.protect_token>=10)
+		if(rtt <= param[RTT_TEMPLATE_BASE_RTT])
 		{
-			ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_AI] : 0;
-			ccctx ->flags.protect_token = 0;
-		}
+			ccctx->last_rate = cur_rate;
+			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
+		}else if (rtt > param[RTT_TEMPLATE_BASE_RTT])
+		{
+			ccctx->con_rate = ccctx->last_rate >= cur_rate ? ccctx->last_rate : cur_rate;
+			ccctx->last_rate = cur_rate;
+			//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+			cur_rate = (ccctx->pro_rate + cur_rate)/2;
 
-	}
+			
+			ccctx ->flags.protect_token++;
+
+			if(ccctx ->flags.protect_token>=20)
+			{
+				ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - (((1 << 20) * 5) / 1000) : 0;
+				ccctx ->flags.protect_token = 0;
+			}
+		}
+		
+	}  
+
 
 	if(rtt_times>0)
 	{	
