@@ -270,9 +270,10 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		{
 			ccctx->last_rate = cur_rate;
 			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
+			
 		}else if (rtt > param[RTT_TEMPLATE_BASE_RTT])
 		{
-			ccctx->con_rate = ccctx->last_rate >= cur_rate ? ccctx->last_rate : cur_rate;
+			ccctx->con_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
 			ccctx->last_rate = cur_rate;
 			//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 			cur_rate = (ccctx->pro_rate + cur_rate)/2;
@@ -615,13 +616,14 @@ static inline void rtt_template_handle_new_flow(doca_pcc_dev_event_t *event,
 	ccctx->flags.was_nack = 0;
 	ccctx->last_rx_time = doca_pcc_dev_get_timestamp(event);
 
+
 	results->rate = param[RTT_TEMPLATE_NEW_FLOW_RATE];
 
 	
 	results->rtt_req = 1;
 
 
-
+	ccctx->last_rate = param[RTT_TEMPLATE_NEW_FLOW_RATE];
 	ccctx->last_rtt = 0;
 	ccctx->min_rtt = 0;
 	ccctx->pro_rate = param[RTT_TEMPLATE_MIN_RATE];
