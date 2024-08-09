@@ -237,8 +237,10 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	if( gradient_fixed <= 0)
 	{
-		ccctx->pro_rate = ccctx->rx_rate <= cur_rate ? ccctx->rx_rate : cur_rate;
-		ccctx->rx_rate = cur_rate;
+		ccctx->pro_rate += param[RTT_TEMPLATE_AI];
+		ccctx->pro_rate = ccctx->rx_rate <= ccctx->pro_rate ? ccctx->rx_rate : ccctx->pro_rate;
+		//ccctx->rx_rate = cur_rate;
+		
 		cur_rate += param[RTT_TEMPLATE_AI];
 
 		//doca_pcc_dev_printf("%s, up min_rtt: %d rtt: %d gradient_fixed: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, ccctx->pro_rate, ccctx->con_rate, cur_rate);
@@ -246,7 +248,8 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	} else if (gradient_fixed > 0 && rtt <= param[RTT_TEMPLATE_BASE_RTT]) {
 		
-		ccctx->rx_rate = cur_rate;
+		//ccctx->rx_rate = cur_rate;
+
 		cur_rate += param[RTT_TEMPLATE_AI];
 
 	} else 
@@ -260,7 +263,7 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	if(rtt_times>0)
 	{	
-		doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+		//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 		//rtt_times--;
 	}
 
