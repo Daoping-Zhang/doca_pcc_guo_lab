@@ -655,9 +655,11 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 		
 		rtt_template_ctx->last_rx_time = end_time;
 		
-		//rtt_template_ctx->pro_rate = rtt_template_ctx->pro_rate <= rx_rate ? rtt_template_ctx->pro_rate : rx_rate;
 
 		rtt_template_ctx->rx_rate = update_rx_rate_with_alpha(rtt_template_ctx->rx_rate, rx_rate);
+
+		rtt_template_ctx->pro_rate = rtt_template_ctx->pro_rate <= rtt_template_ctx->rx_rate ? rtt_template_ctx->pro_rate : rtt_template_ctx->rx_rate;
+
 
 		rtt_template_handle_roce_tx(event, cur_rate, rtt_template_ctx , results);
 		
