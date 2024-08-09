@@ -77,7 +77,7 @@ static const volatile char rtt_template_counter_rtt_desc[] = "COUNTER_RTT_EVENT,
 int rtt_times = 50;
 
 #define FRACTIONAL_BITS 20
-#define ALPHA_FIXED_POINT (734003) // 0.3 * (1 << 20) 预计算后的结果
+#define ALPHA_FIXED_POINT (943718) // 0.9 * (1 << 20) 预计算后的结果
 
 
 int32_t update_rx_rate_with_alpha(int32_t rx_rate, int32_t new_rate) {
@@ -237,26 +237,41 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	if( gradient_fixed <= 0)
 	{
+		ccctx->flags.protect_token = 0;
 		if(rtt < param[RTT_TEMPLATE_BASE_RTT]*2)
 		{
+			
 			ccctx->pro_rate += param[RTT_TEMPLATE_AI];
 
 			ccctx->pro_rate = ccctx->last_rate <= ccctx->pro_rate ? ccctx->last_rate : ccctx->pro_rate;
 			//ccctx->rx_rate = cur_rate;
 			ccctx->last_rate = cur_rate;
 
-			ccctx->flags.protect_token = 0;
+			
 
 			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
+			if(rtt < param[RTT_TEMPLATE_BASE_RTT])
+			{
+				ccctx->con_rate = DOCA_PCC_DEV_MAX_RATE;
+				//doca_pcc_dev_printf("%s 突破\n", __func__);
+			}
 
-		}else
+		}
+		else if(rtt>100000)
 		{
 			//ccctx->con_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
+			ccctx ->flags.protect_token++;
 			ccctx->last_rate = cur_rate;
 			//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 			cur_rate = (ccctx->pro_rate + cur_rate)/2;
 
-			ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_AI] : 0;			
+			if(ccctx ->flags.protect_token>=10)
+			{
+				ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_MIN_RATE] : 0;
+				doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+				ccctx ->flags.protect_token = 0;
+			}
+			//ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_MIN_RATE] : 0;			
 		}
 
 
@@ -269,8 +284,9 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		if(rtt <= param[RTT_TEMPLATE_BASE_RTT])
 		{
 			ccctx->last_rate = cur_rate;
-			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
 			
+			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
+
 		}else if (rtt > param[RTT_TEMPLATE_BASE_RTT])
 		{
 			ccctx->con_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
@@ -281,9 +297,10 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 			
 			ccctx ->flags.protect_token++;
 
-			if(ccctx ->flags.protect_token>=20)
+			if(ccctx ->flags.protect_token>=10)
 			{
-				ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - (((1 << 20) * 5) / 1000) : 0;
+				ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_MIN_RATE] : 0;
+				doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 				ccctx ->flags.protect_token = 0;
 			}
 		}
@@ -671,7 +688,13 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 
 		rtt_template_ctx->rx_rate = update_rx_rate_with_alpha(rtt_template_ctx->rx_rate, rx_rate);
 
-		rtt_template_ctx->pro_rate = rtt_template_ctx->pro_rate <= rtt_template_ctx->rx_rate ? rtt_template_ctx->pro_rate : rtt_template_ctx->rx_rate;
+		if(rtt_template_ctx->rx_rate < rtt_template_ctx->pro_rate)
+		{
+			//doca_pcc_dev_printf("%s, rx_rate: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,rtt_template_ctx->rx_rate, rtt_template_ctx->pro_rate, rtt_template_ctx->con_rate, cur_rate);
+			rtt_template_ctx->pro_rate = (rtt_template_ctx->pro_rate + rtt_template_ctx->rx_rate)/2;
+		}
+
+
 
 
 		rtt_template_handle_roce_tx(event, cur_rate, rtt_template_ctx , results);
