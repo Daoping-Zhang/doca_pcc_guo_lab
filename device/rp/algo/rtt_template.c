@@ -78,7 +78,18 @@ int rtt_times = 50;
 
 #define FRACTIONAL_BITS 20
 #define ALPHA_FIXED_POINT (943718) // 0.9 * (1 << 20) 预计算后的结果
+#define UP_PROTECT_TOKEN 5
+#define DOWN_PROTECT_TOKEN 5
+#define UP_CONGESTION_TOKEN 5
+#define DOWN_PROTECT_TOKEN 5
+#define UP_MAX (((1 << 20) * 30) / 100)	 
+#define UP_MULTI (((1 << 20) * 16) / 100)	 
+#define UP_MIN (((1 << 20) * 2) / 100)	 
 
+uint32_t add_rate(uint32_t rate) 
+{
+	return rate;
+}
 
 int32_t update_rx_rate_with_alpha(int32_t rx_rate, int32_t new_rate) {
     // 使用定点数计算加权平均
@@ -95,6 +106,15 @@ int32_t update_rx_rate_with_alpha(int32_t rx_rate, int32_t new_rate) {
     return updated_rate;
 }
 
+uint32_t max(uint32_t a, uint32_t b)
+{
+	return a>=b? a : b;
+}
+
+uint32_t min(uint32_t a, uint32_t b)
+{
+	return a<=b? a : b;
+}
 
 void rtt_template_init(uint32_t algo_idx)
 {
@@ -189,6 +209,7 @@ void rtt_template_init(uint32_t algo_idx)
  * @norm_np_rx_rate [in]: Notification Point RX rate normalized in fxp
  * @return: The new calculated rate value
  */
+
 uint32_t calculate_cur_rate(uint32_t sent_32bytes, uint32_t start_time_ns, uint32_t end_time_ns) {
     // Calculate total bytes sent
   
@@ -233,24 +254,33 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 	int32_t new_rtt_diff = rtt - ccctx->last_rtt;
 
     
-    int64_t gradient_fixed = ((int64_t)new_rtt_diff * SCALE) / ccctx->min_rtt;
 
-	if( gradient_fixed <= 0)
+	if( new_rtt_diff <= 0)
 	{
-		ccctx->flags.protect_token = 0;
+		ccctx->flags.up_protect_token ++;
+
+		if(ccctx->flags.up_protect_token == UP_PROTECT_TOKEN)
+		{
+			ccctx->pro_rate = ccctx->last_rate;
+
+			ccctx->last_rate = cur_rate;
+		}
+
 		if(rtt < param[RTT_TEMPLATE_BASE_RTT]*2)
 		{
 			
-			ccctx->pro_rate += param[RTT_TEMPLATE_AI];
+			//ccctx->pro_rate += param[RTT_TEMPLATE_AI];
 
-			ccctx->pro_rate = ccctx->last_rate <= ccctx->pro_rate ? ccctx->last_rate : ccctx->pro_rate;
+			//ccctx->pro_rate = ccctx->last_rate <= ccctx->pro_rate ? ccctx->last_rate : ccctx->pro_rate;
 			//ccctx->rx_rate = cur_rate;
-			ccctx->last_rate = cur_rate;
+			//ccctx->last_rate = cur_rate;
 
 			
 
-			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
-			if(rtt < param[RTT_TEMPLATE_BASE_RTT])
+			cur_rate = cur_rate+param[RTT_TEMPLATE_AI];
+
+
+			if(rtt < param[RTT_TEMPLATE_BASE_RTT] && ccctx->con_rate - ccctx->pro_rate <=1000)
 			{
 				ccctx->con_rate = DOCA_PCC_DEV_MAX_RATE;
 				//doca_pcc_dev_printf("%s 突破\n", __func__);
@@ -260,17 +290,10 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		else if(rtt>100000)
 		{
 			//ccctx->con_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
-			ccctx ->flags.protect_token++;
-			ccctx->last_rate = cur_rate;
+	
 			//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 			cur_rate = (ccctx->pro_rate + cur_rate)/2;
 
-			if(ccctx ->flags.protect_token>=10)
-			{
-				ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_MIN_RATE] : 0;
-				doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-				ccctx ->flags.protect_token = 0;
-			}
 			//ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_MIN_RATE] : 0;			
 		}
 
@@ -280,28 +303,29 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	} else{
 		
+		ccctx->flags.up_protect_token = 0;
 		//ccctx->rx_rate = cur_rate;
 		if(rtt <= param[RTT_TEMPLATE_BASE_RTT])
 		{
-			ccctx->last_rate = cur_rate;
+			//ccctx->last_rate = cur_rate;
 			
 			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
 
 		}else if (rtt > param[RTT_TEMPLATE_BASE_RTT])
 		{
-			ccctx->con_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
-			ccctx->last_rate = cur_rate;
+			ccctx->con_rate  =  cur_rate;
+			
 			//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 			cur_rate = (ccctx->pro_rate + cur_rate)/2;
 
 			
-			ccctx ->flags.protect_token++;
+			ccctx ->flags.down_protect_token++;
 
-			if(ccctx ->flags.protect_token>=10)
+			if(ccctx ->flags.down_protect_token>=10)
 			{
-				ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_MIN_RATE] : 0;
-				doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-				ccctx ->flags.protect_token = 0;
+				ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_AI] : 0;
+				//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+				ccctx ->flags.down_protect_token = 0;
 			}
 		}
 		
@@ -310,7 +334,7 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	if(rtt_times>0)
 	{	
-		doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+		doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 		//rtt_times--;
 	}
 
