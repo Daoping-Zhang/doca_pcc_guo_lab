@@ -81,7 +81,7 @@ int rtt_times = 50;
 #define UP_PROTECT_TOKEN 5
 #define DOWN_PROTECT_TOKEN 5
 #define UP_CONGESTION_TOKEN 5
-#define DOWN_PROTECT_TOKEN 5
+#define DOWN_CONGESTION_TOKEN 3
 #define UP_MAX (((1 << 20) * 30) / 100)	 
 #define UP_MULTI (((1 << 20) * 16) / 100)	 
 #define UP_MIN (((1 << 20) * 2) / 100)	 
@@ -257,6 +257,15 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 	if( new_rtt_diff <= 0)
 	{
+
+		if(rtt < param[RTT_TEMPLATE_BASE_RTT] && ccctx->pro_rate >= ccctx->con_rate)
+		{
+			ccctx->con_rate = DOCA_PCC_DEV_MAX_RATE;
+			//doca_pcc_dev_printf("%s 突破\n", __func__);
+		}
+
+		ccctx->flags.down_congestion_token = 0;
+
 		ccctx->flags.up_protect_token ++;
 
 		if(ccctx->flags.up_protect_token == UP_PROTECT_TOKEN)
@@ -270,23 +279,19 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		{
 			
 			//ccctx->pro_rate += param[RTT_TEMPLATE_AI];
-
 			//ccctx->pro_rate = ccctx->last_rate <= ccctx->pro_rate ? ccctx->last_rate : ccctx->pro_rate;
 			//ccctx->rx_rate = cur_rate;
 			//ccctx->last_rate = cur_rate;
 
 			
 
-			cur_rate = cur_rate+param[RTT_TEMPLATE_AI];
+			cur_rate = cur_rate + param[RTT_TEMPLATE_AI] <= ccctx->con_rate + param[RTT_TEMPLATE_AI] ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate + param[RTT_TEMPLATE_AI] ;
 
 
-			if(rtt < param[RTT_TEMPLATE_BASE_RTT] && ccctx->con_rate - ccctx->pro_rate <=1000)
-			{
-				ccctx->con_rate = DOCA_PCC_DEV_MAX_RATE;
-				//doca_pcc_dev_printf("%s 突破\n", __func__);
-			}
+
 
 		}
+
 		else if(rtt>100000)
 		{
 			//ccctx->con_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
@@ -302,6 +307,10 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 
 	} else{
+
+
+
+		
 		
 		ccctx->flags.up_protect_token = 0;
 		//ccctx->rx_rate = cur_rate;
@@ -309,11 +318,24 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 		{
 			//ccctx->last_rate = cur_rate;
 			
-			cur_rate = cur_rate+param[RTT_TEMPLATE_AI] <= ccctx->con_rate ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate;
+			cur_rate = cur_rate + param[RTT_TEMPLATE_AI] <= ccctx->con_rate + param[RTT_TEMPLATE_AI] ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate + param[RTT_TEMPLATE_AI] ;
+
+			ccctx->flags.down_congestion_token = 0;
 
 		}else if (rtt > param[RTT_TEMPLATE_BASE_RTT])
 		{
-			ccctx->con_rate  =  cur_rate;
+			ccctx->flags.down_congestion_token ++;
+
+			if(ccctx->flags.down_congestion_token == UP_PROTECT_TOKEN)
+			{
+				ccctx->con_rate = ccctx->last_rate;
+
+				ccctx->last_rate = cur_rate;
+
+				ccctx->flags.down_congestion_token = 0;
+			}	
+
+
 			
 			//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 			cur_rate = (ccctx->pro_rate + cur_rate)/2;
@@ -323,7 +345,7 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 			if(ccctx ->flags.down_protect_token>=10)
 			{
-				ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_AI] : 0;
+				ccctx->pro_rate = ccctx->pro_rate > (((1 << 20) * 1) / 100) ? ccctx->pro_rate - (((1 << 20) * 1) / 100) : 0;
 				//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
 				ccctx ->flags.down_protect_token = 0;
 			}
@@ -720,7 +742,7 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 
 
 
-
+		//rtt_template_ctx->last_rate = rtt_template_ctx->rx_rate <= rtt_template_ctx->last_rate ? rtt_template_ctx->rx_rate : rtt_template_ctx->last_rate ;
 		rtt_template_handle_roce_tx(event, cur_rate, rtt_template_ctx , results);
 		
 
