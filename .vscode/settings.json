@@ -3,6 +3,8 @@
         "random": "c",
         "algorithm": "c",
         "cstdint": "c",
-        "compare": "c"
+        "compare": "c",
+        "locale": "c",
+        "string": "c"
     }
 }

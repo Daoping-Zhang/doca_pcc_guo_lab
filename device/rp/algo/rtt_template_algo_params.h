@@ -14,6 +14,7 @@
 #ifndef _RTT_TEMPLATE_ALGO_PARAMS_H_
 #define _RTT_TEMPLATE_ALGO_PARAMS_H_
 
+
 /* Configurable algorithm parameters */
 /* This parameters are hardcoded and they provide the best set of the parameters for real firmware */
 #define UPDATE_FACTOR (((1 << 16) * 10) / 100) /* 0.08 in fxp16 - maximum multiplicative decrease factor */

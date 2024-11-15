@@ -29,6 +29,11 @@
 #define FIXED_POINT_SCALE 1048576  // 1 << 20
 #define GIGABIT_SCALE 100          // To scale Gbps to percentage of 100Gbps
 
+#define PER_RTT 5
+#define BURST_RTT 10000
+#define HIGH_RTT 6000
+#define LOW_RTT 4000
+#define RECOVERY_RTT 1000
 
 #define FF32BIT (0xffffffff)
 #define DEC_FACTOR ((1 << 16) - param[RTT_TEMPLATE_UPDATE_FACTOR])	    /* Rate decrease factor */
@@ -252,106 +257,103 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 	
 
 	int32_t new_rtt_diff = rtt - ccctx->last_rtt;
-
-    
-
-	if( new_rtt_diff <= 0)
+	if(rtt > ccctx->min_rtt + BURST_RTT)
 	{
-
-		if(rtt < param[RTT_TEMPLATE_BASE_RTT] && ccctx->pro_rate >= ccctx->con_rate)
+		ccctx->flags.state = 3;
+	}
+    
+	if(ccctx->flags.state == 1)
+	{
+		if(new_rtt_diff <= 0)
 		{
-			ccctx->con_rate = DOCA_PCC_DEV_MAX_RATE;
-			//doca_pcc_dev_printf("%s 突破\n", __func__);
+			ccctx->cur_rate =  ccctx->cur_rate + 0.5* (ccctx->high_rate - ccctx->last_rate)/PER_RTT;
+			ccctx->flags.high = false;
+		}else
+		{
+			ccctx->cur_rate =  ccctx->cur_rate - 0.5* (ccctx->last_rate - ccctx->low_rate)/PER_RTT;
+			ccctx->flags.low = false;
 		}
 
-		ccctx->flags.down_congestion_token = 0;
+		ccctx->flags.rtt_count++;
 
-		ccctx->flags.up_protect_token ++;
-
-		if(ccctx->flags.up_protect_token == UP_PROTECT_TOKEN)
+		if(ccctx->flags.rtt_count >= PER_RTT)
 		{
-			ccctx->pro_rate = ccctx->last_rate;
-
-			ccctx->last_rate = cur_rate;
-		}
-
-		if(rtt < param[RTT_TEMPLATE_BASE_RTT]*2)
-		{
-			
-			//ccctx->pro_rate += param[RTT_TEMPLATE_AI];
-			//ccctx->pro_rate = ccctx->last_rate <= ccctx->pro_rate ? ccctx->last_rate : ccctx->pro_rate;
-			//ccctx->rx_rate = cur_rate;
-			//ccctx->last_rate = cur_rate;
-
-			
-
-			cur_rate = cur_rate + param[RTT_TEMPLATE_AI] <= ccctx->con_rate + param[RTT_TEMPLATE_AI] ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate + param[RTT_TEMPLATE_AI] ;
-
-
-
-
-		}
-
-		else if(rtt>100000)
-		{
-			//ccctx->con_rate = ccctx->last_rate <= cur_rate ? ccctx->last_rate : cur_rate;
-	
-			//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-			cur_rate = (ccctx->pro_rate + cur_rate)/2;
-
-			//ccctx->pro_rate = ccctx->pro_rate > param[RTT_TEMPLATE_AI] ? ccctx->pro_rate - param[RTT_TEMPLATE_MIN_RATE] : 0;			
-		}
-
-
-		//doca_pcc_dev_printf("%s, up min_rtt: %d rtt: %d gradient_fixed: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-
-
-	} else{
-
-
-
-		
-		
-		ccctx->flags.up_protect_token = 0;
-		//ccctx->rx_rate = cur_rate;
-		if(rtt <= param[RTT_TEMPLATE_BASE_RTT])
-		{
-			//ccctx->last_rate = cur_rate;
-			
-			cur_rate = cur_rate + param[RTT_TEMPLATE_AI] <= ccctx->con_rate + param[RTT_TEMPLATE_AI] ? cur_rate+param[RTT_TEMPLATE_AI] : ccctx->con_rate + param[RTT_TEMPLATE_AI] ;
-
-			ccctx->flags.down_congestion_token = 0;
-
-		}else if (rtt > param[RTT_TEMPLATE_BASE_RTT])
-		{
-			ccctx->flags.down_congestion_token ++;
-
-			if(ccctx->flags.down_congestion_token == UP_PROTECT_TOKEN)
+			if(ccctx->flags.low)
 			{
-				ccctx->con_rate = ccctx->last_rate;
-
-				ccctx->last_rate = cur_rate;
-
-				ccctx->flags.down_congestion_token = 0;
-			}	
-
-
-			
-			//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-			cur_rate = (ccctx->pro_rate + cur_rate)/2;
-
-			
-			ccctx ->flags.down_protect_token++;
-
-			if(ccctx ->flags.down_protect_token>=10)
-			{
-				ccctx->pro_rate = ccctx->pro_rate > (((1 << 20) * 1) / 100) ? ccctx->pro_rate - (((1 << 20) * 1) / 100) : 0;
-				//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-				ccctx ->flags.down_protect_token = 0;
+				ccctx->low_rate = ccctx->last_rate;
 			}
+
+			if(ccctx->flags.high)
+			{
+				ccctx->high_rate = ccctx->last_rate;
+			}
+
+			ccctx->flags.high = true;
+			ccctx->flags.low = true;
+
+			if(ccctx->low_rate  >= 0.95*ccctx->high_rate)
+            {
+                if(ccctx->average_rtt <= ccctx->min_rtt +  0.5*(LOW_RTT + HIGH_RTT))
+            	{
+					ccctx->flags.state_count = 0;
+					qp->ufcc.state = 2;
+
+                }else if(ccctx->average_rtt > qp->ufcc.minRtt + HIGH_RTT)
+                {
+
+                    ccctx->flags.state_count =ccctx->flags.state_count+3;
+
+                }else
+        		{
+            		ccctx->flags.state_count++;
+                }
+                if(ccctx->state_count >= 5)
+           		 {
+                    ccctx->cur_rate = 0.95*ccctx->low_rate;
+                   	ccctx->low_rate = ccctx->cur_rate;
+              		ccctx->flags.state_count = 0;
+                }
+
+                ccctx->flags.rtt_count = PER_RTT - 2;
+
+            }else
+			{
+				ccctx->flags.rtt_count = 0;
+			}
+
+			
 		}
 		
-	}  
+	}else if(ccctx->flags.state == 2){
+
+		if(rtt <= ccctx->average_rtt )
+		{
+			ccctx->cur_rate = ccctx->high_rate;
+		}else
+		{
+			ccctx->cur_rate = ccctx->low_rate;
+		}
+
+		if( ccctx->average_rtt > ccctx->min_rtt + HIGH_RTT)
+		{
+			ccctx->cur_rate = 0.95*ccctx->low_rate;
+		}
+
+		if( ccctx->average_rtt < ccctx->min_rtt + LOW_RTT)
+		{
+			ccctx->cur_rate = 1.05*ccctx->high_rate;
+		}
+
+	}else if(ccctx->flags.state == 3)
+	{
+		ccctx->cur_rate = min(0.5*ccctx->low_rate,param[RTT_TEMPLATE_MIN_RATE])
+		
+		if(rtt < ccctx->min_rtt + BURST_RTT)
+		{
+			ccctx->low_rate = 0.99*ccctx->low_rate;
+			ccctx->cur_rate = 0.5*(ccctx->low_rate+ccctx->high_rate);
+		}
+	}
 
 
 	if(rtt_times>0)
@@ -520,7 +522,7 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 
 	if (unlikely(end_rtt < start_rtt)){
 		rtt += UINT32_MAX;
-		doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+		doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d low_rate: %u high_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, ccctx->low_rate, ccctx->high_rate, cur_rate);
 	}
 
 		
@@ -532,12 +534,14 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	{
 		ccctx->min_rtt = param[RTT_TEMPLATE_BASE_RTT] <= ccctx->rtt ? param[RTT_TEMPLATE_BASE_RTT] : ccctx->rtt;
 		ccctx->last_rtt = ccctx->rtt;
+		ccctx->average_rtt = rtt;
 
+		ccctx->flags.state = 1;
 		ccctx->rtt_req_to_rtt_sent = 1;
 		ccctx->cur_rate = cur_rate;
 		results->rate = cur_rate;
 		results->rtt_req = 1;
-		doca_pcc_dev_printf("%s, min_rtt: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, ccctx->pro_rate, ccctx->con_rate, cur_rate);
+		doca_pcc_dev_printf("%s, min_rtt: %d pro_rate: %u low_rate: %u high_rate: %u \n", __func__,ccctx->min_rtt, ccctx->low_rate, ccctx->high_rate, cur_rate);
 		return;
 	}
 
@@ -686,11 +690,10 @@ static inline void rtt_template_handle_new_flow(doca_pcc_dev_event_t *event,
 	results->rtt_req = 1;
 
 
-	ccctx->last_rate = param[RTT_TEMPLATE_NEW_FLOW_RATE];
 	ccctx->last_rtt = 0;
 	ccctx->min_rtt = 0;
-	ccctx->pro_rate = param[RTT_TEMPLATE_MIN_RATE];
-	ccctx->con_rate = DOCA_PCC_DEV_MAX_RATE;
+	ccctx->low_rate = param[RTT_TEMPLATE_MIN_RATE];
+	ccctx->high_rate = DOCA_PCC_DEV_MAX_RATE;
 }
 
 void rtt_template_algo(doca_pcc_dev_event_t *event,
@@ -737,7 +740,7 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 		if(rtt_template_ctx->rx_rate < rtt_template_ctx->pro_rate)
 		{
 			//doca_pcc_dev_printf("%s, rx_rate: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,rtt_template_ctx->rx_rate, rtt_template_ctx->pro_rate, rtt_template_ctx->con_rate, cur_rate);
-			rtt_template_ctx->pro_rate = (rtt_template_ctx->pro_rate + rtt_template_ctx->rx_rate)/2;
+			//rtt_template_ctx->low_rate = (rtt_template_ctx->pro_rate + rtt_template_ctx->rx_rate)/2;
 		}
 
 

@@ -18,12 +18,13 @@ typedef struct {
 	uint8_t was_nack : 1; /* Signal the reception of a NACK */
 	uint8_t was_cnp : 1;  /* Signal the reception of a CNP */
 
-	uint8_t up_protect_token;
-	uint8_t down_protect_token;
-	uint8_t up_congestion_token;
-	uint8_t down_congestion_token;
+	uint8_t state;
+	uint8_t state_count;
+	uint8_t rtt_count;
+	uint8_t update_high;
+	uint8_t update_low;
 
-	uint8_t reserved : 2; /* Reserved bits */
+	uint8_t reserved : 1; /* Reserved bits */
 } rtt_template_flags_t;
 
 typedef struct {
@@ -49,18 +50,19 @@ typedef struct {
 	uint32_t reserved[0];/* Reserved bits */
 #else
 	uint32_t last_rate;
-	uint32_t pro_rate;
-	uint32_t con_rate;
+
+	uint32_t low_rate;
+	uint32_t high_rate;
 	uint32_t min_rtt;
 	uint32_t last_rtt;
 	uint32_t last_rx_time;
 	uint32_t rx_rate;
+	uint32_t average_rtt;
 
 
 
 
-
-	uint32_t reserved[2]; /* Reserved bits */
+	uint32_t reserved[1]; /* Reserved bits */
 #endif
 } cc_ctxt_rtt_template_t;
 
