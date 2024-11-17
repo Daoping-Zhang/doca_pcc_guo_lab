@@ -21,8 +21,8 @@ typedef struct {
 	uint8_t state;
 	uint8_t state_count;
 	uint8_t rtt_count;
-	uint8_t update_high;
-	uint8_t update_low;
+	uint8_t high;
+	uint8_t low;
 
 	uint8_t reserved : 1; /* Reserved bits */
 } rtt_template_flags_t;

@@ -238,6 +238,11 @@ uint32_t calculate_cur_rate(uint32_t sent_32bytes, uint32_t start_time_ns, uint3
     // 计算实际发送速率（bps）
     // 使用整数算术： (比特数 * 1,000,000,000) / 纳秒
     uint64_t send_rate_bps = (total_bits_sent * 1000000000ULL) / time_interval_ns;
+	if(rtt_times>0)
+	{	
+		doca_pcc_dev_printf("%s,  rx_rate: %lu \n", __func__, send_rate_bps);
+	}
+	
 
     // 转换为虚拟速率，使用定点缩放
     // 确保以Mbps为基础，将速率与虚拟比例关联
@@ -257,6 +262,7 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 	
 
 	int32_t new_rtt_diff = rtt - ccctx->last_rtt;
+
 	if(rtt > ccctx->min_rtt + BURST_RTT)
 	{
 		ccctx->flags.state = 3;
@@ -264,14 +270,14 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
     
 	if(ccctx->flags.state == 1)
 	{
-		if(new_rtt_diff <= 0)
+		if(new_rtt_diff <= 100)
 		{
-			ccctx->cur_rate =  ccctx->cur_rate + 0.5* (ccctx->high_rate - ccctx->last_rate)/PER_RTT;
-			ccctx->flags.high = false;
+			ccctx->cur_rate =  min(ccctx->cur_rate + (ccctx->high_rate - ccctx->last_rate)/(PER_RTT*2),DOCA_PCC_DEV_MAX_RATE);
+			ccctx->flags.high = 0;
 		}else
 		{
-			ccctx->cur_rate =  ccctx->cur_rate - 0.5* (ccctx->last_rate - ccctx->low_rate)/PER_RTT;
-			ccctx->flags.low = false;
+			ccctx->cur_rate =  max(ccctx->cur_rate - (ccctx->last_rate - ccctx->low_rate)/(PER_RTT*2), param[RTT_TEMPLATE_MIN_RATE]);
+			ccctx->flags.low = 0;
 		}
 
 		ccctx->flags.rtt_count++;
@@ -288,17 +294,17 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 				ccctx->high_rate = ccctx->last_rate;
 			}
 
-			ccctx->flags.high = true;
-			ccctx->flags.low = true;
+			ccctx->flags.high = 1;
+			ccctx->flags.low = 1;
 
-			if(ccctx->low_rate  >= 0.95*ccctx->high_rate)
+			if(ccctx->low_rate  >= ccctx->high_rate - ccctx->high_rate/20)
             {
-                if(ccctx->average_rtt <= ccctx->min_rtt +  0.5*(LOW_RTT + HIGH_RTT))
+                if(ccctx->average_rtt <= ccctx->min_rtt +  (LOW_RTT + HIGH_RTT)/2)
             	{
 					ccctx->flags.state_count = 0;
-					qp->ufcc.state = 2;
+					ccctx->flags.state = 2;
 
-                }else if(ccctx->average_rtt > qp->ufcc.minRtt + HIGH_RTT)
+                }else if(ccctx->average_rtt > ccctx->min_rtt + HIGH_RTT)
                 {
 
                     ccctx->flags.state_count =ccctx->flags.state_count+3;
@@ -307,9 +313,9 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
         		{
             		ccctx->flags.state_count++;
                 }
-                if(ccctx->state_count >= 5)
+                if(ccctx->flags.state_count >= 5)
            		 {
-                    ccctx->cur_rate = 0.95*ccctx->low_rate;
+                    ccctx->cur_rate = ccctx->low_rate - ccctx->low_rate/20;
                    	ccctx->low_rate = ccctx->cur_rate;
               		ccctx->flags.state_count = 0;
                 }
@@ -336,35 +342,32 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 
 		if( ccctx->average_rtt > ccctx->min_rtt + HIGH_RTT)
 		{
-			ccctx->cur_rate = 0.95*ccctx->low_rate;
+			ccctx->cur_rate = ccctx->low_rate - ccctx->low_rate/20;
 		}
 
 		if( ccctx->average_rtt < ccctx->min_rtt + LOW_RTT)
 		{
-			ccctx->cur_rate = 1.05*ccctx->high_rate;
+			ccctx->cur_rate = ccctx->high_rate + ccctx->high_rate/20;
 		}
 
 	}else if(ccctx->flags.state == 3)
 	{
-		ccctx->cur_rate = min(0.5*ccctx->low_rate,param[RTT_TEMPLATE_MIN_RATE])
+		ccctx->cur_rate = min(ccctx->low_rate/2,param[RTT_TEMPLATE_MIN_RATE]);
 		
 		if(rtt < ccctx->min_rtt + BURST_RTT)
 		{
-			ccctx->low_rate = 0.99*ccctx->low_rate;
-			ccctx->cur_rate = 0.5*(ccctx->low_rate+ccctx->high_rate);
+			ccctx->low_rate = ccctx->low_rate - ccctx->low_rate/100;
+			ccctx->cur_rate = (ccctx->low_rate+ccctx->high_rate)/2;
 		}
 	}
-
-
 	if(rtt_times>0)
 	{	
-		doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-		//rtt_times--;
+		doca_pcc_dev_printf("%s,  STATE: %u, rtt: %u, last_rtt: %u,new_rtt_diff: %d, low_rate: %u, high_rate: %u, cur_rate: %u, max_rate: %u \n", __func__,ccctx->flags.state, rtt, ccctx->last_rtt, new_rtt_diff,ccctx->low_rate, ccctx->high_rate, ccctx->cur_rate, DOCA_PCC_DEV_MAX_RATE);
+		rtt_times--;
 	}
-
-	//doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d gradient_fixed: %ld  new_rtt_diff: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, gradient_fixed, new_rtt_diff, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-
+	ccctx->average_rtt = 7*rtt/10 + 3*ccctx->average_rtt/10;
 	ccctx->last_rtt = rtt;
+	
 
 	return cur_rate;
 }
@@ -411,7 +414,7 @@ static inline uint32_t algorithm_core(cc_ctxt_rtt_template_t *ccctx,
 	}
 
 	if (cur_rate > DOCA_PCC_DEV_MAX_RATE)
-		cur_rate = DOCA_PCC_DEV_MAX_RATE;
+		{cur_rate = DOCA_PCC_DEV_MAX_RATE;}
 
 	if (cur_rate < param[RTT_TEMPLATE_MIN_RATE])
 	{cur_rate = param[RTT_TEMPLATE_MIN_RATE];}
@@ -522,7 +525,7 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 
 	if (unlikely(end_rtt < start_rtt)){
 		rtt += UINT32_MAX;
-		doca_pcc_dev_printf("%s, min_rtt: %d rtt: %d low_rate: %u high_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, rtt, ccctx->low_rate, ccctx->high_rate, cur_rate);
+		doca_pcc_dev_printf("%s,  STATE: %u, rtt: %u, last_rtt: %u, low_rate: %u, high_rate: %u, cur_rate: %u, max_rate: %u \n", __func__,ccctx->flags.state, rtt, ccctx->last_rtt,ccctx->low_rate, ccctx->high_rate, ccctx->cur_rate, DOCA_PCC_DEV_MAX_RATE);
 	}
 
 		
@@ -539,9 +542,10 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 		ccctx->flags.state = 1;
 		ccctx->rtt_req_to_rtt_sent = 1;
 		ccctx->cur_rate = cur_rate;
+		ccctx->last_rate = cur_rate;
 		results->rate = cur_rate;
 		results->rtt_req = 1;
-		doca_pcc_dev_printf("%s, min_rtt: %d pro_rate: %u low_rate: %u high_rate: %u \n", __func__,ccctx->min_rtt, ccctx->low_rate, ccctx->high_rate, cur_rate);
+		doca_pcc_dev_printf("%s, min_rtt: %d low_rate: %u high_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, ccctx->low_rate, ccctx->high_rate, cur_rate);
 		return;
 	}
 
@@ -602,11 +606,7 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	ccctx->cur_rate = cur_rate;
 	results->rate = cur_rate;
 	results->rtt_req = 1;
-	if(rtt_times>0)
-	{	
-		//doca_pcc_dev_printf("%s, min_rtt: %d pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,ccctx->min_rtt, ccctx->pro_rate, ccctx->con_rate, cur_rate);
-		rtt_times--;
-	}
+
 	
 }
 
@@ -737,10 +737,10 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 
 		rtt_template_ctx->rx_rate = update_rx_rate_with_alpha(rtt_template_ctx->rx_rate, rx_rate);
 
-		if(rtt_template_ctx->rx_rate < rtt_template_ctx->pro_rate)
+		if(rtt_template_ctx->rx_rate < rtt_template_ctx->low_rate - rtt_template_ctx->low_rate/5)
 		{
 			//doca_pcc_dev_printf("%s, rx_rate: %u pro_rate: %u con_rate: %u cur_rate: %u \n", __func__,rtt_template_ctx->rx_rate, rtt_template_ctx->pro_rate, rtt_template_ctx->con_rate, cur_rate);
-			//rtt_template_ctx->low_rate = (rtt_template_ctx->pro_rate + rtt_template_ctx->rx_rate)/2;
+			rtt_template_ctx->low_rate = (rtt_template_ctx->low_rate + rtt_template_ctx->rx_rate)/2;
 		}
 
 
