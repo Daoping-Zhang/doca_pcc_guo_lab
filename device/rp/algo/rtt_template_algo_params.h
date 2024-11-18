@@ -27,6 +27,6 @@
 #define UPDATE_FACTOR_MAX (10 * (1 << 16)) /* Maximum value of update factor */
 #define AI_MAX (1 << (20))		   /* Maximum value of AI */
 #define RATE_MAX (1 << (20))		   /* Maximum value of rate */
-#define BW_MB_DEFAULT (25000)		   /* Initial value of bandwidth. Units MB/s */
+#define BW_MB_DEFAULT (2500)		   /* Initial value of bandwidth. Units MB/s */
 
 #endif /* _RTT_TEMPLATE_ALGO_PARAMS_H_ */

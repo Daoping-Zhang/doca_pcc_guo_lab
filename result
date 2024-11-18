@@ -1,0 +1,225 @@
+Script started on 2024-11-17 17:11:22+08:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="142" LINES="29"]
+[?2004h]0;zdp@localhost: /tmp/build/pcc[01;32mzdp@localhost[00m:[01;34m/tmp/build/pcc[00m$ exit./doca_pcc -d mlx5_0exit[K[Kexit[K[K]0;zdp@localhost: /tmp/build/pcc[01;32mzdp@localhost[00m:[01;34m/tmp/build/pcc[00m$ [K]0;zdp@localhost: /tmp/build/pcc[01;32mzdp@localhost[00m:[01;34m/tmp/build/pcc[00m$ ./doca_pcc -d mlx5_0
+[?2004lInfo: Welcome to DOCA Programable Congestion Control (PCC) application
+Info: Starting DOCA PCC
+/  5/doca_pcc_dev_user_init, disable_event_bitmask=0x20
+format 0 - user init: port num = 0, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x1, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x2, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x3, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+Info: Press ctrl + C to exit
+Info: PCC host status Active
+Info: Waiting on DOCA PCC
+Info: PCC host status Active
+Info: Waiting on DOCA PCC
+/  5/rtt_template_algo, new flow BW in MB: 20000 Mb
+/  5/calculate_cur_rate,  tx_rate: 630857142857, last_rtt: 0,time: 2520685936, sent_32bytes: 16008, time_interval_ns: 6496
+/  5/rtt_template_handle_roce_rtt, min_rtt: 4248 low_rate: 64 high_rate: 1048576 cur_rate: 1048576 
+/  5/calculate_cur_rate,  tx_rate: 270464805348, last_rtt: 4248,time: 2520726624, sent_32bytes: 42987, time_interval_ns: 40688
+/  5/calculate_cur_rate,  tx_rate: 59136692235, last_rtt: 3678,time: 2520835350, sent_32bytes: 25116, time_interval_ns: 108726
+/  5/calculate_cur_rate,  tx_rate: 9996918723, last_rtt: 3464,time: 2520898960, sent_32bytes: 2484, time_interval_ns: 63610
+/  5/calculate_cur_rate,  tx_rate: 8801195814, last_rtt: 2538,time: 2520963184, sent_32bytes: 2208, time_interval_ns: 64224
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 2344,time: 2521020272, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901671777, last_rtt: 2356,time: 2521080926, sent_32bytes: 2346, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3466,time: 2521141582, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9901018826, last_rtt: 3386,time: 2521202240, sent_32bytes: 2346, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 9610129253, last_rtt: 3392,time: 2521262896, sent_32bytes: 2277, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10193075356, last_rtt: 2344,time: 2521321816, sent_32bytes: 2346, time_interval_ns: 58920
+/  5/calculate_cur_rate,  tx_rate: 9319220496, last_rtt: 2344,time: 2521382470, sent_32bytes: 2208, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 3474,time: 2521439558, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901018826, last_rtt: 3380,time: 2521500216, sent_32bytes: 2346, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3382,time: 2521560872, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3382,time: 2521621528, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9610446137, last_rtt: 3396,time: 2521682182, sent_32bytes: 2277, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 10188579377, last_rtt: 3480,time: 2521741128, sent_32bytes: 2346, time_interval_ns: 58946
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3380,time: 2521801784, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9319220496, last_rtt: 2352,time: 2521862438, sent_32bytes: 2208, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 2352,time: 2521919526, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 2354,time: 2521980182, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9901018826, last_rtt: 3478,time: 2522040840, sent_32bytes: 2346, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 2348,time: 2522101496, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10829596412, last_rtt: 2348,time: 2522158584, sent_32bytes: 2415, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9623690029, last_rtt: 2356,time: 2522220990, sent_32bytes: 2346, time_interval_ns: 62406
+/  5/calculate_cur_rate,  tx_rate: 9318605954, last_rtt: 2346,time: 2522281648, sent_32bytes: 2208, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 3478,time: 2522338736, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3390,time: 2522399392, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9901671777, last_rtt: 3390,time: 2522460046, sent_32bytes: 2346, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 2362,time: 2522520702, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9609812390, last_rtt: 2342,time: 2522581360, sent_32bytes: 2277, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 10203119160, last_rtt: 3476,time: 2522640222, sent_32bytes: 2346, time_interval_ns: 58862
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 3388,time: 2522700878, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10519810825, last_rtt: 3394,time: 2522757968, sent_32bytes: 2346, time_interval_ns: 57090
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3388,time: 2522818624, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3378,time: 2522879280, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9319220496, last_rtt: 3468,time: 2522939934, sent_32bytes: 2208, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 10829596412, last_rtt: 3388,time: 2522997022, sent_32bytes: 2415, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9623073225, last_rtt: 3384,time: 2523059432, sent_32bytes: 2346, time_interval_ns: 62410
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 2352,time: 2523120088, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 2344,time: 2523177176, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901671777, last_rtt: 3478,time: 2523237830, sent_32bytes: 2346, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 2348,time: 2523298486, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9901018826, last_rtt: 2354,time: 2523359144, sent_32bytes: 2346, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 9610129253, last_rtt: 2346,time: 2523419800, sent_32bytes: 2277, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10205546492, last_rtt: 2350,time: 2523478648, sent_32bytes: 2346, time_interval_ns: 58848
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3474,time: 2523539304, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 3374,time: 2523599960, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10520547945, last_rtt: 3388,time: 2523657046, sent_32bytes: 2346, time_interval_ns: 57086
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 2348,time: 2523717702, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9901018826, last_rtt: 2346,time: 2523778360, sent_32bytes: 2346, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 9610129253, last_rtt: 3472,time: 2523839016, sent_32bytes: 2277, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10195844085, last_rtt: 3388,time: 2523897920, sent_32bytes: 2346, time_interval_ns: 58904
+/  5/calculate_cur_rate,  tx_rate: 9901671777, last_rtt: 3382,time: 2523958574, sent_32bytes: 2346, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 3380,time: 2524019230, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 3384,time: 2524076318, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901018826, last_rtt: 3476,time: 2524136976, sent_32bytes: 2346, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3384,time: 2524197632, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9610446137, last_rtt: 3388,time: 2524258286, sent_32bytes: 2277, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 10204159304, last_rtt: 2346,time: 2524317142, sent_32bytes: 2346, time_interval_ns: 58856
+/  5/calculate_cur_rate,  tx_rate: 9901018826, last_rtt: 2350,time: 2524377800, sent_32bytes: 2346, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 3466,time: 2524438456, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 3378,time: 2524495544, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901671777, last_rtt: 2346,time: 2524556198, sent_32bytes: 2346, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 2346,time: 2524616854, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 2348,time: 2524673942, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9609812390, last_rtt: 2348,time: 2524734600, sent_32bytes: 2277, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 10205893348, last_rtt: 3480,time: 2524793446, sent_32bytes: 2346, time_interval_ns: 58846
+/  5/calculate_cur_rate,  tx_rate: 9318605954, last_rtt: 3382,time: 2524854104, sent_32bytes: 2208, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 2350,time: 2524911192, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 2346,time: 2524971848, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9319220496, last_rtt: 2354,time: 2525032502, sent_32bytes: 2208, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 3476,time: 2525089590, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9609812390, last_rtt: 3380,time: 2525150248, sent_32bytes: 2277, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 10200346479, last_rtt: 3380,time: 2525209126, sent_32bytes: 2346, time_interval_ns: 58878
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 3384,time: 2525269782, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10519810825, last_rtt: 3380,time: 2525326872, sent_32bytes: 2346, time_interval_ns: 57090
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3476,time: 2525387528, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 3378,time: 2525448184, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10520547945, last_rtt: 3390,time: 2525505270, sent_32bytes: 2346, time_interval_ns: 57086
+/  5/calculate_cur_rate,  tx_rate: 9610129253, last_rtt: 3380,time: 2525565926, sent_32bytes: 2277, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10194113453, last_rtt: 2352,time: 2525624840, sent_32bytes: 2346, time_interval_ns: 58914
+/  5/calculate_cur_rate,  tx_rate: 9319220496, last_rtt: 3388,time: 2525685494, sent_32bytes: 2208, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 3474,time: 2525742582, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 2344,time: 2525803238, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9318605954, last_rtt: 2344,time: 2525863896, sent_32bytes: 2208, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 10520179372, last_rtt: 2354,time: 2525920984, sent_32bytes: 2346, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 9610129253, last_rtt: 2346,time: 2525981640, sent_32bytes: 2277, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10207281008, last_rtt: 3472,time: 2526040478, sent_32bytes: 2346, time_interval_ns: 58838
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 3380,time: 2526101134, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10519810825, last_rtt: 2350,time: 2526158224, sent_32bytes: 2346, time_interval_ns: 57090
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 2360,time: 2526218880, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9318913215, last_rtt: 2346,time: 2526279536, sent_32bytes: 2208, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 10520547945, last_rtt: 2348,time: 2526336622, sent_32bytes: 2346, time_interval_ns: 57086
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 3466,time: 2526397278, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 9609812390, last_rtt: 3388,time: 2526457936, sent_32bytes: 2277, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 9605546681, last_rtt: 3386,time: 2526516782, sent_32bytes: 2208, time_interval_ns: 58846
+/  5/calculate_cur_rate,  tx_rate: 10519810825, last_rtt: 2352,time: 2526573872, sent_32bytes: 2346, time_interval_ns: 57090
+/  5/calculate_cur_rate,  tx_rate: 9901345291, last_rtt: 2338,time: 2526634528, sent_32bytes: 2346, time_interval_ns: 60656
+/  5/rtt_template_handle_roce_rtt,  STATE: 2, rtt: 2121, last_rtt: 2128, low_rate: 106052, high_rate: 1048576, cur_rate: 104857, max_rate: 1048576 
+/  5/rtt_template_algo, new flow BW in MB: 20000 Mb
+/  5/calculate_cur_rate,  tx_rate: 1368588, last_rtt: 0,time: 2466704438, sent_32bytes: 2, time_interval_ns: 374108
+/  5/rtt_template_handle_roce_rtt, min_rtt: 3510 low_rate: 32 high_rate: 1048576 cur_rate: 1048576 
+/  5/calculate_cur_rate,  tx_rate: 423841059, last_rtt: 3510,time: 2466707458, sent_32bytes: 5, time_interval_ns: 3020
+/  5/calculate_cur_rate,  tx_rate: 1014508, last_rtt: 3510,time: 2467212136, sent_32bytes: 2, time_interval_ns: 504678
+/  5/calculate_cur_rate,  tx_rate: 40885662431, last_rtt: 2342,time: 2467213238, sent_32bytes: 176, time_interval_ns: 1102
+/  5/calculate_cur_rate,  tx_rate: 58439, last_rtt: 2342,time: 2475974492, sent_32bytes: 2, time_interval_ns: 8761254
+/  5/calculate_cur_rate,  tx_rate: 1677902621, last_rtt: 3408,time: 2475978764, sent_32bytes: 28, time_interval_ns: 4272
+/  5/calculate_cur_rate,  tx_rate: 8112051, last_rtt: 3408,time: 2480333766, sent_32bytes: 138, time_interval_ns: 4355002
+/  5/calculate_cur_rate,  tx_rate: 393047120418, last_rtt: 3412,time: 2480336822, sent_32bytes: 4692, time_interval_ns: 3056
+/  5/calculate_cur_rate,  tx_rate: 19822298501, last_rtt: 3318,time: 2480397418, sent_32bytes: 4692, time_interval_ns: 60596
+/  5/calculate_cur_rate,  tx_rate: 18637211909, last_rtt: 3410,time: 2480458076, sent_32bytes: 4416, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 3322,time: 2480515164, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 19220258506, last_rtt: 2334,time: 2480575820, sent_32bytes: 4554, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 20228761799, last_rtt: 3560,time: 2480633452, sent_32bytes: 4554, time_interval_ns: 57632
+/  5/calculate_cur_rate,  tx_rate: 18806494543, last_rtt: 26254,time: 2480693564, sent_32bytes: 4416, time_interval_ns: 60112
+/  5/calculate_cur_rate,  tx_rate: 14233183856, last_rtt: 3316,time: 2480750652, sent_32bytes: 3174, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 576821343, last_rtt: 3316,time: 2480873144, sent_32bytes: 276, time_interval_ns: 122492
+/  5/calculate_cur_rate,  tx_rate: 1764395005675, last_rtt: 2344,time: 2480876668, sent_32bytes: 24288, time_interval_ns: 3524
+/  5/calculate_cur_rate,  tx_rate: 23792428753, last_rtt: 42414,time: 2480933092, sent_32bytes: 5244, time_interval_ns: 56424
+/  5/calculate_cur_rate,  tx_rate: 20721276310, last_rtt: 3524,time: 2480992764, sent_32bytes: 4830, time_interval_ns: 59672
+/  5/calculate_cur_rate,  tx_rate: 18103161397, last_rtt: 2332,time: 2481055268, sent_32bytes: 4420, time_interval_ns: 62504
+/  5/calculate_cur_rate,  tx_rate: 21034463435, last_rtt: 3310,time: 2481112372, sent_32bytes: 4692, time_interval_ns: 57104
+/  5/calculate_cur_rate,  tx_rate: 18637826431, last_rtt: 3316,time: 2481173028, sent_32bytes: 4416, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 3408,time: 2481230116, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 18654708520, last_rtt: 34508,time: 2481290772, sent_32bytes: 4420, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 3322,time: 2481347860, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 19220258506, last_rtt: 3504,time: 2481408516, sent_32bytes: 4554, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 19178502358, last_rtt: 40978,time: 2481467462, sent_32bytes: 4416, time_interval_ns: 58946
+/  5/calculate_cur_rate,  tx_rate: 21055849665, last_rtt: 2124,time: 2481524508, sent_32bytes: 4692, time_interval_ns: 57046
+/  5/calculate_cur_rate,  tx_rate: 19802690582, last_rtt: 10404,time: 2481585164, sent_32bytes: 4692, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 18638440993, last_rtt: 3314,time: 2481645818, sent_32bytes: 4416, time_interval_ns: 60654
+/  5/calculate_cur_rate,  tx_rate: 21057558241, last_rtt: 3462,time: 2481702908, sent_32bytes: 4696, time_interval_ns: 57090
+/  5/calculate_cur_rate,  tx_rate: 18637826431, last_rtt: 2342,time: 2481763564, sent_32bytes: 4416, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 3312,time: 2481820652, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 19220258506, last_rtt: 6010,time: 2481881308, sent_32bytes: 4554, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 20390995823, last_rtt: 11590,time: 2481940214, sent_32bytes: 4692, time_interval_ns: 58906
+/  5/calculate_cur_rate,  tx_rate: 18632911392, last_rtt: 3318,time: 2482000886, sent_32bytes: 4416, time_interval_ns: 60672
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 11162,time: 2482057974, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 18654708520, last_rtt: 3312,time: 2482118630, sent_32bytes: 4420, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 2340,time: 2482175718, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 18637211909, last_rtt: 3402,time: 2482236376, sent_32bytes: 4416, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 21659951651, last_rtt: 3330,time: 2482293462, sent_32bytes: 4830, time_interval_ns: 57086
+/  5/calculate_cur_rate,  tx_rate: 18098360655, last_rtt: 3314,time: 2482355926, sent_32bytes: 4416, time_interval_ns: 62464
+/  5/calculate_cur_rate,  tx_rate: 19801996847, last_rtt: 18644,time: 2482413016, sent_32bytes: 4416, time_interval_ns: 57090
+/  5/calculate_cur_rate,  tx_rate: 21038147616, last_rtt: 15422,time: 2482470110, sent_32bytes: 4692, time_interval_ns: 57094
+/  5/calculate_cur_rate,  tx_rate: 19802690582, last_rtt: 2816,time: 2482530766, sent_32bytes: 4692, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 18637211909, last_rtt: 3318,time: 2482591424, sent_32bytes: 4416, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 21050064814, last_rtt: 3320,time: 2482648510, sent_32bytes: 4694, time_interval_ns: 57086
+/  5/calculate_cur_rate,  tx_rate: 19228699551, last_rtt: 43176,time: 2482709166, sent_32bytes: 4556, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 20392380564, last_rtt: 2214,time: 2482768068, sent_32bytes: 4692, time_interval_ns: 58902
+/  5/calculate_cur_rate,  tx_rate: 18637826431, last_rtt: 3320,time: 2482828724, sent_32bytes: 4416, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 19802690582, last_rtt: 3320,time: 2482885812, sent_32bytes: 4416, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 21034463435, last_rtt: 81300,time: 2482942916, sent_32bytes: 4692, time_interval_ns: 57104
+/  5/calculate_cur_rate,  tx_rate: 18637826431, last_rtt: 3316,time: 2483003572, sent_32bytes: 4416, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 3316,time: 2483060660, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 19802690582, last_rtt: 2336,time: 2483121316, sent_32bytes: 4692, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 19237140596, last_rtt: 5778,time: 2483181972, sent_32bytes: 4558, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 19205871360, last_rtt: 3404,time: 2483240834, sent_32bytes: 4416, time_interval_ns: 58862
+/  5/calculate_cur_rate,  tx_rate: 21039621650, last_rtt: 3312,time: 2483297924, sent_32bytes: 4692, time_interval_ns: 57090
+/  5/calculate_cur_rate,  tx_rate: 18635368587, last_rtt: 4368,time: 2483358588, sent_32bytes: 4416, time_interval_ns: 60664
+/  5/calculate_cur_rate,  tx_rate: 21041095890, last_rtt: 3318,time: 2483415674, sent_32bytes: 4692, time_interval_ns: 57086
+/  5/calculate_cur_rate,  tx_rate: 18637211909, last_rtt: 3416,time: 2483476332, sent_32bytes: 4416, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 21058295964, last_rtt: 3402,time: 2483533420, sent_32bytes: 4696, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 19220258506, last_rtt: 3306,time: 2483594076, sent_32bytes: 4554, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 19800000000, last_rtt: 3318,time: 2483652956, sent_32bytes: 4554, time_interval_ns: 58880
+/  5/calculate_cur_rate,  tx_rate: 20381538461, last_rtt: 43392,time: 2483710156, sent_32bytes: 4554, time_interval_ns: 57200
+/  5/calculate_cur_rate,  tx_rate: 19839323467, last_rtt: 36978,time: 2483770700, sent_32bytes: 4692, time_interval_ns: 60544
+/  5/calculate_cur_rate,  tx_rate: 18632911392, last_rtt: 33040,time: 2483831372, sent_32bytes: 4416, time_interval_ns: 60672
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 3406,time: 2483888460, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 18637826431, last_rtt: 38206,time: 2483949116, sent_32bytes: 4416, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 21677130044, last_rtt: 34902,time: 2484006204, sent_32bytes: 4834, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 18103577490, last_rtt: 2118,time: 2484068650, sent_32bytes: 4416, time_interval_ns: 62446
+/  5/calculate_cur_rate,  tx_rate: 21039621650, last_rtt: 3420,time: 2484125740, sent_32bytes: 4692, time_interval_ns: 57090
+/  5/calculate_cur_rate,  tx_rate: 18637826431, last_rtt: 3402,time: 2484186396, sent_32bytes: 4416, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 20421524663, last_rtt: 3308,time: 2484243484, sent_32bytes: 4554, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 19840435670, last_rtt: 3372,time: 2484302244, sent_32bytes: 4554, time_interval_ns: 58760
+/  5/calculate_cur_rate,  tx_rate: 18922335297, last_rtt: 3308,time: 2484361988, sent_32bytes: 4416, time_interval_ns: 59744
+/  5/calculate_cur_rate,  tx_rate: 21058295964, last_rtt: 3310,time: 2484419076, sent_32bytes: 4696, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 19220258506, last_rtt: 2332,time: 2484479732, sent_32bytes: 4554, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 20100413793, last_rtt: 6254,time: 2484537732, sent_32bytes: 4554, time_interval_ns: 58000
+/  5/calculate_cur_rate,  tx_rate: 18922335297, last_rtt: 12198,time: 2484597476, sent_32bytes: 4416, time_interval_ns: 59744
+/  5/calculate_cur_rate,  tx_rate: 21659192825, last_rtt: 3314,time: 2484654564, sent_32bytes: 4830, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 18673500768, last_rtt: 2338,time: 2484716996, sent_32bytes: 4554, time_interval_ns: 62432
+/  5/calculate_cur_rate,  tx_rate: 20078258473, last_rtt: 3468,time: 2484775060, sent_32bytes: 4554, time_interval_ns: 58064
+/  5/calculate_cur_rate,  tx_rate: 18937550254, last_rtt: 3404,time: 2484834756, sent_32bytes: 4416, time_interval_ns: 59696
+/  5/calculate_cur_rate,  tx_rate: 21058295964, last_rtt: 3312,time: 2484891844, sent_32bytes: 4696, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 19220258506, last_rtt: 2338,time: 2484952500, sent_32bytes: 4554, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 20083792723, last_rtt: 3308,time: 2485010548, sent_32bytes: 4554, time_interval_ns: 58048
+/  5/calculate_cur_rate,  tx_rate: 19530003015, last_rtt: 3318,time: 2485070242, sent_32bytes: 4554, time_interval_ns: 59694
+/  5/calculate_cur_rate,  tx_rate: 20396535914, last_rtt: 2338,time: 2485129132, sent_32bytes: 4692, time_interval_ns: 58890
+/  5/calculate_cur_rate,  tx_rate: 18635368587, last_rtt: 3404,time: 2485189796, sent_32bytes: 4416, time_interval_ns: 60664
+/  5/calculate_cur_rate,  tx_rate: 21041095890, last_rtt: 3320,time: 2485246882, sent_32bytes: 4692, time_interval_ns: 57086
+/  5/calculate_cur_rate,  tx_rate: 18645652675, last_rtt: 3314,time: 2485307540, sent_32bytes: 4418, time_interval_ns: 60658
+/  5/calculate_cur_rate,  tx_rate: 20430493273, last_rtt: 2430,time: 2485364628, sent_32bytes: 4556, time_interval_ns: 57088
+/  5/calculate_cur_rate,  tx_rate: 20056151940, last_rtt: 36290,time: 2485422756, sent_32bytes: 4554, time_interval_ns: 58128
+/  5/calculate_cur_rate,  tx_rate: 20148148148, last_rtt: 2120,time: 2485482372, sent_32bytes: 4692, time_interval_ns: 59616
+/  5/calculate_cur_rate,  tx_rate: 18055394355, last_rtt: 2120,time: 2485543028, sent_32bytes: 4278, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 21690840797, last_rtt: 90710,time: 2485598404, sent_32bytes: 4692, time_interval_ns: 55376
+/  5/calculate_cur_rate,  tx_rate: 19797468354, last_rtt: 45274,time: 2485659076, sent_32bytes: 4692, time_interval_ns: 60672
+/  5/calculate_cur_rate,  tx_rate: 18637826431, last_rtt: 3500,time: 2485719732, sent_32bytes: 4416, time_interval_ns: 60656
+/  5/calculate_cur_rate,  tx_rate: 21040358744, last_rtt: 48456,time: 2485776820, sent_32bytes: 4692, time_interval_ns: 57088
+/  5/rtt_template_handle_roce_rtt,  STATE: 3, rtt: 47347, last_rtt: 42724, low_rate: 32, high_rate: 1048576, cur_rate: 104857, max_rate: 1048576 
+^CInfo: Finished waiting on DOCA PCC
+[?2004h]0;zdp@localhost: /tmp/build/pcc[01;32mzdp@localhost[00m:[01;34m/tmp/build/pcc[00m$ exit
+[?2004lexit
+
+Script done on 2024-11-17 17:14:57+08:00 [COMMAND_EXIT_CODE="0"]

@@ -79,7 +79,8 @@ static const volatile char rtt_template_param_max_delay_desc[] = "MAX_DELAY, max
 static const volatile char rtt_template_counter_tx_desc[] = "COUNTER_TX_EVENT, number of tx events handled";
 static const volatile char rtt_template_counter_rtt_desc[] = "COUNTER_RTT_EVENT, number of rtt events handled";
 
-int rtt_times = 50;
+int rtt_times = 100;
+int tx_times = 10;
 
 #define FRACTIONAL_BITS 20
 #define ALPHA_FIXED_POINT (943718) // 0.9 * (1 << 20) 预计算后的结果
@@ -215,7 +216,7 @@ void rtt_template_init(uint32_t algo_idx)
  * @return: The new calculated rate value
  */
 
-uint32_t calculate_cur_rate(uint32_t sent_32bytes, uint32_t start_time_ns, uint32_t end_time_ns) {
+uint32_t calculate_cur_rate(uint32_t sent_32bytes, uint32_t start_time_ns, uint32_t end_time_ns, cc_ctxt_rtt_template_t *ccctx) {
     // Calculate total bytes sent
   
 
@@ -240,7 +241,9 @@ uint32_t calculate_cur_rate(uint32_t sent_32bytes, uint32_t start_time_ns, uint3
     uint64_t send_rate_bps = (total_bits_sent * 1000000000ULL) / time_interval_ns;
 	if(rtt_times>0)
 	{	
-		doca_pcc_dev_printf("%s,  rx_rate: %lu \n", __func__, send_rate_bps);
+		doca_pcc_dev_printf("%s,  tx_rate: %lu, last_rtt: %u,time: %u, sent_32bytes: %u, time_interval_ns: %u\n", __func__, send_rate_bps, ccctx->last_rtt,end_time_ns, sent_32bytes,time_interval_ns);
+
+		//rtt_times--;
 	}
 	
 
@@ -350,14 +353,21 @@ static inline uint32_t new_rate_rtt(cc_ctxt_rtt_template_t *ccctx,
 			ccctx->cur_rate = ccctx->high_rate + ccctx->high_rate/20;
 		}
 
+		if(rtt <= ccctx->min_rtt+ RECOVERY_RTT && ccctx->high_rate != DOCA_PCC_DEV_MAX_RATE)
+		{
+			ccctx->high_rate = DOCA_PCC_DEV_MAX_RATE;
+			ccctx->flags.state = 1;
+		}
+
 	}else if(ccctx->flags.state == 3)
 	{
-		ccctx->cur_rate = min(ccctx->low_rate/2,param[RTT_TEMPLATE_MIN_RATE]);
+		ccctx->cur_rate = max(ccctx->low_rate/2,param[RTT_TEMPLATE_MIN_RATE]);
 		
 		if(rtt < ccctx->min_rtt + BURST_RTT)
 		{
 			ccctx->low_rate = ccctx->low_rate - ccctx->low_rate/100;
 			ccctx->cur_rate = (ccctx->low_rate+ccctx->high_rate)/2;
+			ccctx->flags.state = 1;
 		}
 	}
 	if(rtt_times>0)
@@ -420,7 +430,7 @@ static inline uint32_t algorithm_core(cc_ctxt_rtt_template_t *ccctx,
 	{cur_rate = param[RTT_TEMPLATE_MIN_RATE];}
 	/* End of example */
 
-
+	//cur_rate = DOCA_PCC_DEV_MAX_RATE;
 	return cur_rate;
 }
 
@@ -725,7 +735,7 @@ void rtt_template_algo(doca_pcc_dev_event_t *event,
 
 		
 
-		uint32_t rx_rate = calculate_cur_rate( tx_cntrs.sent_32bytes, rtt_template_ctx->last_rx_time, end_time);
+		uint32_t rx_rate = calculate_cur_rate( tx_cntrs.sent_32bytes, rtt_template_ctx->last_rx_time, end_time, rtt_template_ctx);
 
 		if(rtt_times>0)
 		{	
