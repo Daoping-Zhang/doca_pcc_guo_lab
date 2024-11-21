@@ -270,7 +270,7 @@ uint32_t calculate_cur_rate(doca_pcc_dev_event_t *event, cc_ctxt_rtt_template_t 
 		
 			if(1)
 			{	
-				doca_pcc_dev_printf("%s,  tx_rate: %lu, tx_rate: %u, cur_rate: %u, sent_32bytes: %u, start: %u, end: %u, time_interval_ns: %u\n", __func__, send_rate_bps, tx_rate, ccctx->cur_rate, ccctx->tx_32byte ,start_time_ns,end_time_ns,ccctx->tx_time);
+				//doca_pcc_dev_printf("%s,  tx_rate: %lu, tx_rate: %u, cur_rate: %u, sent_32bytes: %u, start: %u, end: %u, time_interval_ns: %u\n", __func__, send_rate_bps, tx_rate, ccctx->cur_rate, ccctx->tx_32byte ,start_time_ns,end_time_ns,ccctx->tx_time);
 			}
 
 		ccctx->tx_time = 0;
@@ -718,9 +718,9 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	*/
 
 	cur_rate = DOCA_PCC_DEV_MAX_RATE;
-	if(rtt>10000)
+	if(rtt>5000)
 	{
-		doca_pcc_dev_printf("cur_rate: %u RTT_start: %u RTT_end: %u RTT: %d\n", cur_rate, start_rtt, end_rtt, rtt);
+		doca_pcc_dev_printf("high RTT: %d\n", rtt);
 	}
 	
 	//doca_pcc_dev_printf(" rtt_meas_psn:%u, rtt_req_to_rtt_sent: %u \n",ccctx->rtt_meas_psn, ccctx->rtt_req_to_rtt_sent);
