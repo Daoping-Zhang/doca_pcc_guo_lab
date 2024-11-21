@@ -1,0 +1,1148 @@
+Script started on 2024-11-19 17:54:13+08:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="230" LINES="19"]
+[?2004h]0;zdp@localhost: /tmp/build/pcc[01;32mzdp@localhost[00m:[01;34m/tmp/build/pcc[00m$ exit./doca_pcc -d mlx5_0
+[?2004lInfo: Welcome to DOCA Programable Congestion Control (PCC) application
+Info: Starting DOCA PCC
+/  5/doca_pcc_dev_user_init, disable_event_bitmask=0x20
+format 0 - user init: port num = 0, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x1, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x2, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x3, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+Info: Press ctrl + C to exit
+Info: PCC host status Active
+Info: Waiting on DOCA PCC
+Info: PCC host status Active
+Info: Waiting on DOCA PCC
+/  5/rtt_template_algo, new flow BW in MB: 20000 Mb
+/  5/cur_rate: 1048576 RTT_start: 3682231574 RTT_end: 3682234692 RTT: 3118
+/  5/cur_rate: 1048576 RTT_start: 3682276078 RTT_end: 3682279432 RTT: 3354
+/  5/calculate_cur_rate,  tx_rate: 133241007826, tx_rate: 1397133, cur_rate: 1048576, sent_32bytes: 53337, start: 3682274518, end: 3682279334, time_interval_ns: 102478
+/  5/cur_rate: 1048576 RTT_start: 3682320102 RTT_end: 3682323408 RTT: 3306
+/  5/calculate_cur_rate,  tx_rate: 79339624598, tx_rate: 831936, cur_rate: 1048576, sent_32bytes: 47817, start: 3682317824, end: 3682433622, time_interval_ns: 154288
+/  5/cur_rate: 1048576 RTT_start: 3682438394 RTT_end: 3682441742 RTT: 3348
+/  5/calculate_cur_rate,  tx_rate: 101712092130, tx_rate: 1066528, cur_rate: 1048576, sent_32bytes: 46782, start: 3682438350, end: 3682551368, time_interval_ns: 117746
+/  5/cur_rate: 1027605 RTT_start: 3682558118 RTT_end: 3682562702 RTT: 4584
+/  5/calculate_cur_rate,  tx_rate: 96497443239, tx_rate: 1011849, cur_rate: 1027605, sent_32bytes: 44229, start: 3682555968, end: 3682668704, time_interval_ns: 117336
+/  5/cur_rate: 1027605 RTT_start: 3682671844 RTT_end: 3682675172 RTT: 3328
+/  5/calculate_cur_rate,  tx_rate: 99142700929, tx_rate: 1039586, cur_rate: 1027605, sent_32bytes: 45333, start: 3682673278, end: 3682785760, time_interval_ns: 117056
+/  5/cur_rate: 1027605 RTT_start: 3682787912 RTT_end: 3682791266 RTT: 3354
+/  5/calculate_cur_rate,  tx_rate: 99192116217, tx_rate: 1040104, cur_rate: 1027605, sent_32bytes: 45609, start: 3682790334, end: 3682903470, time_interval_ns: 117710
+/  5/cur_rate: 1027605 RTT_start: 3682905604 RTT_end: 3682908960 RTT: 3356
+/  5/calculate_cur_rate,  tx_rate: 99690792174, tx_rate: 1045333, cur_rate: 1027605, sent_32bytes: 45540, start: 3682907910, end: 3683020414, time_interval_ns: 116944
+/  5/cur_rate: 1027605 RTT_start: 3683021644 RTT_end: 3683024972 RTT: 3328
+/  5/calculate_cur_rate,  tx_rate: 99115605356, tx_rate: 1039302, cur_rate: 1027605, sent_32bytes: 45333, start: 3683024990, end: 3683137502, time_interval_ns: 117088
+/  5/cur_rate: 1027605 RTT_start: 3683138842 RTT_end: 3683142166 RTT: 3324
+/  5/calculate_cur_rate,  tx_rate: 99166632590, tx_rate: 1039837, cur_rate: 1027605, sent_32bytes: 45471, start: 3683142078, end: 3683254886, time_interval_ns: 117384
+/  5/cur_rate: 1027605 RTT_start: 3683256862 RTT_end: 3683260214 RTT: 3352
+/  5/calculate_cur_rate,  tx_rate: 99883558835, tx_rate: 1047355, cur_rate: 1027605, sent_32bytes: 45678, start: 3683259462, end: 3683371958, time_interval_ns: 117072
+/  5/cur_rate: 1006634 RTT_start: 3683374028 RTT_end: 3683377374 RTT: 3346
+/  5/calculate_cur_rate,  tx_rate: 98988605534, tx_rate: 1037970, cur_rate: 1006634, sent_32bytes: 45609, start: 3683376886, end: 3683489910, time_interval_ns: 117952
+/  5/cur_rate: 1006634 RTT_start: 3683491174 RTT_end: 3683494532 RTT: 3358
+/  5/cur_rate: 1006634 RTT_start: 3683607626 RTT_end: 3683610540 RTT: 2914
+/  5/calculate_cur_rate,  tx_rate: 127624838116, tx_rate: 1338243, cur_rate: 1006634, sent_32bytes: 58512, start: 3683494590, end: 3683607278, time_interval_ns: 117368
+/  5/cur_rate: 1006634 RTT_start: 3683649292 RTT_end: 3683652192 RTT: 2900
+/  5/cur_rate: 1006634 RTT_start: 3683764204 RTT_end: 3683767522 RTT: 3318
+/  5/calculate_cur_rate,  tx_rate: 97346919965, tx_rate: 1020756, cur_rate: 1006634, sent_32bytes: 59409, start: 3683648944, end: 3683763510, time_interval_ns: 156232
+/  5/cur_rate: 1006634 RTT_start: 3683805490 RTT_end: 3683807910 RTT: 2420
+/  5/cur_rate: 1006634 RTT_start: 3683920356 RTT_end: 3683923684 RTT: 3328
+/  5/calculate_cur_rate,  tx_rate: 96953121801, tx_rate: 1016627, cur_rate: 1006634, sent_32bytes: 59202, start: 3683805142, end: 3683919830, time_interval_ns: 156320
+/  5/cur_rate: 985663 RTT_start: 3683962154 RTT_end: 3683965490 RTT: 3336
+/  5/cur_rate: 985663 RTT_start: 3684076166 RTT_end: 3684079524 RTT: 3358
+/  5/calculate_cur_rate,  tx_rate: 95724180390, tx_rate: 1003740, cur_rate: 985663, sent_32bytes: 58305, start: 3683961510, end: 3684075758, time_interval_ns: 155928
+/  5/cur_rate: 985663 RTT_start: 3684116974 RTT_end: 3684119960 RTT: 2986
+/  5/cur_rate: 985663 RTT_start: 3684231464 RTT_end: 3684234016 RTT: 2552
+/  5/calculate_cur_rate,  tx_rate: 93226919314, tx_rate: 977555, cur_rate: 985663, sent_32bytes: 56580, start: 3684116652, end: 3684231126, time_interval_ns: 155368
+/  5/cur_rate: 985663 RTT_start: 3684272782 RTT_end: 3684275338 RTT: 2556
+/  5/cur_rate: 985663 RTT_start: 3684386122 RTT_end: 3684388468 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 93303817109, tx_rate: 978361, cur_rate: 985663, sent_32bytes: 56373, start: 3684272454, end: 3684385798, time_interval_ns: 154672
+/  5/cur_rate: 985663 RTT_start: 3684427746 RTT_end: 3684430538 RTT: 2792
+/  5/cur_rate: 964692 RTT_start: 3684541274 RTT_end: 3684543822 RTT: 2548
+/  5/calculate_cur_rate,  tx_rate: 92683168316, tx_rate: 971853, cur_rate: 964692, sent_32bytes: 56166, start: 3684427398, end: 3684540934, time_interval_ns: 155136
+/  5/cur_rate: 964692 RTT_start: 3684582448 RTT_end: 3684585050 RTT: 2602
+/  5/cur_rate: 964692 RTT_start: 3684696138 RTT_end: 3684698652 RTT: 2514
+/  5/calculate_cur_rate,  tx_rate: 91139742728, tx_rate: 955669, cur_rate: 964692, sent_32bytes: 55131, start: 3684582126, end: 3684695790, time_interval_ns: 154856
+/  5/cur_rate: 964692 RTT_start: 3684737042 RTT_end: 3684739546 RTT: 2504
+/  5/cur_rate: 964692 RTT_start: 3684850736 RTT_end: 3684853246 RTT: 2510
+/  5/calculate_cur_rate,  tx_rate: 91733443708, tx_rate: 961894, cur_rate: 964692, sent_32bytes: 55407, start: 3684736694, end: 3684850414, time_interval_ns: 154624
+/  5/cur_rate: 964692 RTT_start: 3684892414 RTT_end: 3684894946 RTT: 2532
+/  5/cur_rate: 964692 RTT_start: 3685006270 RTT_end: 3685008926 RTT: 2656
+/  5/calculate_cur_rate,  tx_rate: 90878221947, tx_rate: 952927, cur_rate: 964692, sent_32bytes: 55200, start: 3684892086, end: 3685005910, time_interval_ns: 155496
+/  5/cur_rate: 943721 RTT_start: 3685047568 RTT_end: 3685049912 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 69516387096, tx_rate: 728932, cur_rate: 943721, sent_32bytes: 42090, start: 3685047246, end: 3685160910, time_interval_ns: 155000
+/  5/cur_rate: 943721 RTT_start: 3685161962 RTT_end: 3685165438 RTT: 3476
+/  5/cur_rate: 943721 RTT_start: 3685277172 RTT_end: 3685279692 RTT: 2520
+/  5/calculate_cur_rate,  tx_rate: 118078940104, tx_rate: 1238147, cur_rate: 943721, sent_32bytes: 53475, start: 3685165224, end: 3685276846, time_interval_ns: 115936
+/  5/cur_rate: 943721 RTT_start: 3685318538 RTT_end: 3685321518 RTT: 2980
+/  5/cur_rate: 943721 RTT_start: 3685433110 RTT_end: 3685435630 RTT: 2520
+/  5/calculate_cur_rate,  tx_rate: 89261321807, tx_rate: 935972, cur_rate: 943721, sent_32bytes: 54372, start: 3685318190, end: 3685432784, time_interval_ns: 155938
+/  5/cur_rate: 943721 RTT_start: 3685474456 RTT_end: 3685477046 RTT: 2590
+/  5/cur_rate: 943721 RTT_start: 3685588616 RTT_end: 3685591150 RTT: 2534
+/  5/calculate_cur_rate,  tx_rate: 89166227252, tx_rate: 934975, cur_rate: 943721, sent_32bytes: 54165, start: 3685474120, end: 3685588294, time_interval_ns: 155510
+/  5/cur_rate: 922750 RTT_start: 3685629628 RTT_end: 3685632490 RTT: 2862
+/  5/cur_rate: 922750 RTT_start: 3685742462 RTT_end: 3685745046 RTT: 2584
+/  5/calculate_cur_rate,  tx_rate: 88769012729, tx_rate: 930810, cur_rate: 922750, sent_32bytes: 53337, start: 3685629302, end: 3685742112, time_interval_ns: 153818
+/  5/cur_rate: 922750 RTT_start: 3685782994 RTT_end: 3685785494 RTT: 2500
+/  5/cur_rate: 922750 RTT_start: 3685895336 RTT_end: 3685897894 RTT: 2558
+/  5/calculate_cur_rate,  tx_rate: 87706401852, tx_rate: 919668, cur_rate: 922750, sent_32bytes: 52371, start: 3685782670, end: 3685894974, time_interval_ns: 152862
+/  5/cur_rate: 922750 RTT_start: 3685936038 RTT_end: 3685938582 RTT: 2544
+/  5/cur_rate: 922750 RTT_start: 3686049440 RTT_end: 3686051918 RTT: 2478
+/  5/calculate_cur_rate,  tx_rate: 87893709777, tx_rate: 921632, cur_rate: 922750, sent_32bytes: 52923, start: 3685935672, end: 3686049118, time_interval_ns: 154144
+/  5/cur_rate: 922750 RTT_start: 3686090432 RTT_end: 3686092978 RTT: 2546
+/  5/cur_rate: 901779 RTT_start: 3686202886 RTT_end: 3686205388 RTT: 2502
+/  5/calculate_cur_rate,  tx_rate: 87629100391, tx_rate: 918857, cur_rate: 901779, sent_32bytes: 52509, start: 3686090112, end: 3686202518, time_interval_ns: 153400
+/  5/cur_rate: 901779 RTT_start: 3686243668 RTT_end: 3686246138 RTT: 2470
+/  5/cur_rate: 901779 RTT_start: 3686356868 RTT_end: 3686359420 RTT: 2552
+/  5/calculate_cur_rate,  tx_rate: 83956989247, tx_rate: 880352, cur_rate: 901779, sent_32bytes: 50508, start: 3686243318, end: 3686356526, time_interval_ns: 154008
+/  5/cur_rate: 901779 RTT_start: 3686397292 RTT_end: 3686399646 RTT: 2354
+/  5/cur_rate: 901779 RTT_start: 3686509868 RTT_end: 3686512452 RTT: 2584
+/  5/calculate_cur_rate,  tx_rate: 84390254104, tx_rate: 884895, cur_rate: 901779, sent_32bytes: 50439, start: 3686396966, end: 3686509534, time_interval_ns: 153008
+/  5/cur_rate: 901779 RTT_start: 3686550328 RTT_end: 3686552850 RTT: 2522
+/  5/cur_rate: 901779 RTT_start: 3686662992 RTT_end: 3686666774 RTT: 3782
+/  5/calculate_cur_rate,  tx_rate: 84319715808, tx_rate: 884156, cur_rate: 901779, sent_32bytes: 50439, start: 3686550006, end: 3686662670, time_interval_ns: 153136
+/  5/cur_rate: 880808 RTT_start: 3686703902 RTT_end: 3686706342 RTT: 2440
+/  5/calculate_cur_rate,  tx_rate: 64639029745, tx_rate: 677789, cur_rate: 880808, sent_32bytes: 38640, start: 3686703158, end: 3686815702, time_interval_ns: 153032
+/  5/cur_rate: 880808 RTT_start: 3686816024 RTT_end: 3686820136 RTT: 4112
+/  5/cur_rate: 880808 RTT_start: 3686930888 RTT_end: 3686933334 RTT: 2446
+/  5/calculate_cur_rate,  tx_rate: 108416213957, tx_rate: 1136826, cur_rate: 880808, sent_32bytes: 48645, start: 3686820366, end: 3686930566, time_interval_ns: 114864
+/  5/cur_rate: 880808 RTT_start: 3686971324 RTT_end: 3686973814 RTT: 2490
+/  5/cur_rate: 880808 RTT_start: 3687084348 RTT_end: 3687086780 RTT: 2432
+/  5/calculate_cur_rate,  tx_rate: 83004705606, tx_rate: 870367, cur_rate: 880808, sent_32bytes: 49749, start: 3686970998, end: 3687084000, time_interval_ns: 153434
+/  5/cur_rate: 880808 RTT_start: 3687125202 RTT_end: 3687127738 RTT: 2536
+/  5/cur_rate: 880808 RTT_start: 3687237574 RTT_end: 3687240100 RTT: 2526
+/  5/calculate_cur_rate,  tx_rate: 82645471986, tx_rate: 866600, cur_rate: 880808, sent_32bytes: 49473, start: 3687124846, end: 3687237246, time_interval_ns: 153246
+/  5/cur_rate: 859837 RTT_start: 3687278396 RTT_end: 3687280910 RTT: 2514
+/  5/cur_rate: 859837 RTT_start: 3687390944 RTT_end: 3687393444 RTT: 2500
+/  5/calculate_cur_rate,  tx_rate: 82114750678, tx_rate: 861035, cur_rate: 859837, sent_32bytes: 49197, start: 3687278070, end: 3687390622, time_interval_ns: 153376
+/  5/cur_rate: 859837 RTT_start: 3687431208 RTT_end: 3687433624 RTT: 2416
+/  5/cur_rate: 859837 RTT_start: 3687543690 RTT_end: 3687546186 RTT: 2496
+/  5/calculate_cur_rate,  tx_rate: 81542168674, tx_rate: 855031, cur_rate: 859837, sent_32bytes: 48645, start: 3687430886, end: 3687543342, time_interval_ns: 152720
+/  5/cur_rate: 859837 RTT_start: 3687584350 RTT_end: 3687586930 RTT: 2580
+/  5/cur_rate: 859837 RTT_start: 3687697034 RTT_end: 3687699536 RTT: 2502
+/  5/calculate_cur_rate,  tx_rate: 81210350584, tx_rate: 851552, cur_rate: 859837, sent_32bytes: 48645, start: 3687584022, end: 3687696686, time_interval_ns: 153344
+/  5/cur_rate: 859837 RTT_start: 3687737664 RTT_end: 3687741062 RTT: 3398
+/  5/cur_rate: 838866 RTT_start: 3687849766 RTT_end: 3687852274 RTT: 2508
+/  5/calculate_cur_rate,  tx_rate: 81293809573, tx_rate: 852427, cur_rate: 838866, sent_32bytes: 48507, start: 3687737344, end: 3687849438, time_interval_ns: 152752
+/  5/cur_rate: 838866 RTT_start: 3687890484 RTT_end: 3687893048 RTT: 2564
+/  5/cur_rate: 838866 RTT_start: 3688003392 RTT_end: 3688005902 RTT: 2510
+/  5/calculate_cur_rate,  tx_rate: 80027495703, tx_rate: 839149, cur_rate: 838866, sent_32bytes: 48024, start: 3687890158, end: 3688003062, time_interval_ns: 153624
+/  5/cur_rate: 838866 RTT_start: 3688044330 RTT_end: 3688046858 RTT: 2528
+/  5/cur_rate: 838866 RTT_start: 3688157122 RTT_end: 3688159716 RTT: 2594
+/  5/calculate_cur_rate,  tx_rate: 79636931404, tx_rate: 835053, cur_rate: 838866, sent_32bytes: 47817, start: 3688043982, end: 3688156774, time_interval_ns: 153712
+/  5/cur_rate: 838866 RTT_start: 3688197580 RTT_end: 3688200022 RTT: 2442
+/  5/cur_rate: 838866 RTT_start: 3688310008 RTT_end: 3688312420 RTT: 2412
+/  5/calculate_cur_rate,  tx_rate: 80053573297, tx_rate: 839422, cur_rate: 838866, sent_32bytes: 47817, start: 3688197254, end: 3688309686, time_interval_ns: 152912
+/  5/cur_rate: 817895 RTT_start: 3688351020 RTT_end: 3688353390 RTT: 2370
+/  5/calculate_cur_rate,  tx_rate: 60834063869, tx_rate: 637891, cur_rate: 817895, sent_32bytes: 36432, start: 3688350694, end: 3688462998, time_interval_ns: 153312
+/  5/cur_rate: 817895 RTT_start: 3688463894 RTT_end: 3688467602 RTT: 3708
+/  5/cur_rate: 817895 RTT_start: 3688578306 RTT_end: 3688580796 RTT: 2490
+/  5/calculate_cur_rate,  tx_rate: 101257620041, tx_rate: 1061763, cur_rate: 817895, sent_32bytes: 45471, start: 3688467558, end: 3688577958, time_interval_ns: 114960
+/  5/cur_rate: 817895 RTT_start: 3688619058 RTT_end: 3688622578 RTT: 3520
+/  5/cur_rate: 817895 RTT_start: 3688732226 RTT_end: 3688734572 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 76992568726, tx_rate: 807325, cur_rate: 817895, sent_32bytes: 46299, start: 3688618734, end: 3688731902, time_interval_ns: 153944
+/  5/cur_rate: 817895 RTT_start: 3688772858 RTT_end: 3688775208 RTT: 2350
+/  5/cur_rate: 817895 RTT_start: 3688885204 RTT_end: 3688887568 RTT: 2364
+/  5/calculate_cur_rate,  tx_rate: 77028962956, tx_rate: 807707, cur_rate: 817895, sent_32bytes: 46023, start: 3688772510, end: 3688884856, time_interval_ns: 152954
+/  5/cur_rate: 796924 RTT_start: 3688925784 RTT_end: 3688928170 RTT: 2386
+/  5/cur_rate: 796924 RTT_start: 3689038056 RTT_end: 3689040556 RTT: 2500
+/  5/calculate_cur_rate,  tx_rate: 76951713130, tx_rate: 806897, cur_rate: 796924, sent_32bytes: 45954, start: 3688925462, end: 3689037734, time_interval_ns: 152878
+/  5/cur_rate: 796924 RTT_start: 3689078888 RTT_end: 3689081256 RTT: 2368
+/  5/cur_rate: 796924 RTT_start: 3689191220 RTT_end: 3689193726 RTT: 2506
+/  5/calculate_cur_rate,  tx_rate: 75783930623, tx_rate: 794652, cur_rate: 796924, sent_32bytes: 45333, start: 3689078566, end: 3689190870, time_interval_ns: 153136
+/  5/cur_rate: 796924 RTT_start: 3689232030 RTT_end: 3689234414 RTT: 2384
+/  5/cur_rate: 796924 RTT_start: 3689344356 RTT_end: 3689346840 RTT: 2484
+/  5/calculate_cur_rate,  tx_rate: 75782940876, tx_rate: 794641, cur_rate: 796924, sent_32bytes: 45333, start: 3689231704, end: 3689344008, time_interval_ns: 153138
+/  5/cur_rate: 796924 RTT_start: 3689385206 RTT_end: 3689387742 RTT: 2536
+/  5/cur_rate: 775953 RTT_start: 3689497658 RTT_end: 3689500156 RTT: 2498
+/  5/calculate_cur_rate,  tx_rate: 75471422421, tx_rate: 791375, cur_rate: 775953, sent_32bytes: 45195, start: 3689384854, end: 3689497310, time_interval_ns: 153302
+/  5/cur_rate: 775953 RTT_start: 3689538056 RTT_end: 3689540566 RTT: 2510
+/  5/cur_rate: 775953 RTT_start: 3689650478 RTT_end: 3689652994 RTT: 2516
+/  5/calculate_cur_rate,  tx_rate: 74671133912, tx_rate: 782983, cur_rate: 775953, sent_32bytes: 44574, start: 3689537714, end: 3689650126, time_interval_ns: 152816
+/  5/cur_rate: 775953 RTT_start: 3689691066 RTT_end: 3689693600 RTT: 2534
+/  5/cur_rate: 775953 RTT_start: 3689803438 RTT_end: 3689805806 RTT: 2368
+/  5/calculate_cur_rate,  tx_rate: 74703619939, tx_rate: 783324, cur_rate: 775953, sent_32bytes: 44643, start: 3689690718, end: 3689803112, time_interval_ns: 152986
+/  5/cur_rate: 775953 RTT_start: 3689844498 RTT_end: 3689846856 RTT: 2358
+/  5/cur_rate: 775953 RTT_start: 3689956910 RTT_end: 3689959326 RTT: 2416
+/  5/calculate_cur_rate,  tx_rate: 74236864053, tx_rate: 778429, cur_rate: 775953, sent_32bytes: 44505, start: 3689844150, end: 3689956584, time_interval_ns: 153472
+/  5/cur_rate: 754982 RTT_start: 3689997594 RTT_end: 3690000084 RTT: 2490
+/  5/cur_rate: 754982 RTT_start: 3690109976 RTT_end: 3690112356 RTT: 2380
+/  5/calculate_cur_rate,  tx_rate: 74315459391, tx_rate: 779254, cur_rate: 754982, sent_32bytes: 44436, start: 3689997246, end: 3690109656, time_interval_ns: 153072
+/  5/cur_rate: 754982 RTT_start: 3690150802 RTT_end: 3690153252 RTT: 2450
+/  5/cur_rate: 754982 RTT_start: 3690263596 RTT_end: 3690265958 RTT: 2362
+/  5/calculate_cur_rate,  tx_rate: 73258815563, tx_rate: 768174, cur_rate: 754982, sent_32bytes: 43953, start: 3690150454, end: 3690263248, time_interval_ns: 153592
+/  5/cur_rate: 754982 RTT_start: 3690304344 RTT_end: 3690306842 RTT: 2498
+/  5/calculate_cur_rate,  tx_rate: 55902374223, tx_rate: 586178, cur_rate: 754982, sent_32bytes: 33534, start: 3690304016, end: 3690416814, time_interval_ns: 153566
+/  5/cur_rate: 754982 RTT_start: 3690417820 RTT_end: 3690421674 RTT: 3854
+/  5/cur_rate: 754982 RTT_start: 3690531892 RTT_end: 3690534362 RTT: 2470
+/  5/calculate_cur_rate,  tx_rate: 96511973230, tx_rate: 1012001, cur_rate: 754982, sent_32bytes: 43263, start: 3690421136, end: 3690531570, time_interval_ns: 114756
+/  5/cur_rate: 734011 RTT_start: 3690572694 RTT_end: 3690575216 RTT: 2522
+/  5/cur_rate: 734011 RTT_start: 3690685950 RTT_end: 3690688372 RTT: 2422
+/  5/calculate_cur_rate,  tx_rate: 72476160797, tx_rate: 759967, cur_rate: 734011, sent_32bytes: 43608, start: 3690572366, end: 3690685602, time_interval_ns: 154032
+/  5/cur_rate: 734011 RTT_start: 3690726234 RTT_end: 3690728734 RTT: 2500
+/  5/cur_rate: 734011 RTT_start: 3690838350 RTT_end: 3690840796 RTT: 2446
+/  5/calculate_cur_rate,  tx_rate: 71040755806, tx_rate: 744916, cur_rate: 734011, sent_32bytes: 42297, start: 3690725902, end: 3690838022, time_interval_ns: 152420
+/  5/cur_rate: 734011 RTT_start: 3690878984 RTT_end: 3690881496 RTT: 2512
+/  5/cur_rate: 734011 RTT_start: 3690991466 RTT_end: 3690993910 RTT: 2444
+/  5/calculate_cur_rate,  tx_rate: 71073208966, tx_rate: 745256, cur_rate: 734011, sent_32bytes: 42504, start: 3690878640, end: 3690991118, time_interval_ns: 153096
+/  5/cur_rate: 734011 RTT_start: 3691032116 RTT_end: 3691034596 RTT: 2480
+/  5/cur_rate: 713040 RTT_start: 3691144634 RTT_end: 3691147164 RTT: 2530
+/  5/calculate_cur_rate,  tx_rate: 70924475086, tx_rate: 743697, cur_rate: 713040, sent_32bytes: 42435, start: 3691031790, end: 3691144286, time_interval_ns: 153168
+/  5/cur_rate: 713040 RTT_start: 3691185274 RTT_end: 3691187784 RTT: 2510
+/  5/cur_rate: 713040 RTT_start: 3691297756 RTT_end: 3691300194 RTT: 2438
+/  5/calculate_cur_rate,  tx_rate: 68744083999, tx_rate: 720833, cur_rate: 713040, sent_32bytes: 41124, start: 3691184942, end: 3691297430, time_interval_ns: 153144
+/  5/cur_rate: 713040 RTT_start: 3691338206 RTT_end: 3691340646 RTT: 2440
+/  5/cur_rate: 713040 RTT_start: 3691450714 RTT_end: 3691453118 RTT: 2404
+/  5/calculate_cur_rate,  tx_rate: 68953078411, tx_rate: 723025, cur_rate: 713040, sent_32bytes: 41193, start: 3691337878, end: 3691450366, time_interval_ns: 152936
+/  5/cur_rate: 713040 RTT_start: 3691491640 RTT_end: 3691494144 RTT: 2504
+/  5/cur_rate: 713040 RTT_start: 3691604166 RTT_end: 3691606662 RTT: 2496
+/  5/calculate_cur_rate,  tx_rate: 68597164303, tx_rate: 719293, cur_rate: 713040, sent_32bytes: 41124, start: 3691491302, end: 3691603838, time_interval_ns: 153472
+/  5/cur_rate: 692069 RTT_start: 3691644622 RTT_end: 3691647126 RTT: 2504
+/  5/cur_rate: 692069 RTT_start: 3691757120 RTT_end: 3691759622 RTT: 2502
+/  5/calculate_cur_rate,  tx_rate: 68256512187, tx_rate: 715721, cur_rate: 692069, sent_32bytes: 40779, start: 3691644288, end: 3691756782, time_interval_ns: 152944
+/  5/cur_rate: 692069 RTT_start: 3691798210 RTT_end: 3691800552 RTT: 2342
+/  5/cur_rate: 692069 RTT_start: 3691911214 RTT_end: 3691913756 RTT: 2542
+/  5/calculate_cur_rate,  tx_rate: 65571673329, tx_rate: 687568, cur_rate: 692069, sent_32bytes: 39468, start: 3691797886, end: 3691910870, time_interval_ns: 154088
+/  5/cur_rate: 692069 RTT_start: 3691951814 RTT_end: 3691954162 RTT: 2348
+/  5/cur_rate: 692069 RTT_start: 3692064688 RTT_end: 3692067242 RTT: 2554
+/  5/calculate_cur_rate,  tx_rate: 65831430805, tx_rate: 690292, cur_rate: 692069, sent_32bytes: 39468, start: 3691951486, end: 3692064350, time_interval_ns: 153480
+/  5/cur_rate: 692069 RTT_start: 3692105410 RTT_end: 3692107760 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 50119117034, tx_rate: 525537, cur_rate: 692069, sent_32bytes: 30084, start: 3692105088, end: 3692218014, time_interval_ns: 153664
+/  5/cur_rate: 671098 RTT_start: 3692218388 RTT_end: 3692222596 RTT: 4208
+/  5/cur_rate: 671098 RTT_start: 3692333330 RTT_end: 3692335674 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 85868373452, tx_rate: 900395, cur_rate: 671098, sent_32bytes: 38571, start: 3692222302, end: 3692333006, time_interval_ns: 114992
+/  5/cur_rate: 671098 RTT_start: 3692374058 RTT_end: 3692376530 RTT: 2472
+/  5/cur_rate: 671098 RTT_start: 3692486534 RTT_end: 3692489016 RTT: 2482
+/  5/calculate_cur_rate,  tx_rate: 63876344647, tx_rate: 669792, cur_rate: 671098, sent_32bytes: 38226, start: 3692373710, end: 3692486206, time_interval_ns: 153200
+/  5/cur_rate: 671098 RTT_start: 3692527270 RTT_end: 3692529788 RTT: 2518
+/  5/cur_rate: 671098 RTT_start: 3692639580 RTT_end: 3692642080 RTT: 2500
+/  5/calculate_cur_rate,  tx_rate: 63939783597, tx_rate: 670457, cur_rate: 671098, sent_32bytes: 38226, start: 3692526942, end: 3692639254, time_interval_ns: 153048
+/  5/cur_rate: 671098 RTT_start: 3692680430 RTT_end: 3692682962 RTT: 2532
+/  5/cur_rate: 650127 RTT_start: 3692792804 RTT_end: 3692795352 RTT: 2548
+/  5/calculate_cur_rate,  tx_rate: 63866339476, tx_rate: 669687, cur_rate: 650127, sent_32bytes: 38226, start: 3692680102, end: 3692792478, time_interval_ns: 153224
+/  5/cur_rate: 650127 RTT_start: 3692833656 RTT_end: 3692836218 RTT: 2562
+/  5/cur_rate: 650127 RTT_start: 3692946178 RTT_end: 3692948738 RTT: 2560
+/  5/calculate_cur_rate,  tx_rate: 61157373115, tx_rate: 641281, cur_rate: 650127, sent_32bytes: 36639, start: 3692833326, end: 3692945846, time_interval_ns: 153368
+/  5/cur_rate: 650127 RTT_start: 3692986838 RTT_end: 3692989328 RTT: 2490
+/  5/cur_rate: 650127 RTT_start: 3693098942 RTT_end: 3693101394 RTT: 2452
+/  5/calculate_cur_rate,  tx_rate: 61513196480, tx_rate: 645012, cur_rate: 650127, sent_32bytes: 36708, start: 3692986510, end: 3693098614, time_interval_ns: 152768
+/  5/cur_rate: 650127 RTT_start: 3693140164 RTT_end: 3693142704 RTT: 2540
+/  5/cur_rate: 650127 RTT_start: 3693252572 RTT_end: 3693255018 RTT: 2446
+/  5/calculate_cur_rate,  tx_rate: 60934924953, tx_rate: 638948, cur_rate: 650127, sent_32bytes: 36570, start: 3693139838, end: 3693252252, time_interval_ns: 153638
+/  5/cur_rate: 629156 RTT_start: 3693293022 RTT_end: 3693295530 RTT: 2508
+/  5/cur_rate: 629156 RTT_start: 3693405572 RTT_end: 3693407924 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 60969275422, tx_rate: 639309, cur_rate: 629156, sent_32bytes: 36432, start: 3693292694, end: 3693405224, time_interval_ns: 152972
+/  5/cur_rate: 629156 RTT_start: 3693446418 RTT_end: 3693448764 RTT: 2346
+/  5/cur_rate: 629156 RTT_start: 3693559066 RTT_end: 3693561540 RTT: 2474
+/  5/calculate_cur_rate,  tx_rate: 59611137894, tx_rate: 625068, cur_rate: 629156, sent_32bytes: 35742, start: 3693446070, end: 3693558718, time_interval_ns: 153494
+/  5/cur_rate: 629156 RTT_start: 3693599894 RTT_end: 3693602398 RTT: 2504
+/  5/cur_rate: 629156 RTT_start: 3693712734 RTT_end: 3693715278 RTT: 2544
+/  5/calculate_cur_rate,  tx_rate: 59420956743, tx_rate: 623073, cur_rate: 629156, sent_32bytes: 35673, start: 3693599566, end: 3693712406, time_interval_ns: 153688
+/  5/cur_rate: 629156 RTT_start: 3693753366 RTT_end: 3693755868 RTT: 2502
+/  5/cur_rate: 608185 RTT_start: 3693866212 RTT_end: 3693868778 RTT: 2566
+/  5/calculate_cur_rate,  tx_rate: 59616575449, tx_rate: 625125, cur_rate: 608185, sent_32bytes: 35742, start: 3693753040, end: 3693865886, time_interval_ns: 153480
+/  5/cur_rate: 608185 RTT_start: 3693906866 RTT_end: 3693909310 RTT: 2444
+/  5/calculate_cur_rate,  tx_rate: 43780796252, tx_rate: 459074, cur_rate: 608185, sent_32bytes: 26289, start: 3693906518, end: 3694019606, time_interval_ns: 153720
+/  5/cur_rate: 608185 RTT_start: 3694019954 RTT_end: 3694024126 RTT: 4172
+/  5/cur_rate: 608185 RTT_start: 3694134598 RTT_end: 3694137104 RTT: 2506
+/  5/calculate_cur_rate,  tx_rate: 75483229553, tx_rate: 791499, cur_rate: 608185, sent_32bytes: 33810, start: 3694023918, end: 3694134272, time_interval_ns: 114666
+/  5/cur_rate: 608185 RTT_start: 3694175274 RTT_end: 3694177852 RTT: 2578
+/  5/cur_rate: 608185 RTT_start: 3694287646 RTT_end: 3694290154 RTT: 2508
+/  5/calculate_cur_rate,  tx_rate: 57261440727, tx_rate: 600429, cur_rate: 608185, sent_32bytes: 34224, start: 3694174926, end: 3694287278, time_interval_ns: 153006
+/  5/cur_rate: 608185 RTT_start: 3694328282 RTT_end: 3694330696 RTT: 2414
+/  5/cur_rate: 587214 RTT_start: 3694440544 RTT_end: 3694443054 RTT: 2510
+/  5/calculate_cur_rate,  tx_rate: 57302637086, tx_rate: 600861, cur_rate: 587214, sent_32bytes: 34224, start: 3694327934, end: 3694440174, time_interval_ns: 152896
+/  5/cur_rate: 587214 RTT_start: 3694481178 RTT_end: 3694483526 RTT: 2348
+/  5/cur_rate: 587214 RTT_start: 3694593750 RTT_end: 3694596272 RTT: 2522
+/  5/calculate_cur_rate,  tx_rate: 55787119086, tx_rate: 584970, cur_rate: 587214, sent_32bytes: 33396, start: 3694480830, end: 3694593424, time_interval_ns: 153250
+/  5/cur_rate: 587214 RTT_start: 3694634196 RTT_end: 3694636708 RTT: 2512
+/  5/cur_rate: 587214 RTT_start: 3694746218 RTT_end: 3694748708 RTT: 2490
+/  5/calculate_cur_rate,  tx_rate: 55849599202, tx_rate: 585625, cur_rate: 587214, sent_32bytes: 33258, start: 3694633870, end: 3694745870, time_interval_ns: 152446
+/  5/cur_rate: 587214 RTT_start: 3694786666 RTT_end: 3694789116 RTT: 2450
+/  5/cur_rate: 587214 RTT_start: 3694899186 RTT_end: 3694901626 RTT: 2440
+/  5/calculate_cur_rate,  tx_rate: 56120914178, tx_rate: 588470, cur_rate: 587214, sent_32bytes: 33534, start: 3694786318, end: 3694898838, time_interval_ns: 152968
+/  5/cur_rate: 566243 RTT_start: 3694940268 RTT_end: 3694942718 RTT: 2450
+/  5/cur_rate: 566243 RTT_start: 3695052212 RTT_end: 3695054778 RTT: 2566
+/  5/calculate_cur_rate,  tx_rate: 55168260937, tx_rate: 578481, cur_rate: 566243, sent_32bytes: 32982, start: 3694939920, end: 3695051886, time_interval_ns: 153048
+/  5/cur_rate: 566243 RTT_start: 3695092922 RTT_end: 3695095464 RTT: 2542
+/  5/cur_rate: 566243 RTT_start: 3695205150 RTT_end: 3695207650 RTT: 2500
+/  5/calculate_cur_rate,  tx_rate: 54052962638, tx_rate: 566786, cur_rate: 566243, sent_32bytes: 32292, start: 3695092560, end: 3695204824, time_interval_ns: 152938
+/  5/cur_rate: 566243 RTT_start: 3695246504 RTT_end: 3695249020 RTT: 2516
+/  5/cur_rate: 566243 RTT_start: 3695358696 RTT_end: 3695361132 RTT: 2436
+/  5/calculate_cur_rate,  tx_rate: 53607450341, tx_rate: 562114, cur_rate: 566243, sent_32bytes: 32154, start: 3695246150, end: 3695358374, time_interval_ns: 153550
+/  5/cur_rate: 566243 RTT_start: 3695399374 RTT_end: 3695401882 RTT: 2508
+/  5/cur_rate: 545272 RTT_start: 3695511584 RTT_end: 3695514030 RTT: 2446
+/  5/calculate_cur_rate,  tx_rate: 53839568834, tx_rate: 564548, cur_rate: 545272, sent_32bytes: 32154, start: 3695399046, end: 3695511262, time_interval_ns: 152888
+/  5/cur_rate: 545272 RTT_start: 3695552262 RTT_end: 3695554818 RTT: 2556
+/  5/cur_rate: 545272 RTT_start: 3695665182 RTT_end: 3695667734 RTT: 2552
+/  5/calculate_cur_rate,  tx_rate: 52672743372, tx_rate: 552313, cur_rate: 545272, sent_32bytes: 31602, start: 3695551934, end: 3695664854, time_interval_ns: 153592
+/  5/cur_rate: 545272 RTT_start: 3695706190 RTT_end: 3695708760 RTT: 2570
+/  5/calculate_cur_rate,  tx_rate: 39927978487, tx_rate: 418675, cur_rate: 545272, sent_32bytes: 24012, start: 3695705846, end: 3695818808, time_interval_ns: 153954
+/  5/cur_rate: 545272 RTT_start: 3695820108 RTT_end: 3695823800 RTT: 3692
+/  5/cur_rate: 545272 RTT_start: 3695933796 RTT_end: 3695936302 RTT: 2506
+/  5/calculate_cur_rate,  tx_rate: 69184179765, tx_rate: 725448, cur_rate: 545272, sent_32bytes: 30981, start: 3695822840, end: 3695933446, time_interval_ns: 114638
+/  5/cur_rate: 545272 RTT_start: 3695974114 RTT_end: 3695977592 RTT: 3478
+/  5/cur_rate: 524301 RTT_start: 3696086968 RTT_end: 3696089486 RTT: 2518
+/  5/calculate_cur_rate,  tx_rate: 52576919060, tx_rate: 551308, cur_rate: 524301, sent_32bytes: 31464, start: 3695973766, end: 3696086646, time_interval_ns: 153200
+/  5/cur_rate: 524301 RTT_start: 3696127316 RTT_end: 3696130848 RTT: 3532
+/  5/cur_rate: 524301 RTT_start: 3696240280 RTT_end: 3696242680 RTT: 2400
+/  5/calculate_cur_rate,  tx_rate: 51386349405, tx_rate: 538824, cur_rate: 524301, sent_32bytes: 30774, start: 3696126968, end: 3696239958, time_interval_ns: 153312
+/  5/cur_rate: 524301 RTT_start: 3696280876 RTT_end: 3696283384 RTT: 2508
+/  5/cur_rate: 524301 RTT_start: 3696393160 RTT_end: 3696395726 RTT: 2566
+/  5/calculate_cur_rate,  tx_rate: 51305840485, tx_rate: 537980, cur_rate: 524301, sent_32bytes: 30636, start: 3696280550, end: 3696392822, time_interval_ns: 152864
+/  5/cur_rate: 524301 RTT_start: 3696433736 RTT_end: 3696436194 RTT: 2458
+/  5/cur_rate: 524301 RTT_start: 3696546270 RTT_end: 3696548820 RTT: 2550
+/  5/calculate_cur_rate,  tx_rate: 51220062695, tx_rate: 537081, cur_rate: 524301, sent_32bytes: 30636, start: 3696433416, end: 3696545942, time_interval_ns: 153120
+/  5/cur_rate: 503330 RTT_start: 3696586544 RTT_end: 3696589052 RTT: 2508
+/  5/cur_rate: 503330 RTT_start: 3696699102 RTT_end: 3696701624 RTT: 2522
+/  5/calculate_cur_rate,  tx_rate: 50853605873, tx_rate: 533238, cur_rate: 503330, sent_32bytes: 30360, start: 3696586222, end: 3696698776, time_interval_ns: 152834
+/  5/cur_rate: 503330 RTT_start: 3696740288 RTT_end: 3696742660 RTT: 2372
+/  5/cur_rate: 503330 RTT_start: 3696852050 RTT_end: 3696854584 RTT: 2534
+/  5/calculate_cur_rate,  tx_rate: 48389774436, tx_rate: 507403, cur_rate: 503330, sent_32bytes: 28911, start: 3696739966, end: 3696851726, time_interval_ns: 152950
+/  5/cur_rate: 503330 RTT_start: 3696892816 RTT_end: 3696895350 RTT: 2534
+/  5/cur_rate: 503330 RTT_start: 3697005656 RTT_end: 3697008210 RTT: 2554
+/  5/calculate_cur_rate,  tx_rate: 48527472527, tx_rate: 508847, cur_rate: 503330, sent_32bytes: 29118, start: 3696892494, end: 3697005334, time_interval_ns: 153608
+/  5/cur_rate: 503330 RTT_start: 3697046424 RTT_end: 3697048970 RTT: 2546
+/  5/cur_rate: 482359 RTT_start: 3697158168 RTT_end: 3697160716 RTT: 2548
+/  5/calculate_cur_rate,  tx_rate: 48644565673, tx_rate: 510075, cur_rate: 482359, sent_32bytes: 28980, start: 3697046102, end: 3697157846, time_interval_ns: 152512
+/  5/cur_rate: 482359 RTT_start: 3697199352 RTT_end: 3697201930 RTT: 2578
+/  5/cur_rate: 482359 RTT_start: 3697311864 RTT_end: 3697314418 RTT: 2554
+/  5/calculate_cur_rate,  tx_rate: 45741411617, tx_rate: 479633, cur_rate: 482359, sent_32bytes: 27462, start: 3697199030, end: 3697311542, time_interval_ns: 153696
+/  5/cur_rate: 482359 RTT_start: 3697352172 RTT_end: 3697354676 RTT: 2504
+/  5/cur_rate: 482359 RTT_start: 3697464654 RTT_end: 3697467208 RTT: 2554
+/  5/calculate_cur_rate,  tx_rate: 46130065975, tx_rate: 483708, cur_rate: 482359, sent_32bytes: 27531, start: 3697351846, end: 3697464326, time_interval_ns: 152784
+/  5/cur_rate: 482359 RTT_start: 3697505352 RTT_end: 3697507888 RTT: 2536
+/  5/cur_rate: 482359 RTT_start: 3697618696 RTT_end: 3697621280 RTT: 2584
+/  5/calculate_cur_rate,  tx_rate: 45866223514, tx_rate: 480942, cur_rate: 482359, sent_32bytes: 27600, start: 3697505030, end: 3697618374, time_interval_ns: 154048
+/  5/cur_rate: 461388 RTT_start: 3697659086 RTT_end: 3697661636 RTT: 2550
+/  5/cur_rate: 461388 RTT_start: 3697772366 RTT_end: 3697776016 RTT: 3650
+/  5/calculate_cur_rate,  tx_rate: 45521032902, tx_rate: 477322, cur_rate: 461388, sent_32bytes: 27324, start: 3697658758, end: 3697772038, time_interval_ns: 153664
+/  5/cur_rate: 461388 RTT_start: 3697813008 RTT_end: 3697815224 RTT: 2216
+/  5/cur_rate: 461388 RTT_start: 3697925920 RTT_end: 3697928362 RTT: 2442
+/  5/calculate_cur_rate,  tx_rate: 43596353216, tx_rate: 457140, cur_rate: 461388, sent_32bytes: 26151, start: 3697812806, end: 3697925598, time_interval_ns: 153560
+/  5/cur_rate: 461388 RTT_start: 3697966326 RTT_end: 3697968640 RTT: 2314
+/  5/cur_rate: 461388 RTT_start: 3698079912 RTT_end: 3698083344 RTT: 3432
+/  5/calculate_cur_rate,  tx_rate: 43588757857, tx_rate: 457061, cur_rate: 461388, sent_32bytes: 26220, start: 3697965998, end: 3698079590, time_interval_ns: 153992
+/  5/cur_rate: 461388 RTT_start: 3698119934 RTT_end: 3698122404 RTT: 2470
+/  5/cur_rate: 440417 RTT_start: 3698233414 RTT_end: 3698235910 RTT: 2496
+/  5/calculate_cur_rate,  tx_rate: 43844115232, tx_rate: 459738, cur_rate: 440417, sent_32bytes: 26289, start: 3698119590, end: 3698233088, time_interval_ns: 153498
+/  5/cur_rate: 440417 RTT_start: 3698274846 RTT_end: 3698278358 RTT: 3512
+/  5/cur_rate: 440417 RTT_start: 3698387028 RTT_end: 3698389500 RTT: 2472
+/  5/calculate_cur_rate,  tx_rate: 41626205944, tx_rate: 436482, cur_rate: 440417, sent_32bytes: 24978, start: 3698273486, end: 3698386702, time_interval_ns: 153614
+/  5/cur_rate: 440417 RTT_start: 3698427326 RTT_end: 3698429826 RTT: 2500
+/  5/cur_rate: 440417 RTT_start: 3698540552 RTT_end: 3698543098 RTT: 2546
+/  5/calculate_cur_rate,  tx_rate: 41764577145, tx_rate: 437933, cur_rate: 440417, sent_32bytes: 25047, start: 3698426998, end: 3698540230, time_interval_ns: 153528
+/  5/cur_rate: 440417 RTT_start: 3698581256 RTT_end: 3698584754 RTT: 3498
+/  5/cur_rate: 440417 RTT_start: 3698693648 RTT_end: 3698696174 RTT: 2526
+/  5/calculate_cur_rate,  tx_rate: 41767048126, tx_rate: 437959, cur_rate: 440417, sent_32bytes: 24978, start: 3698580936, end: 3698693326, time_interval_ns: 153096
+/  5/cur_rate: 419446 RTT_start: 3698734772 RTT_end: 3698738094 RTT: 3322
+/  5/cur_rate: 419446 RTT_start: 3698847984 RTT_end: 3698850456 RTT: 2472
+/  5/calculate_cur_rate,  tx_rate: 41087586984, tx_rate: 430834, cur_rate: 419446, sent_32bytes: 24771, start: 3698734424, end: 3698847664, time_interval_ns: 154338
+/  5/cur_rate: 419446 RTT_start: 3698888858 RTT_end: 3698892332 RTT: 3474
+/  5/cur_rate: 419446 RTT_start: 3699001170 RTT_end: 3699003540 RTT: 2370
+/  5/calculate_cur_rate,  tx_rate: 39904830305, tx_rate: 418432, cur_rate: 419446, sent_32bytes: 23874, start: 3698888510, end: 3699000822, time_interval_ns: 153158
+/  5/cur_rate: 419446 RTT_start: 3699042464 RTT_end: 3699044888 RTT: 2424
+/  5/cur_rate: 419446 RTT_start: 3699154794 RTT_end: 3699157216 RTT: 2422
+/  5/calculate_cur_rate,  tx_rate: 39668801749, tx_rate: 415957, cur_rate: 419446, sent_32bytes: 23805, start: 3699042142, end: 3699154446, time_interval_ns: 153624
+/  5/cur_rate: 419446 RTT_start: 3699195622 RTT_end: 3699198026 RTT: 2404
+/  5/cur_rate: 398475 RTT_start: 3699308872 RTT_end: 3699311282 RTT: 2410
+/  5/calculate_cur_rate,  tx_rate: 39659866064, tx_rate: 415863, cur_rate: 398475, sent_32bytes: 23874, start: 3699195294, end: 3699308550, time_interval_ns: 154104
+/  5/cur_rate: 398475 RTT_start: 3699349296 RTT_end: 3699351692 RTT: 2396
+/  5/cur_rate: 398475 RTT_start: 3699462128 RTT_end: 3699464524 RTT: 2396
+/  5/calculate_cur_rate,  tx_rate: 38150441092, tx_rate: 400036, cur_rate: 398475, sent_32bytes: 22839, start: 3699348974, end: 3699461806, time_interval_ns: 153256
+/  5/cur_rate: 398475 RTT_start: 3699502988 RTT_end: 3699506274 RTT: 3286
+/  5/cur_rate: 398475 RTT_start: 3699615770 RTT_end: 3699618142 RTT: 2372
+/  5/calculate_cur_rate,  tx_rate: 38061035308, tx_rate: 399098, cur_rate: 398475, sent_32bytes: 22839, start: 3699502640, end: 3699615422, time_interval_ns: 153616
+/  5/cur_rate: 398475 RTT_start: 3699656580 RTT_end: 3699659080 RTT: 2500
+/  5/cur_rate: 398475 RTT_start: 3699769336 RTT_end: 3699771690 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 38181491464, tx_rate: 400361, cur_rate: 398475, sent_32bytes: 22908, start: 3699656254, end: 3699769016, time_interval_ns: 153594
+/  5/cur_rate: 377504 RTT_start: 3699810716 RTT_end: 3699813142 RTT: 2426
+/  5/calculate_cur_rate,  tx_rate: 28998715203, tx_rate: 304073, cur_rate: 377504, sent_32bytes: 17457, start: 3699810368, end: 3699923126, time_interval_ns: 154110
+/  5/cur_rate: 377504 RTT_start: 3699924018 RTT_end: 3699927712 RTT: 3694
+/  5/cur_rate: 377504 RTT_start: 3700039146 RTT_end: 3700041490 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 47797496369, tx_rate: 501193, cur_rate: 377504, sent_32bytes: 21597, start: 3699927966, end: 3700038798, time_interval_ns: 115672
+/  5/cur_rate: 377504 RTT_start: 3700079802 RTT_end: 3700082150 RTT: 2348
+/  5/cur_rate: 377504 RTT_start: 3700192626 RTT_end: 3700194980 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 36483502736, tx_rate: 382557, cur_rate: 377504, sent_32bytes: 21873, start: 3700079454, end: 3700192278, time_interval_ns: 153480
+/  5/cur_rate: 377504 RTT_start: 3700233262 RTT_end: 3700235616 RTT: 2354
+/  5/cur_rate: 377504 RTT_start: 3700346074 RTT_end: 3700348424 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 36606224910, tx_rate: 383844, cur_rate: 377504, sent_32bytes: 21942, start: 3700232936, end: 3700345726, time_interval_ns: 153448
+/  5/cur_rate: 356533 RTT_start: 3700387152 RTT_end: 3700389498 RTT: 2346
+/  5/cur_rate: 356533 RTT_start: 3700500006 RTT_end: 3700502364 RTT: 2358
+/  5/calculate_cur_rate,  tx_rate: 35912233524, tx_rate: 376567, cur_rate: 356533, sent_32bytes: 21597, start: 3700386830, end: 3700499680, time_interval_ns: 153954
+/  5/cur_rate: 356533 RTT_start: 3700541282 RTT_end: 3700543632 RTT: 2350
+/  5/cur_rate: 356533 RTT_start: 3700653282 RTT_end: 3700655638 RTT: 2356
+/  5/calculate_cur_rate,  tx_rate: 34226751392, tx_rate: 358893, cur_rate: 356533, sent_32bytes: 20493, start: 3700540958, end: 3700652958, time_interval_ns: 153278
+/  5/cur_rate: 356533 RTT_start: 3700694562 RTT_end: 3700696918 RTT: 2356
+/  5/cur_rate: 356533 RTT_start: 3700807626 RTT_end: 3700809978 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 33990359197, tx_rate: 356414, cur_rate: 356533, sent_32bytes: 20493, start: 3700694238, end: 3700807302, time_interval_ns: 154344
+/  5/cur_rate: 356533 RTT_start: 3700847874 RTT_end: 3700850226 RTT: 2352
+/  5/cur_rate: 335562 RTT_start: 3700960884 RTT_end: 3700963242 RTT: 2358
+/  5/calculate_cur_rate,  tx_rate: 34346922795, tx_rate: 360153, cur_rate: 335562, sent_32bytes: 20562, start: 3700847550, end: 3700960558, time_interval_ns: 153256
+/  5/cur_rate: 335562 RTT_start: 3701001646 RTT_end: 3701004000 RTT: 2354
+/  5/cur_rate: 335562 RTT_start: 3701115594 RTT_end: 3701117942 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 31625631810, tx_rate: 331618, cur_rate: 335562, sent_32bytes: 19113, start: 3701001318, end: 3701115272, time_interval_ns: 154714
+/  5/cur_rate: 335562 RTT_start: 3701155624 RTT_end: 3701157974 RTT: 2350
+/  5/cur_rate: 335562 RTT_start: 3701268546 RTT_end: 3701270896 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 31990375939, tx_rate: 335443, cur_rate: 335562, sent_32bytes: 19113, start: 3701155302, end: 3701268222, time_interval_ns: 152950
+/  5/cur_rate: 335562 RTT_start: 3701309690 RTT_end: 3701312038 RTT: 2348
+/  5/cur_rate: 335562 RTT_start: 3701422530 RTT_end: 3701424876 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 31546134663, tx_rate: 330785, cur_rate: 335562, sent_32bytes: 18975, start: 3701309366, end: 3701422206, time_interval_ns: 153984
+/  5/cur_rate: 314591 RTT_start: 3701462562 RTT_end: 3701464906 RTT: 2344
+/  5/cur_rate: 314591 RTT_start: 3701575832 RTT_end: 3701579532 RTT: 3700
+/  5/calculate_cur_rate,  tx_rate: 31529657914, tx_rate: 330612, cur_rate: 314591, sent_32bytes: 18837, start: 3701462238, end: 3701575150, time_interval_ns: 152944
+/  5/cur_rate: 314591 RTT_start: 3701617068 RTT_end: 3701619194 RTT: 2126
+/  5/cur_rate: 314591 RTT_start: 3701729858 RTT_end: 3701733240 RTT: 3382
+/  5/calculate_cur_rate,  tx_rate: 29404912426, tx_rate: 308332, cur_rate: 314591, sent_32bytes: 17733, start: 3701616870, end: 3701729534, time_interval_ns: 154384
+/  5/cur_rate: 314591 RTT_start: 3701770262 RTT_end: 3701772390 RTT: 2128
+/  5/cur_rate: 314591 RTT_start: 3701883026 RTT_end: 3701885374 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 29637970882, tx_rate: 310776, cur_rate: 314591, sent_32bytes: 17733, start: 3701770064, end: 3701882704, time_interval_ns: 153170
+/  5/cur_rate: 314591 RTT_start: 3701923428 RTT_end: 3701925548 RTT: 2120
+/  5/cur_rate: 293620 RTT_start: 3702036170 RTT_end: 3702038520 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 29643389795, tx_rate: 310833, cur_rate: 293620, sent_32bytes: 17733, start: 3701923230, end: 3702035846, time_interval_ns: 153142
+/  5/cur_rate: 293620 RTT_start: 3702076696 RTT_end: 3702080168 RTT: 3472
+/  5/cur_rate: 293620 RTT_start: 3702189298 RTT_end: 3702192676 RTT: 3378
+/  5/calculate_cur_rate,  tx_rate: 27800428399, tx_rate: 291508, cur_rate: 293620, sent_32bytes: 16629, start: 3702076374, end: 3702188974, time_interval_ns: 153128
+/  5/cur_rate: 293620 RTT_start: 3702230002 RTT_end: 3702233388 RTT: 3386
+/  5/cur_rate: 293620 RTT_start: 3702342546 RTT_end: 3702344892 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 27778659427, tx_rate: 291280, cur_rate: 293620, sent_32bytes: 16629, start: 3702229678, end: 3702342222, time_interval_ns: 153248
+/  5/cur_rate: 293620 RTT_start: 3702383250 RTT_end: 3702386628 RTT: 3378
+/  5/cur_rate: 293620 RTT_start: 3702495802 RTT_end: 3702499104 RTT: 3302
+/  5/calculate_cur_rate,  tx_rate: 27777209375, tx_rate: 291265, cur_rate: 293620, sent_32bytes: 16629, start: 3702382926, end: 3702495478, time_interval_ns: 153256
+/  5/cur_rate: 272649 RTT_start: 3702536506 RTT_end: 3702539806 RTT: 3300
+/  5/cur_rate: 272649 RTT_start: 3702649042 RTT_end: 3702651386 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 27319028974, tx_rate: 286460, cur_rate: 272649, sent_32bytes: 16353, start: 3702536182, end: 3702648718, time_interval_ns: 153240
+/  5/cur_rate: 272649 RTT_start: 3702689602 RTT_end: 3702691956 RTT: 2354
+/  5/cur_rate: 272649 RTT_start: 3702802482 RTT_end: 3702804824 RTT: 2342
+/  5/calculate_cur_rate,  tx_rate: 26132221063, tx_rate: 274016, cur_rate: 272649, sent_32bytes: 15663, start: 3702689278, end: 3702802158, time_interval_ns: 153440
+/  5/cur_rate: 272649 RTT_start: 3702843042 RTT_end: 3702845394 RTT: 2352
+/  5/cur_rate: 272649 RTT_start: 3702955906 RTT_end: 3702958260 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 26134946292, tx_rate: 274044, cur_rate: 272649, sent_32bytes: 15663, start: 3702842718, end: 3702955582, time_interval_ns: 153424
+/  5/cur_rate: 272649 RTT_start: 3702996466 RTT_end: 3702998820 RTT: 2354
+/  5/cur_rate: 251678 RTT_start: 3703108074 RTT_end: 3703110420 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 26118157324, tx_rate: 273868, cur_rate: 251678, sent_32bytes: 15525, start: 3702996142, end: 3703107752, time_interval_ns: 152170
+/  5/cur_rate: 251678 RTT_start: 3703148634 RTT_end: 3703150988 RTT: 2354
+/  5/cur_rate: 251678 RTT_start: 3703262066 RTT_end: 3703264416 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 23973816821, tx_rate: 251383, cur_rate: 251678, sent_32bytes: 14421, start: 3703148310, end: 3703261744, time_interval_ns: 153992
+/  5/cur_rate: 251678 RTT_start: 3703301594 RTT_end: 3703303942 RTT: 2348
+/  5/cur_rate: 251678 RTT_start: 3703415106 RTT_end: 3703417456 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 24354108130, tx_rate: 255371, cur_rate: 251678, sent_32bytes: 14559, start: 3703301270, end: 3703414782, time_interval_ns: 153038
+/  5/cur_rate: 251678 RTT_start: 3703456098 RTT_end: 3703458446 RTT: 2348
+/  5/cur_rate: 251678 RTT_start: 3703568098 RTT_end: 3703570454 RTT: 2356
+/  5/calculate_cur_rate,  tx_rate: 24130516628, tx_rate: 253026, cur_rate: 251678, sent_32bytes: 14421, start: 3703455774, end: 3703567774, time_interval_ns: 152992
+/  5/cur_rate: 230707 RTT_start: 3703609090 RTT_end: 3703611448 RTT: 2358
+/  5/cur_rate: 230707 RTT_start: 3703721058 RTT_end: 3703723408 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 23442677824, tx_rate: 245814, cur_rate: 230707, sent_32bytes: 14007, start: 3703608766, end: 3703720734, time_interval_ns: 152960
+/  5/cur_rate: 230707 RTT_start: 3703761658 RTT_end: 3703764004 RTT: 2346
+/  5/cur_rate: 230707 RTT_start: 3703875338 RTT_end: 3703877690 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 21638920936, tx_rate: 226900, cur_rate: 230707, sent_32bytes: 13041, start: 3703761334, end: 3703875016, time_interval_ns: 154282
+/  5/cur_rate: 230707 RTT_start: 3703915098 RTT_end: 3703917446 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 16754818396, tx_rate: 175687, cur_rate: 230707, sent_32bytes: 9936, start: 3703914774, end: 3704026830, time_interval_ns: 151814
+/  5/cur_rate: 230707 RTT_start: 3704028022 RTT_end: 3704031492 RTT: 3470
+/  5/cur_rate: 230707 RTT_start: 3704141658 RTT_end: 3704144004 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 28847621043, tx_rate: 302489, cur_rate: 230707, sent_32bytes: 12903, start: 3704031702, end: 3704141334, time_interval_ns: 114504
+/  5/cur_rate: 209736 RTT_start: 3704183880 RTT_end: 3704187260 RTT: 3380
+/  5/cur_rate: 209736 RTT_start: 3704295936 RTT_end: 3704298284 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 20952242675, tx_rate: 219700, cur_rate: 209736, sent_32bytes: 12627, start: 3704183558, end: 3704295614, time_interval_ns: 154280
+/  5/cur_rate: 209736 RTT_start: 3704336130 RTT_end: 3704339516 RTT: 3386
+/  5/cur_rate: 209736 RTT_start: 3704448522 RTT_end: 3704450870 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 19911707649, tx_rate: 208789, cur_rate: 209736, sent_32bytes: 11868, start: 3704335806, end: 3704448198, time_interval_ns: 152584
+/  5/cur_rate: 209736 RTT_start: 3704489554 RTT_end: 3704492844 RTT: 3290
+/  5/calculate_cur_rate,  tx_rate: 14992380656, tx_rate: 157206, cur_rate: 209736, sent_32bytes: 9039, start: 3704489230, end: 3704602542, time_interval_ns: 154344
+/  5/cur_rate: 209736 RTT_start: 3704602864 RTT_end: 3704606244 RTT: 3380
+/  5/cur_rate: 209736 RTT_start: 3704717042 RTT_end: 3704719392 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 26145281928, tx_rate: 274153, cur_rate: 209736, sent_32bytes: 11661, start: 3704606110, end: 3704716720, time_interval_ns: 114178
+/  5/cur_rate: 188765 RTT_start: 3704757154 RTT_end: 3704759504 RTT: 2350
+/  5/cur_rate: 188765 RTT_start: 3704869546 RTT_end: 3704871898 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 19458846981, tx_rate: 204040, cur_rate: 188765, sent_32bytes: 11592, start: 3704756830, end: 3704869224, time_interval_ns: 152504
+/  5/cur_rate: 188765 RTT_start: 3704910202 RTT_end: 3704912550 RTT: 2348
+/  5/cur_rate: 188765 RTT_start: 3705023474 RTT_end: 3705025830 RTT: 2356
+/  5/calculate_cur_rate,  tx_rate: 18246274183, tx_rate: 191326, cur_rate: 188765, sent_32bytes: 10971, start: 3704909878, end: 3705023150, time_interval_ns: 153926
+/  5/cur_rate: 188765 RTT_start: 3705064130 RTT_end: 3705066482 RTT: 2352
+/  5/cur_rate: 188765 RTT_start: 3705176418 RTT_end: 3705178768 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 18132440631, tx_rate: 190132, cur_rate: 188765, sent_32bytes: 10833, start: 3705063806, end: 3705176094, time_interval_ns: 152944
+/  5/cur_rate: 188765 RTT_start: 3705216138 RTT_end: 3705218490 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 14176938055, tx_rate: 148655, cur_rate: 188765, sent_32bytes: 8418, start: 3705215814, end: 3705328102, time_interval_ns: 152008
+/  5/cur_rate: 167794 RTT_start: 3705329294 RTT_end: 3705332760 RTT: 3466
+/  5/cur_rate: 167794 RTT_start: 3705443626 RTT_end: 3705447022 RTT: 3396
+/  5/calculate_cur_rate,  tx_rate: 22846666666, tx_rate: 239564, cur_rate: 167794, sent_32bytes: 10281, start: 3705333910, end: 3705443302, time_interval_ns: 115200
+/  5/cur_rate: 167794 RTT_start: 3705483800 RTT_end: 3705487180 RTT: 3380
+/  5/cur_rate: 167794 RTT_start: 3705597634 RTT_end: 3705599980 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 15827956989, tx_rate: 165968, cur_rate: 167794, sent_32bytes: 9522, start: 3705483478, end: 3705597310, time_interval_ns: 154008
+/  5/cur_rate: 167794 RTT_start: 3705637810 RTT_end: 3705641188 RTT: 3378
+/  5/cur_rate: 167794 RTT_start: 3705750570 RTT_end: 3705752920 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 15823403253, tx_rate: 165920, cur_rate: 167794, sent_32bytes: 9453, start: 3705637488, end: 3705750246, time_interval_ns: 152936
+/  5/cur_rate: 167794 RTT_start: 3705790746 RTT_end: 3705794134 RTT: 3388
+/  5/cur_rate: 146823 RTT_start: 3705902346 RTT_end: 3705905738 RTT: 3392
+/  5/calculate_cur_rate,  tx_rate: 16060721062, tx_rate: 168408, cur_rate: 146823, sent_32bytes: 9522, start: 3705790422, end: 3705902022, time_interval_ns: 151776
+/  5/cur_rate: 146823 RTT_start: 3705944752 RTT_end: 3705948136 RTT: 3384
+/  5/cur_rate: 146823 RTT_start: 3706055456 RTT_end: 3706057814 RTT: 2358
+/  5/calculate_cur_rate,  tx_rate: 13728616960, tx_rate: 143954, cur_rate: 146823, sent_32bytes: 8211, start: 3705944430, end: 3706055134, time_interval_ns: 153112
+/  5/cur_rate: 146823 RTT_start: 3706096162 RTT_end: 3706099544 RTT: 3382
+/  5/cur_rate: 146823 RTT_start: 3706208096 RTT_end: 3706210442 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 13886792452, tx_rate: 145613, cur_rate: 146823, sent_32bytes: 8280, start: 3706095840, end: 3706207774, time_interval_ns: 152640
+/  5/cur_rate: 146823 RTT_start: 3706248802 RTT_end: 3706251150 RTT: 2348
+/  5/cur_rate: 146823 RTT_start: 3706362082 RTT_end: 3706364428 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 13880299251, tx_rate: 145545, cur_rate: 146823, sent_32bytes: 8349, start: 3706248480, end: 3706361758, time_interval_ns: 153984
+/  5/cur_rate: 125852 RTT_start: 3706402786 RTT_end: 3706405138 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 10646540880, tx_rate: 111637, cur_rate: 125852, sent_32bytes: 6348, start: 3706402462, end: 3706514398, time_interval_ns: 152640
+/  5/cur_rate: 125852 RTT_start: 3706514722 RTT_end: 3706518106 RTT: 3384
+/  5/cur_rate: 125852 RTT_start: 3706627754 RTT_end: 3706630104 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 15783707268, tx_rate: 165504, cur_rate: 125852, sent_32bytes: 6969, start: 3706520270, end: 3706627430, time_interval_ns: 113032
+/  5/cur_rate: 125852 RTT_start: 3706668858 RTT_end: 3706671202 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 9255799939, tx_rate: 97054, cur_rate: 125852, sent_32bytes: 5520, start: 3706668534, end: 3706780104, time_interval_ns: 152674
+/  5/cur_rate: 125852 RTT_start: 3706781294 RTT_end: 3706784770 RTT: 3476
+/  5/calculate_cur_rate,  tx_rate: 11724166841, tx_rate: 122936, cur_rate: 125852, sent_32bytes: 5244, start: 3706785974, end: 3706894608, time_interval_ns: 114504
+/  5/cur_rate: 125852 RTT_start: 3706894930 RTT_end: 3706898316 RTT: 3386
+/  5/cur_rate: 125852 RTT_start: 3707007962 RTT_end: 3707010298 RTT: 2336
+/  5/calculate_cur_rate,  tx_rate: 16096540741, tx_rate: 168784, cur_rate: 125852, sent_32bytes: 7107, start: 3706897542, end: 3707007638, time_interval_ns: 113030
+/  5/cur_rate: 104881 RTT_start: 3707049064 RTT_end: 3707051414 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 9081281168, tx_rate: 95224, cur_rate: 104881, sent_32bytes: 5520, start: 3707048742, end: 3707163246, time_interval_ns: 155608
+/  5/cur_rate: 104881 RTT_start: 3707163568 RTT_end: 3707166952 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 9901171854, tx_rate: 103821, cur_rate: 104881, sent_32bytes: 4416, start: 3707166814, end: 3707277424, time_interval_ns: 114178
+/  5/cur_rate: 104881 RTT_start: 3707277746 RTT_end: 3707280098 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 9897998754, tx_rate: 103788, cur_rate: 104881, sent_32bytes: 4347, start: 3707280990, end: 3707389854, time_interval_ns: 112430
+/  5/cur_rate: 104881 RTT_start: 3707390178 RTT_end: 3707393564 RTT: 3386
+/  5/calculate_cur_rate,  tx_rate: 9901171854, tx_rate: 103821, cur_rate: 104881, sent_32bytes: 4416, start: 3707393422, end: 3707504032, time_interval_ns: 114178
+/  5/cur_rate: 104881 RTT_start: 3707504354 RTT_end: 3707507740 RTT: 3386
+/  5/cur_rate: 104881 RTT_start: 3707618530 RTT_end: 3707620876 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 12995743339, tx_rate: 136270, cur_rate: 104881, sent_32bytes: 5796, start: 3707507600, end: 3707618206, time_interval_ns: 114174
+/  5/cur_rate: 104881 RTT_start: 3707657778 RTT_end: 3707660128 RTT: 2350
+/  5/cur_rate: 83910 RTT_start: 3707770194 RTT_end: 3707772544 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 10132714421, tx_rate: 106249, cur_rate: 83910, sent_32bytes: 6003, start: 3707657456, end: 3707769870, time_interval_ns: 151664
+/  5/cur_rate: 83910 RTT_start: 3707813010 RTT_end: 3707815354 RTT: 2344
+/  5/cur_rate: 83910 RTT_start: 3707921650 RTT_end: 3707924142 RTT: 2492
+/  5/calculate_cur_rate,  tx_rate: 8047433544, tx_rate: 84383, cur_rate: 83910, sent_32bytes: 4761, start: 3707812686, end: 3707921324, time_interval_ns: 151454
+/  5/cur_rate: 83910 RTT_start: 3707967638 RTT_end: 3707969980 RTT: 2342
+/  5/calculate_cur_rate,  tx_rate: 5758698033, tx_rate: 60384, cur_rate: 83910, sent_32bytes: 3450, start: 3707967316, end: 3708074692, time_interval_ns: 153368
+/  5/cur_rate: 83910 RTT_start: 3708075016 RTT_end: 3708078400 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 7890410958, tx_rate: 82736, cur_rate: 83910, sent_32bytes: 3519, start: 3708075712, end: 3708188864, time_interval_ns: 114172
+/  5/cur_rate: 83910 RTT_start: 3708189188 RTT_end: 3708192572 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 7973615845, tx_rate: 83609, cur_rate: 83910, sent_32bytes: 3381, start: 3708189950, end: 3708297414, time_interval_ns: 108550
+/  5/cur_rate: 83910 RTT_start: 3708297742 RTT_end: 3708301268 RTT: 3526
+/  5/calculate_cur_rate,  tx_rate: 7955491972, tx_rate: 83419, cur_rate: 83910, sent_32bytes: 3519, start: 3708303058, end: 3708410652, time_interval_ns: 113238
+/  5/cur_rate: 62939 RTT_start: 3708410976 RTT_end: 3708414362 RTT: 3386
+/  5/calculate_cur_rate,  tx_rate: 7901899900, tx_rate: 82857, cur_rate: 62939, sent_32bytes: 3519, start: 3708417338, end: 3708524658, time_interval_ns: 114006
+/  5/cur_rate: 62939 RTT_start: 3708524982 RTT_end: 3708528372 RTT: 3390
+/  5/calculate_cur_rate,  tx_rate: 5846357523, tx_rate: 61303, cur_rate: 62939, sent_32bytes: 2622, start: 3708533460, end: 3708639470, time_interval_ns: 114812
+/  5/cur_rate: 62939 RTT_start: 3708639794 RTT_end: 3708643170 RTT: 3376
+/  5/cur_rate: 62939 RTT_start: 3708746934 RTT_end: 3708750452 RTT: 3518
+/  5/calculate_cur_rate,  tx_rate: 8078400627, tx_rate: 84708, cur_rate: 62939, sent_32bytes: 3381, start: 3708640486, end: 3708746612, time_interval_ns: 107142
+/  5/cur_rate: 62939 RTT_start: 3708789970 RTT_end: 3708793358 RTT: 3388
+/  5/calculate_cur_rate,  tx_rate: 4589273040, tx_rate: 48122, cur_rate: 62939, sent_32bytes: 2829, start: 3708789648, end: 3708904420, time_interval_ns: 157808
+/  5/cur_rate: 62939 RTT_start: 3708904742 RTT_end: 3708907090 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 6010784399, tx_rate: 63027, cur_rate: 62939, sent_32bytes: 2691, start: 3708905444, end: 3709019030, time_interval_ns: 114610
+/  5/cur_rate: 62939 RTT_start: 3709019354 RTT_end: 3709021720 RTT: 2366
+/  5/calculate_cur_rate,  tx_rate: 6002404809, tx_rate: 62939, cur_rate: 62939, sent_32bytes: 2691, start: 3709019996, end: 3709133800, time_interval_ns: 114770
+/  5/cur_rate: 41968 RTT_start: 3709134994 RTT_end: 3709138458 RTT: 3464
+/  5/calculate_cur_rate,  tx_rate: 5998119318, tx_rate: 62894, cur_rate: 41968, sent_32bytes: 2691, start: 3709134808, end: 3709248652, time_interval_ns: 114852
+/  5/cur_rate: 41968 RTT_start: 3709248974 RTT_end: 3709252352 RTT: 3378
+/  5/calculate_cur_rate,  tx_rate: 3956267109, tx_rate: 41484, cur_rate: 41968, sent_32bytes: 1863, start: 3709249662, end: 3709369202, time_interval_ns: 120550
+/  5/cur_rate: 41968 RTT_start: 3709369526 RTT_end: 3709372910 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 3954823623, tx_rate: 41469, cur_rate: 41968, sent_32bytes: 1863, start: 3709370194, end: 3709489796, time_interval_ns: 120594
+/  5/cur_rate: 41968 RTT_start: 3709490990 RTT_end: 3709494468 RTT: 3478
+/  5/calculate_cur_rate,  tx_rate: 3958960055, tx_rate: 41512, cur_rate: 41968, sent_32bytes: 1863, start: 3709490792, end: 3709610264, time_interval_ns: 120468
+/  5/cur_rate: 41968 RTT_start: 3709610586 RTT_end: 3709613966 RTT: 3380
+/  5/calculate_cur_rate,  tx_rate: 3957777335, tx_rate: 41500, cur_rate: 41968, sent_32bytes: 1863, start: 3709611274, end: 3709730768, time_interval_ns: 120504
+/  5/cur_rate: 41968 RTT_start: 3709731090 RTT_end: 3709733436 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 3951023113, tx_rate: 41429, cur_rate: 41968, sent_32bytes: 1863, start: 3709731820, end: 3709851478, time_interval_ns: 120710
+/  5/cur_rate: 41968 RTT_start: 3709851802 RTT_end: 3709855184 RTT: 3382
+/  5/calculate_cur_rate,  tx_rate: 3951088577, tx_rate: 41430, cur_rate: 41968, sent_32bytes: 1863, start: 3709852532, end: 3709972186, time_interval_ns: 120708
+/  5/cur_rate: 20997 RTT_start: 3709972510 RTT_end: 3709975890 RTT: 3380
+/  5/calculate_cur_rate,  tx_rate: 3957514604, tx_rate: 41497, cur_rate: 20997, sent_32bytes: 1863, start: 3709973258, end: 3710092698, time_interval_ns: 120512
+/  5/cur_rate: 20997 RTT_start: 3710093894 RTT_end: 3710097370 RTT: 3476
+/  5/calculate_cur_rate,  tx_rate: 1979174447, tx_rate: 20753, cur_rate: 20997, sent_32bytes: 1035, start: 3710093722, end: 3710226572, time_interval_ns: 133874
+/  5/cur_rate: 20997 RTT_start: 3710226894 RTT_end: 3710229244 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 1978908373, tx_rate: 20750, cur_rate: 20997, sent_32bytes: 1035, start: 3710227648, end: 3710360464, time_interval_ns: 133892
+/  5/cur_rate: 20997 RTT_start: 3710360786 RTT_end: 3710364176 RTT: 3390
+/  5/calculate_cur_rate,  tx_rate: 1979381443, tx_rate: 20755, cur_rate: 20997, sent_32bytes: 1035, start: 3710361532, end: 3710494324, time_interval_ns: 133860
+/  5/cur_rate: 20997 RTT_start: 3710495518 RTT_end: 3710498992 RTT: 3474
+/  5/calculate_cur_rate,  tx_rate: 1980239458, tx_rate: 20764, cur_rate: 20997, sent_32bytes: 1035, start: 3710495298, end: 3710628126, time_interval_ns: 133802
+/  5/cur_rate: 20997 RTT_start: 3710628448 RTT_end: 3710631824 RTT: 3376
+/  5/calculate_cur_rate,  tx_rate: 1980002690, tx_rate: 20761, cur_rate: 20997, sent_32bytes: 1035, start: 3710629158, end: 3710761944, time_interval_ns: 133818
+/  5/cur_rate: 20997 RTT_start: 3710762266 RTT_end: 3710765644 RTT: 3378
+/  5/calculate_cur_rate,  tx_rate: 1979174447, tx_rate: 20753, cur_rate: 20997, sent_32bytes: 1035, start: 3710762998, end: 3710895818, time_interval_ns: 133874
+/  5/cur_rate: 26 RTT_start: 3710897008 RTT_end: 3710900478 RTT: 3470
+/  5/calculate_cur_rate,  tx_rate: 1979144880, tx_rate: 20752, cur_rate: 26, sent_32bytes: 1035, start: 3710896816, end: 3711029694, time_interval_ns: 133876
+/  5/cur_rate: 26 RTT_start: 3711030018 RTT_end: 3711033408 RTT: 3390
+/  5/calculate_cur_rate,  tx_rate: 2449715, tx_rate: 25, cur_rate: 26, sent_32bytes: 207, start: 3711030870, end: 3732661590, time_interval_ns: 21631896
+/  5/cur_rate: 26 RTT_start: 3732662784 RTT_end: 3732666256 RTT: 3472
+/  5/calculate_cur_rate,  tx_rate: 2449707, tx_rate: 25, cur_rate: 26, sent_32bytes: 207, start: 3732662612, end: 3754293560, time_interval_ns: 21631970
+/  5/cur_rate: 26 RTT_start: 3754294754 RTT_end: 3754298232 RTT: 3478
+/  5/calculate_cur_rate,  tx_rate: 2449713, tx_rate: 25, cur_rate: 26, sent_32bytes: 207, start: 3754294618, end: 3775925476, time_interval_ns: 21631916
+/  5/cur_rate: 26 RTT_start: 3775926668 RTT_end: 3775930142 RTT: 3474
+/  5/calculate_cur_rate,  tx_rate: 2449716, tx_rate: 25, cur_rate: 26, sent_32bytes: 207, start: 3775926612, end: 3797557364, time_interval_ns: 21631888
+/  5/cur_rate: 26 RTT_start: 3797558554 RTT_end: 3797562028 RTT: 3474
+/  5/calculate_cur_rate,  tx_rate: 2449718, tx_rate: 25, cur_rate: 26, sent_32bytes: 207, start: 3797558374, end: 3819189240, time_interval_ns: 21631876
+/  5/cur_rate: 26 RTT_start: 3819190432 RTT_end: 3819193902 RTT: 3470
+/  5/calculate_cur_rate,  tx_rate: 2449709, tx_rate: 25, cur_rate: 26, sent_32bytes: 207, start: 3819190228, end: 3840821192, time_interval_ns: 21631952
+/  5/cur_rate: 20997 RTT_start: 3840822390 RTT_end: 3840825858 RTT: 3468
+/  5/calculate_cur_rate,  tx_rate: 2449714, tx_rate: 25, cur_rate: 20997, sent_32bytes: 207, start: 3840822282, end: 3862453104, time_interval_ns: 21631912
+/  5/cur_rate: 20997 RTT_start: 3862454300 RTT_end: 3862457774 RTT: 3474
+/  5/calculate_cur_rate,  tx_rate: 1980683551, tx_rate: 20768, cur_rate: 20997, sent_32bytes: 1035, start: 3862454166, end: 3862586876, time_interval_ns: 133772
+/  5/cur_rate: 20997 RTT_start: 3862588070 RTT_end: 3862591544 RTT: 3474
+/  5/calculate_cur_rate,  tx_rate: 1980683551, tx_rate: 20768, cur_rate: 20997, sent_32bytes: 1035, start: 3862587864, end: 3862720648, time_interval_ns: 133772
+/  5/cur_rate: 20997 RTT_start: 3862721848 RTT_end: 3862725318 RTT: 3470
+/  5/calculate_cur_rate,  tx_rate: 1980979723, tx_rate: 20772, cur_rate: 20997, sent_32bytes: 1035, start: 3862721746, end: 3862854400, time_interval_ns: 133752
+/  5/cur_rate: 20997 RTT_start: 3862854722 RTT_end: 3862858108 RTT: 3386
+/  5/calculate_cur_rate,  tx_rate: 1981009345, tx_rate: 20772, cur_rate: 20997, sent_32bytes: 1035, start: 3862855466, end: 3862988150, time_interval_ns: 133750
+/  5/cur_rate: 20997 RTT_start: 3862989346 RTT_end: 3862992816 RTT: 3470
+/  5/calculate_cur_rate,  tx_rate: 1978731031, tx_rate: 20748, cur_rate: 20997, sent_32bytes: 1035, start: 3862989118, end: 3863122054, time_interval_ns: 133904
+/  5/cur_rate: 20997 RTT_start: 3863123248 RTT_end: 3863126720 RTT: 3472
+/  5/calculate_cur_rate,  tx_rate: 1977933382, tx_rate: 20740, cur_rate: 20997, sent_32bytes: 1035, start: 3863123076, end: 3863256012, time_interval_ns: 133958
+/  5/cur_rate: 41968 RTT_start: 3863256336 RTT_end: 3863259714 RTT: 3378
+/  5/calculate_cur_rate,  tx_rate: 1979854738, tx_rate: 20760, cur_rate: 41968, sent_32bytes: 1035, start: 3863256996, end: 3863389840, time_interval_ns: 133828
+/  5/cur_rate: 41968 RTT_start: 3863391032 RTT_end: 3863394494 RTT: 3462
+/  5/calculate_cur_rate,  tx_rate: 3953446732, tx_rate: 41454, cur_rate: 41968, sent_32bytes: 1863, start: 3863390864, end: 3863510476, time_interval_ns: 120636
+/  5/cur_rate: 41968 RTT_start: 3863510798 RTT_end: 3863514184 RTT: 3386
+/  5/calculate_cur_rate,  tx_rate: 3953250111, tx_rate: 41452, cur_rate: 41968, sent_32bytes: 1863, start: 3863511580, end: 3863631118, time_interval_ns: 120642
+/  5/cur_rate: 41968 RTT_start: 3863632314 RTT_end: 3863635796 RTT: 3482
+/  5/calculate_cur_rate,  tx_rate: 3956660969, tx_rate: 41488, cur_rate: 41968, sent_32bytes: 1863, start: 3863632140, end: 3863751656, time_interval_ns: 120538
+/  5/cur_rate: 41968 RTT_start: 3863751980 RTT_end: 3863755372 RTT: 3392
+/  5/calculate_cur_rate,  tx_rate: 3958631451, tx_rate: 41509, cur_rate: 41968, sent_32bytes: 1863, start: 3863752740, end: 3863872134, time_interval_ns: 120478
+/  5/cur_rate: 41968 RTT_start: 3863873326 RTT_end: 3863876798 RTT: 3472
+/  5/calculate_cur_rate,  tx_rate: 3953643372, tx_rate: 41456, cur_rate: 41968, sent_32bytes: 1863, start: 3863873126, end: 3863992764, time_interval_ns: 120630
+/  5/cur_rate: 41968 RTT_start: 3863993086 RTT_end: 3863995438 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 3951612368, tx_rate: 41435, cur_rate: 41968, sent_32bytes: 1863, start: 3863993766, end: 3864113456, time_interval_ns: 120692
+/  5/cur_rate: 62939 RTT_start: 3864113780 RTT_end: 3864117156 RTT: 3376
+/  5/calculate_cur_rate,  tx_rate: 3954692449, tx_rate: 41467, cur_rate: 62939, sent_32bytes: 1863, start: 3864114590, end: 3864234054, time_interval_ns: 120598
+/  5/cur_rate: 62939 RTT_start: 3864234376 RTT_end: 3864237762 RTT: 3386
+/  5/calculate_cur_rate,  tx_rate: 5992692856, tx_rate: 62837, cur_rate: 62939, sent_32bytes: 2691, start: 3864235062, end: 3864349010, time_interval_ns: 114956
+/  5/cur_rate: 62939 RTT_start: 3864349332 RTT_end: 3864352716 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 5999790977, tx_rate: 62912, cur_rate: 62939, sent_32bytes: 2691, start: 3864350068, end: 3864463830, time_interval_ns: 114820
+/  5/cur_rate: 62939 RTT_start: 3864464152 RTT_end: 3864466504 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 5995091810, tx_rate: 62863, cur_rate: 62939, sent_32bytes: 2691, start: 3864464928, end: 3864578740, time_interval_ns: 114910
+/  5/cur_rate: 62939 RTT_start: 3864579062 RTT_end: 3864582540 RTT: 3478
+/  5/calculate_cur_rate,  tx_rate: 5998850554, tx_rate: 62902, cur_rate: 62939, sent_32bytes: 2691, start: 3864579816, end: 3864693578, time_interval_ns: 114838
+/  5/cur_rate: 62939 RTT_start: 3864693902 RTT_end: 3864697286 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 5997179420, tx_rate: 62884, cur_rate: 62939, sent_32bytes: 2691, start: 3864694624, end: 3864808448, time_interval_ns: 114870
+/  5/cur_rate: 62939 RTT_start: 3864808770 RTT_end: 3864812156 RTT: 3386
+/  5/calculate_cur_rate,  tx_rate: 5993735644, tx_rate: 62848, cur_rate: 62939, sent_32bytes: 2691, start: 3864809618, end: 3864923384, time_interval_ns: 114936
+/  5/cur_rate: 83910 RTT_start: 3864924576 RTT_end: 3864928050 RTT: 3474
+/  5/calculate_cur_rate,  tx_rate: 6001986443, tx_rate: 62935, cur_rate: 83910, sent_32bytes: 2691, start: 3864924372, end: 3865038162, time_interval_ns: 114778
+/  5/cur_rate: 83910 RTT_start: 3865038486 RTT_end: 3865041880 RTT: 3394
+/  5/calculate_cur_rate,  tx_rate: 7983471074, tx_rate: 83712, cur_rate: 83910, sent_32bytes: 3381, start: 3865039160, end: 3865146578, time_interval_ns: 108416
+/  5/cur_rate: 83910 RTT_start: 3865146904 RTT_end: 3865150430 RTT: 3526
+/  5/cur_rate: 83910 RTT_start: 3865260040 RTT_end: 3865262400 RTT: 2360
+/  5/calculate_cur_rate,  tx_rate: 10304260208, tx_rate: 108047, cur_rate: 83910, sent_32bytes: 4554, start: 3865152330, end: 3865259718, time_interval_ns: 113140
+/  5/cur_rate: 83910 RTT_start: 3865300288 RTT_end: 3865303672 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 6067506610, tx_rate: 63622, cur_rate: 83910, sent_32bytes: 3657, start: 3865299966, end: 3865414014, time_interval_ns: 154296
+/  5/cur_rate: 83910 RTT_start: 3865414338 RTT_end: 3865416680 RTT: 2342
+/  5/calculate_cur_rate,  tx_rate: 7907865168, tx_rate: 82919, cur_rate: 83910, sent_32bytes: 3519, start: 3865415058, end: 3865527934, time_interval_ns: 113920
+/  5/cur_rate: 83910 RTT_start: 3865528258 RTT_end: 3865530608 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 7903979785, tx_rate: 82879, cur_rate: 83910, sent_32bytes: 3519, start: 3865528972, end: 3865641910, time_interval_ns: 113976
+/  5/cur_rate: 104881 RTT_start: 3865642234 RTT_end: 3865645620 RTT: 3386
+/  5/calculate_cur_rate,  tx_rate: 7893452965, tx_rate: 82768, cur_rate: 104881, sent_32bytes: 3519, start: 3865642934, end: 3865756038, time_interval_ns: 114128
+/  5/cur_rate: 104881 RTT_start: 3865756360 RTT_end: 3865758714 RTT: 2354
+/  5/cur_rate: 104881 RTT_start: 3865866914 RTT_end: 3865869270 RTT: 2356
+/  5/calculate_cur_rate,  tx_rate: 13101724044, tx_rate: 137381, cur_rate: 104881, sent_32bytes: 5658, start: 3865759550, end: 3865866592, time_interval_ns: 110554
+/  5/cur_rate: 104881 RTT_start: 3865906162 RTT_end: 3865909544 RTT: 3382
+/  5/calculate_cur_rate,  tx_rate: 7598706851, tx_rate: 79678, cur_rate: 104881, sent_32bytes: 4554, start: 3865905838, end: 3866020016, time_interval_ns: 153424
+/  5/cur_rate: 104881 RTT_start: 3866020338 RTT_end: 3866023718 RTT: 3380
+/  5/calculate_cur_rate,  tx_rate: 9901524329, tx_rate: 103825, cur_rate: 104881, sent_32bytes: 4278, start: 3866023582, end: 3866130622, time_interval_ns: 110606
+/  5/cur_rate: 104881 RTT_start: 3866130946 RTT_end: 3866134328 RTT: 3382
+/  5/calculate_cur_rate,  tx_rate: 9897760383, tx_rate: 103785, cur_rate: 104881, sent_32bytes: 4485, start: 3866134190, end: 3866246624, time_interval_ns: 116002
+/  5/cur_rate: 104881 RTT_start: 3866246946 RTT_end: 3866250332 RTT: 3386
+/  5/calculate_cur_rate,  tx_rate: 9901524329, tx_rate: 103825, cur_rate: 104881, sent_32bytes: 4278, start: 3866250192, end: 3866357230, time_interval_ns: 110606
+/  5/cur_rate: 125852 RTT_start: 3866357554 RTT_end: 3866360938 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 9901345291, tx_rate: 103823, cur_rate: 125852, sent_32bytes: 4416, start: 3866360798, end: 3866471406, time_interval_ns: 114176
+/  5/cur_rate: 125852 RTT_start: 3866471730 RTT_end: 3866474082 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 12186962900, tx_rate: 127789, cur_rate: 125852, sent_32bytes: 5451, start: 3866474342, end: 3866585910, time_interval_ns: 114504
+/  5/cur_rate: 125852 RTT_start: 3866586234 RTT_end: 3866589622 RTT: 3388
+/  5/calculate_cur_rate,  tx_rate: 12191123380, tx_rate: 127833, cur_rate: 125852, sent_32bytes: 5382, start: 3866590352, end: 3866698926, time_interval_ns: 113016
+/  5/cur_rate: 125852 RTT_start: 3866699250 RTT_end: 3866702638 RTT: 3388
+/  5/cur_rate: 125852 RTT_start: 3866813754 RTT_end: 3866816112 RTT: 2358
+/  5/calculate_cur_rate,  tx_rate: 15734791189, tx_rate: 164991, cur_rate: 125852, sent_32bytes: 7038, start: 3866704798, end: 3866813432, time_interval_ns: 114506
+/  5/cur_rate: 125852 RTT_start: 3866854858 RTT_end: 3866858234 RTT: 3376
+/  5/calculate_cur_rate,  tx_rate: 9050706308, tx_rate: 94903, cur_rate: 125852, sent_32bytes: 5451, start: 3866854534, end: 3866967614, time_interval_ns: 154182
+/  5/cur_rate: 125852 RTT_start: 3866967938 RTT_end: 3866970284 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 12032697547, tx_rate: 126171, cur_rate: 125852, sent_32bytes: 5382, start: 3866970550, end: 3867082118, time_interval_ns: 114504
+/  5/cur_rate: 146823 RTT_start: 3867082442 RTT_end: 3867085826 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 12032697547, tx_rate: 126171, cur_rate: 146823, sent_32bytes: 5382, start: 3867085054, end: 3867196622, time_interval_ns: 114504
+/  5/cur_rate: 146823 RTT_start: 3867196946 RTT_end: 3867199290 RTT: 2344
+/  5/cur_rate: 146823 RTT_start: 3867310168 RTT_end: 3867312526 RTT: 2358
+/  5/calculate_cur_rate,  tx_rate: 18565109870, tx_rate: 194669, cur_rate: 146823, sent_32bytes: 8211, start: 3867199166, end: 3867309846, time_interval_ns: 113224
+/  5/cur_rate: 146823 RTT_start: 3867350874 RTT_end: 3867353220 RTT: 2346
+/  5/cur_rate: 146823 RTT_start: 3867462808 RTT_end: 3867465166 RTT: 2358
+/  5/calculate_cur_rate,  tx_rate: 13886792452, tx_rate: 145613, cur_rate: 146823, sent_32bytes: 8280, start: 3867350552, end: 3867462486, time_interval_ns: 152640
+/  5/cur_rate: 146823 RTT_start: 3867503514 RTT_end: 3867506898 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 10672210384, tx_rate: 111906, cur_rate: 146823, sent_32bytes: 6417, start: 3867503192, end: 3867616414, time_interval_ns: 153928
+/  5/cur_rate: 146823 RTT_start: 3867616738 RTT_end: 3867619088 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 13886792452, tx_rate: 145613, cur_rate: 146823, sent_32bytes: 6210, start: 3867621502, end: 3867730894, time_interval_ns: 114480
+/  5/cur_rate: 167794 RTT_start: 3867731218 RTT_end: 3867734610 RTT: 3392
+/  5/cur_rate: 167794 RTT_start: 3867845698 RTT_end: 3867848046 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 18824318658, tx_rate: 197387, cur_rate: 167794, sent_32bytes: 8418, start: 3867735984, end: 3867845374, time_interval_ns: 114480
+/  5/cur_rate: 167794 RTT_start: 3867885874 RTT_end: 3867888220 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 12130598576, tx_rate: 127198, cur_rate: 167794, sent_32bytes: 7245, start: 3867885550, end: 3867998270, time_interval_ns: 152896
+/  5/cur_rate: 167794 RTT_start: 3867998594 RTT_end: 3868000942 RTT: 2348
+/  5/cur_rate: 167794 RTT_start: 3868112426 RTT_end: 3868114774 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 20793590554, tx_rate: 218036, cur_rate: 167794, sent_32bytes: 9246, start: 3868002734, end: 3868112102, time_interval_ns: 113832
+/  5/cur_rate: 167794 RTT_start: 3868152602 RTT_end: 3868154946 RTT: 2344
+/  5/cur_rate: 167794 RTT_start: 3868265282 RTT_end: 3868267628 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 15831684722, tx_rate: 166007, cur_rate: 167794, sent_32bytes: 9453, start: 3868152278, end: 3868264958, time_interval_ns: 152856
+/  5/cur_rate: 188765 RTT_start: 3868305458 RTT_end: 3868308834 RTT: 3376
+/  5/cur_rate: 188765 RTT_start: 3868417058 RTT_end: 3868419406 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 16642631246, tx_rate: 174510, cur_rate: 188765, sent_32bytes: 9867, start: 3868305134, end: 3868416734, time_interval_ns: 151776
+/  5/cur_rate: 188765 RTT_start: 3868458714 RTT_end: 3868461070 RTT: 2356
+/  5/cur_rate: 188765 RTT_start: 3868571002 RTT_end: 3868573342 RTT: 2340
+/  5/calculate_cur_rate,  tx_rate: 18129397703, tx_rate: 190100, cur_rate: 188765, sent_32bytes: 10902, start: 3868458390, end: 3868570678, time_interval_ns: 153944
+/  5/cur_rate: 188765 RTT_start: 3868611656 RTT_end: 3868614002 RTT: 2346
+/  5/cur_rate: 188765 RTT_start: 3868723018 RTT_end: 3868725368 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 18243132301, tx_rate: 191293, cur_rate: 188765, sent_32bytes: 10833, start: 3868611334, end: 3868722694, time_interval_ns: 152016
+/  5/cur_rate: 188765 RTT_start: 3868763674 RTT_end: 3868766028 RTT: 2354
+/  5/cur_rate: 209736 RTT_start: 3868875962 RTT_end: 3868879556 RTT: 3594
+/  5/calculate_cur_rate,  tx_rate: 18363427136, tx_rate: 192554, cur_rate: 209736, sent_32bytes: 10971, start: 3868763350, end: 3868875638, time_interval_ns: 152944
+/  5/cur_rate: 209736 RTT_start: 3868917460 RTT_end: 3868919808 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 14909426170, tx_rate: 156336, cur_rate: 209736, sent_32bytes: 8970, start: 3868917262, end: 3869029656, time_interval_ns: 154018
+/  5/cur_rate: 209736 RTT_start: 3869029978 RTT_end: 3869033366 RTT: 3388
+/  5/cur_rate: 209736 RTT_start: 3869143266 RTT_end: 3869145618 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 26351146655, tx_rate: 276311, cur_rate: 209736, sent_32bytes: 11661, start: 3869033222, end: 3869142942, time_interval_ns: 113286
+/  5/cur_rate: 209736 RTT_start: 3869184298 RTT_end: 3869187680 RTT: 3382
+/  5/cur_rate: 209736 RTT_start: 3869296690 RTT_end: 3869299034 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 19917822504, tx_rate: 208853, cur_rate: 209736, sent_32bytes: 11937, start: 3869183976, end: 3869296366, time_interval_ns: 153424
+/  5/cur_rate: 209736 RTT_start: 3869338610 RTT_end: 3869340960 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 15055071855, tx_rate: 157863, cur_rate: 209736, sent_32bytes: 8970, start: 3869338286, end: 3869448894, time_interval_ns: 152528
+/  5/cur_rate: 230707 RTT_start: 3869451002 RTT_end: 3869454290 RTT: 3288
+/  5/cur_rate: 230707 RTT_start: 3869564258 RTT_end: 3869566602 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 26563560500, tx_rate: 278539, cur_rate: 230707, sent_32bytes: 11937, start: 3869454246, end: 3869563934, time_interval_ns: 115040
+/  5/cur_rate: 230707 RTT_start: 3869604858 RTT_end: 3869607206 RTT: 2348
+/  5/cur_rate: 230707 RTT_start: 3869716914 RTT_end: 3869719268 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 21869405722, tx_rate: 229317, cur_rate: 230707, sent_32bytes: 13041, start: 3869604534, end: 3869716590, time_interval_ns: 152656
+/  5/cur_rate: 230707 RTT_start: 3869758306 RTT_end: 3869760656 RTT: 2350
+/  5/cur_rate: 230707 RTT_start: 3869870362 RTT_end: 3869872708 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 21641133919, tx_rate: 226923, cur_rate: 230707, sent_32bytes: 12972, start: 3869757984, end: 3869870040, time_interval_ns: 153450
+/  5/cur_rate: 230707 RTT_start: 3869910962 RTT_end: 3869913320 RTT: 2358
+/  5/cur_rate: 251678 RTT_start: 3870023874 RTT_end: 3870026232 RTT: 2358
+/  5/calculate_cur_rate,  tx_rate: 21747742818, tx_rate: 228041, cur_rate: 251678, sent_32bytes: 13041, start: 3869910640, end: 3870023550, time_interval_ns: 153510
+/  5/cur_rate: 251678 RTT_start: 3870064474 RTT_end: 3870066820 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 18400000000, tx_rate: 192937, cur_rate: 251678, sent_32bytes: 10971, start: 3870064150, end: 3870176190, time_interval_ns: 152640
+/  5/cur_rate: 251678 RTT_start: 3870176576 RTT_end: 3870180290 RTT: 3714
+/  5/cur_rate: 251678 RTT_start: 3870290706 RTT_end: 3870294090 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 32020176544, tx_rate: 335755, cur_rate: 251678, sent_32bytes: 14283, start: 3870180584, end: 3870290382, time_interval_ns: 114192
+/  5/cur_rate: 251678 RTT_start: 3870332424 RTT_end: 3870335804 RTT: 3380
+/  5/cur_rate: 251678 RTT_start: 3870443690 RTT_end: 3870446046 RTT: 2356
+/  5/calculate_cur_rate,  tx_rate: 24131778486, tx_rate: 253040, cur_rate: 251678, sent_32bytes: 14421, start: 3870332102, end: 3870443366, time_interval_ns: 152984
+/  5/cur_rate: 251678 RTT_start: 3870485418 RTT_end: 3870487772 RTT: 2354
+/  5/cur_rate: 272649 RTT_start: 3870596682 RTT_end: 3870600066 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 24015059610, tx_rate: 251816, cur_rate: 272649, sent_32bytes: 14352, start: 3870485096, end: 3870596358, time_interval_ns: 152992
+/  5/cur_rate: 272649 RTT_start: 3870637674 RTT_end: 3870641064 RTT: 3390
+/  5/cur_rate: 272649 RTT_start: 3870750554 RTT_end: 3870752904 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 26058854112, tx_rate: 273246, cur_rate: 272649, sent_32bytes: 15663, start: 3870637352, end: 3870750230, time_interval_ns: 153872
+/  5/cur_rate: 272649 RTT_start: 3870791114 RTT_end: 3870794492 RTT: 3378
+/  5/cur_rate: 272649 RTT_start: 3870902730 RTT_end: 3870905078 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 26117127536, tx_rate: 273857, cur_rate: 272649, sent_32bytes: 15525, start: 3870790792, end: 3870902406, time_interval_ns: 152176
+/  5/cur_rate: 272649 RTT_start: 3870943290 RTT_end: 3870946680 RTT: 3390
+/  5/cur_rate: 272649 RTT_start: 3871056170 RTT_end: 3871058520 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 26132221063, tx_rate: 274016, cur_rate: 272649, sent_32bytes: 15663, start: 3870942966, end: 3871055846, time_interval_ns: 153440
+/  5/cur_rate: 293620 RTT_start: 3871096730 RTT_end: 3871100122 RTT: 3392
+/  5/cur_rate: 293620 RTT_start: 3871209586 RTT_end: 3871211932 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 26596860822, tx_rate: 278888, cur_rate: 293620, sent_32bytes: 15939, start: 3871096406, end: 3871209262, time_interval_ns: 153416
+/  5/cur_rate: 293620 RTT_start: 3871250290 RTT_end: 3871252634 RTT: 2344
+/  5/cur_rate: 293620 RTT_start: 3871362858 RTT_end: 3871365218 RTT: 2360
+/  5/calculate_cur_rate,  tx_rate: 27774309723, tx_rate: 291234, cur_rate: 293620, sent_32bytes: 16629, start: 3871249966, end: 3871362534, time_interval_ns: 153272
+/  5/cur_rate: 293620 RTT_start: 3871403562 RTT_end: 3871405914 RTT: 2352
+/  5/cur_rate: 293620 RTT_start: 3871516194 RTT_end: 3871518548 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 27531962070, tx_rate: 288693, cur_rate: 293620, sent_32bytes: 16491, start: 3871403238, end: 3871515872, time_interval_ns: 153338
+/  5/cur_rate: 293620 RTT_start: 3871555624 RTT_end: 3871557978 RTT: 2354
+/  5/cur_rate: 314591 RTT_start: 3871668178 RTT_end: 3871670522 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 28010053822, tx_rate: 293706, cur_rate: 314591, sent_32bytes: 16629, start: 3871555302, end: 3871667854, time_interval_ns: 151982
+/  5/cur_rate: 314591 RTT_start: 3871708880 RTT_end: 3871711224 RTT: 2344
+/  5/cur_rate: 314591 RTT_start: 3871821562 RTT_end: 3871823906 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 29596620247, tx_rate: 310343, cur_rate: 314591, sent_32bytes: 17733, start: 3871708558, end: 3871821238, time_interval_ns: 153384
+/  5/cur_rate: 314591 RTT_start: 3871862088 RTT_end: 3871864438 RTT: 2350
+/  5/cur_rate: 314591 RTT_start: 3871974730 RTT_end: 3871977084 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 29637970882, tx_rate: 310776, cur_rate: 314591, sent_32bytes: 17733, start: 3871861766, end: 3871974408, time_interval_ns: 153170
+/  5/cur_rate: 314591 RTT_start: 3872015258 RTT_end: 3872017598 RTT: 2340
+/  5/cur_rate: 314591 RTT_start: 3872126714 RTT_end: 3872129054 RTT: 2340
+/  5/calculate_cur_rate,  tx_rate: 29869642457, tx_rate: 313205, cur_rate: 314591, sent_32bytes: 17733, start: 3872014934, end: 3872126390, time_interval_ns: 151982
+/  5/cur_rate: 335562 RTT_start: 3872168432 RTT_end: 3872170798 RTT: 2366
+/  5/calculate_cur_rate,  tx_rate: 22538784392, tx_rate: 236336, cur_rate: 335562, sent_32bytes: 13593, start: 3872168110, end: 3872280782, time_interval_ns: 154392
+/  5/cur_rate: 335562 RTT_start: 3872281104 RTT_end: 3872284582 RTT: 3478
+/  5/cur_rate: 335562 RTT_start: 3872395154 RTT_end: 3872397506 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 41973063973, tx_rate: 440119, cur_rate: 335562, sent_32bytes: 18699, start: 3872285230, end: 3872394830, time_interval_ns: 114048
+/  5/cur_rate: 335562 RTT_start: 3872436298 RTT_end: 3872438646 RTT: 2348
+/  5/cur_rate: 335562 RTT_start: 3872549210 RTT_end: 3872551566 RTT: 2356
+/  5/calculate_cur_rate,  tx_rate: 31531391182, tx_rate: 330630, cur_rate: 335562, sent_32bytes: 18975, start: 3872435976, end: 3872548886, time_interval_ns: 154056
+/  5/cur_rate: 335562 RTT_start: 3872589242 RTT_end: 3872592534 RTT: 3292
+/  5/cur_rate: 335562 RTT_start: 3872702162 RTT_end: 3872704518 RTT: 2356
+/  5/calculate_cur_rate,  tx_rate: 31874470422, tx_rate: 334228, cur_rate: 335562, sent_32bytes: 19044, start: 3872588918, end: 3872701838, time_interval_ns: 152952
+/  5/cur_rate: 356533 RTT_start: 3872742752 RTT_end: 3872745098 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 24314149179, tx_rate: 254952, cur_rate: 356533, sent_32bytes: 14628, start: 3872742430, end: 3872855854, time_interval_ns: 154016
+/  5/cur_rate: 356533 RTT_start: 3872856178 RTT_end: 3872859462 RTT: 3284
+/  5/cur_rate: 356533 RTT_start: 3872970268 RTT_end: 3872972616 RTT: 2348
+/  5/calculate_cur_rate,  tx_rate: 45209732837, tx_rate: 474058, cur_rate: 356533, sent_32bytes: 20148, start: 3872859982, end: 3872969942, time_interval_ns: 114088
+/  5/cur_rate: 356533 RTT_start: 3873011084 RTT_end: 3873013462 RTT: 2378
+/  5/cur_rate: 356533 RTT_start: 3873124130 RTT_end: 3873126484 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 34096396817, tx_rate: 357526, cur_rate: 356533, sent_32bytes: 20493, start: 3873010734, end: 3873123806, time_interval_ns: 153864
+/  5/cur_rate: 356533 RTT_start: 3873164378 RTT_end: 3873166724 RTT: 2346
+/  5/cur_rate: 356533 RTT_start: 3873277402 RTT_end: 3873279746 RTT: 2344
+/  5/calculate_cur_rate,  tx_rate: 34228091236, tx_rate: 358907, cur_rate: 356533, sent_32bytes: 20493, start: 3873164056, end: 3873277078, time_interval_ns: 153272
+/  5/cur_rate: 377504 RTT_start: 3873317650 RTT_end: 3873320004 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 26166327329, tx_rate: 274373, cur_rate: 377504, sent_32bytes: 15663, start: 3873317328, end: 3873430318, time_interval_ns: 153240
+/  5/cur_rate: 377504 RTT_start: 3873430980 RTT_end: 3873434680 RTT: 3700
+/  5/cur_rate: 377504 RTT_start: 3873545398 RTT_end: 3873547748 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 48179863011, tx_rate: 505202, cur_rate: 377504, sent_32bytes: 21597, start: 3873434190, end: 3873545072, time_interval_ns: 114754
+/  5/cur_rate: 377504 RTT_start: 3873586074 RTT_end: 3873589460 RTT: 3386
+/  5/cur_rate: 377504 RTT_start: 3873698914 RTT_end: 3873701264 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 36365095704, tx_rate: 381315, cur_rate: 377504, sent_32bytes: 21804, start: 3873585726, end: 3873698566, time_interval_ns: 153494
+/  5/cur_rate: 377504 RTT_start: 3873739046 RTT_end: 3873742496 RTT: 3450
+/  5/cur_rate: 377504 RTT_start: 3873851802 RTT_end: 3873854224 RTT: 2422
+/  5/calculate_cur_rate,  tx_rate: 36624771074, tx_rate: 384038, cur_rate: 377504, sent_32bytes: 21873, start: 3873738718, end: 3873851454, time_interval_ns: 152888
+/  5/cur_rate: 398475 RTT_start: 3873892458 RTT_end: 3873894836 RTT: 2378
+/  5/cur_rate: 398475 RTT_start: 3874005290 RTT_end: 3874007704 RTT: 2414
+/  5/calculate_cur_rate,  tx_rate: 36711768998, tx_rate: 384950, cur_rate: 398475, sent_32bytes: 22011, start: 3873892110, end: 3874004942, time_interval_ns: 153488
+/  5/cur_rate: 398475 RTT_start: 3874045168 RTT_end: 3874047526 RTT: 2358
+/  5/cur_rate: 398475 RTT_start: 3874157970 RTT_end: 3874160438 RTT: 2468
+/  5/calculate_cur_rate,  tx_rate: 38410060256, tx_rate: 402758, cur_rate: 398475, sent_32bytes: 22908, start: 3874044846, end: 3874157622, time_interval_ns: 152680
+/  5/cur_rate: 398475 RTT_start: 3874199240 RTT_end: 3874201586 RTT: 2346
+/  5/cur_rate: 398475 RTT_start: 3874311112 RTT_end: 3874313510 RTT: 2398
+/  5/calculate_cur_rate,  tx_rate: 37941711062, tx_rate: 397847, cur_rate: 398475, sent_32bytes: 22701, start: 3874198918, end: 3874310790, time_interval_ns: 153168
+/  5/cur_rate: 398475 RTT_start: 3874351950 RTT_end: 3874354448 RTT: 2498
+/  5/cur_rate: 419446 RTT_start: 3874464770 RTT_end: 3874467172 RTT: 2402
+/  5/calculate_cur_rate,  tx_rate: 38057071443, tx_rate: 399057, cur_rate: 419446, sent_32bytes: 22839, start: 3874351622, end: 3874464422, time_interval_ns: 153632
+/  5/cur_rate: 419446 RTT_start: 3874505576 RTT_end: 3874507950 RTT: 2374
+/  5/cur_rate: 419446 RTT_start: 3874618386 RTT_end: 3874620766 RTT: 2380
+/  5/calculate_cur_rate,  tx_rate: 39785855640, tx_rate: 417184, cur_rate: 419446, sent_32bytes: 23874, start: 3874505254, end: 3874618038, time_interval_ns: 153616
+/  5/cur_rate: 419446 RTT_start: 3874659208 RTT_end: 3874661640 RTT: 2432
+/  5/cur_rate: 419446 RTT_start: 3874771594 RTT_end: 3874774036 RTT: 2442
+/  5/calculate_cur_rate,  tx_rate: 39776512975, tx_rate: 417086, cur_rate: 419446, sent_32bytes: 23805, start: 3874658886, end: 3874771246, time_interval_ns: 153208
+/  5/cur_rate: 419446 RTT_start: 3874812416 RTT_end: 3874814776 RTT: 2360
+/  5/cur_rate: 419446 RTT_start: 3874924752 RTT_end: 3874927182 RTT: 2430
+/  5/calculate_cur_rate,  tx_rate: 39667432630, tx_rate: 415943, cur_rate: 419446, sent_32bytes: 23736, start: 3874812094, end: 3874924430, time_interval_ns: 153184
+/  5/cur_rate: 440417 RTT_start: 3874965208 RTT_end: 3874967660 RTT: 2452
+/  5/cur_rate: 440417 RTT_start: 3875078458 RTT_end: 3875080880 RTT: 2422
+/  5/calculate_cur_rate,  tx_rate: 40343987506, tx_rate: 423037, cur_rate: 440417, sent_32bytes: 24219, start: 3874964886, end: 3875078110, time_interval_ns: 153680
+/  5/cur_rate: 440417 RTT_start: 3875119136 RTT_end: 3875121610 RTT: 2474
+/  5/calculate_cur_rate,  tx_rate: 31958198348, tx_rate: 335105, cur_rate: 440417, sent_32bytes: 19113, start: 3875118814, end: 3875231214, time_interval_ns: 153104
+/  5/cur_rate: 440417 RTT_start: 3875232374 RTT_end: 3875236070 RTT: 3696
+/  5/cur_rate: 440417 RTT_start: 3875346472 RTT_end: 3875348896 RTT: 2424
+/  5/calculate_cur_rate,  tx_rate: 54712048444, tx_rate: 573697, cur_rate: 440417, sent_32bytes: 24564, start: 3875236302, end: 3875346150, time_interval_ns: 114936
+/  5/cur_rate: 440417 RTT_start: 3875387668 RTT_end: 3875391216 RTT: 3548
+/  5/cur_rate: 440417 RTT_start: 3875500096 RTT_end: 3875502526 RTT: 2430
+/  5/calculate_cur_rate,  tx_rate: 41508514294, tx_rate: 435248, cur_rate: 440417, sent_32bytes: 24909, start: 3875387342, end: 3875499774, time_interval_ns: 153624
+/  5/cur_rate: 461388 RTT_start: 3875540800 RTT_end: 3875544258 RTT: 3458
+/  5/cur_rate: 461388 RTT_start: 3875653194 RTT_end: 3875655642 RTT: 2448
+/  5/calculate_cur_rate,  tx_rate: 42235183443, tx_rate: 442867, cur_rate: 461388, sent_32bytes: 25254, start: 3875540478, end: 3875652846, time_interval_ns: 153072
+/  5/cur_rate: 461388 RTT_start: 3875693990 RTT_end: 3875696492 RTT: 2502
+/  5/cur_rate: 461388 RTT_start: 3875806712 RTT_end: 3875809230 RTT: 2518
+/  5/calculate_cur_rate,  tx_rate: 43600896160, tx_rate: 457188, cur_rate: 461388, sent_32bytes: 26151, start: 3875693662, end: 3875806390, time_interval_ns: 153544
+/  5/cur_rate: 461388 RTT_start: 3875847138 RTT_end: 3875849622 RTT: 2484
+/  5/cur_rate: 461388 RTT_start: 3875960276 RTT_end: 3875962772 RTT: 2496
+/  5/calculate_cur_rate,  tx_rate: 43711383172, tx_rate: 458347, cur_rate: 461388, sent_32bytes: 26220, start: 3875846790, end: 3875959950, time_interval_ns: 153560
+/  5/cur_rate: 461388 RTT_start: 3876000680 RTT_end: 3876003202 RTT: 2522
+/  5/cur_rate: 482359 RTT_start: 3876113460 RTT_end: 3876115966 RTT: 2506
+/  5/calculate_cur_rate,  tx_rate: 43818675579, tx_rate: 459472, cur_rate: 482359, sent_32bytes: 26220, start: 3876000358, end: 3876113134, time_interval_ns: 153184
+/  5/cur_rate: 482359 RTT_start: 3876154294 RTT_end: 3876156838 RTT: 2544
+/  5/cur_rate: 482359 RTT_start: 3876266104 RTT_end: 3876268658 RTT: 2554
+/  5/calculate_cur_rate,  tx_rate: 45939730622, tx_rate: 481712, cur_rate: 482359, sent_32bytes: 27393, start: 3876153974, end: 3876265782, time_interval_ns: 152648
+/  5/cur_rate: 482359 RTT_start: 3876306830 RTT_end: 3876309396 RTT: 2566
+/  5/cur_rate: 482359 RTT_start: 3876419312 RTT_end: 3876421886 RTT: 2574
+/  5/calculate_cur_rate,  tx_rate: 46117696203, tx_rate: 483579, cur_rate: 482359, sent_32bytes: 27600, start: 3876306486, end: 3876418990, time_interval_ns: 153208
+/  5/cur_rate: 482359 RTT_start: 3876460474 RTT_end: 3876463032 RTT: 2558
+/  5/cur_rate: 482359 RTT_start: 3876573048 RTT_end: 3876575624 RTT: 2576
+/  5/calculate_cur_rate,  tx_rate: 45728915427, tx_rate: 479502, cur_rate: 482359, sent_32bytes: 27462, start: 3876460142, end: 3876572728, time_interval_ns: 153738
+/  5/cur_rate: 503330 RTT_start: 3876613336 RTT_end: 3876615916 RTT: 2580
+/  5/cur_rate: 503330 RTT_start: 3876725904 RTT_end: 3876728414 RTT: 2510
+/  5/calculate_cur_rate,  tx_rate: 46809657789, tx_rate: 490834, cur_rate: 503330, sent_32bytes: 27945, start: 3876613014, end: 3876725558, time_interval_ns: 152830
+/  5/cur_rate: 503330 RTT_start: 3876766674 RTT_end: 3876769244 RTT: 2570
+/  5/cur_rate: 503330 RTT_start: 3876878784 RTT_end: 3876881224 RTT: 2440
+/  5/calculate_cur_rate,  tx_rate: 48519855595, tx_rate: 508767, cur_rate: 503330, sent_32bytes: 28980, start: 3876766326, end: 3876878462, time_interval_ns: 152904
+/  5/cur_rate: 503330 RTT_start: 3876919570 RTT_end: 3876922160 RTT: 2590
+/  5/cur_rate: 503330 RTT_start: 3877032024 RTT_end: 3877034598 RTT: 2574
+/  5/calculate_cur_rate,  tx_rate: 48645914092, tx_rate: 510089, cur_rate: 503330, sent_32bytes: 29118, start: 3876919230, end: 3877031696, time_interval_ns: 153234
+/  5/cur_rate: 503330 RTT_start: 3877073232 RTT_end: 3877075786 RTT: 2554
+/  5/cur_rate: 524301 RTT_start: 3877184968 RTT_end: 3877188532 RTT: 3564
+/  5/calculate_cur_rate,  tx_rate: 48389774436, tx_rate: 507403, cur_rate: 524301, sent_32bytes: 28911, start: 3877072886, end: 3877184646, time_interval_ns: 152950
+/  5/cur_rate: 524301 RTT_start: 3877225772 RTT_end: 3877228064 RTT: 2292
+/  5/cur_rate: 524301 RTT_start: 3877338606 RTT_end: 3877342130 RTT: 3524
+/  5/calculate_cur_rate,  tx_rate: 51279316808, tx_rate: 537702, cur_rate: 524301, sent_32bytes: 30774, start: 3877225414, end: 3877338278, time_interval_ns: 153632
+/  5/cur_rate: 524301 RTT_start: 3877379218 RTT_end: 3877381534 RTT: 2316
+/  5/cur_rate: 524301 RTT_start: 3877491326 RTT_end: 3877493860 RTT: 2534
+/  5/calculate_cur_rate,  tx_rate: 51353544348, tx_rate: 538480, cur_rate: 524301, sent_32bytes: 30636, start: 3877378870, end: 3877491000, time_interval_ns: 152722
+/  5/cur_rate: 524301 RTT_start: 3877531912 RTT_end: 3877534212 RTT: 2300
+/  5/cur_rate: 524301 RTT_start: 3877644172 RTT_end: 3877646684 RTT: 2512
+/  5/calculate_cur_rate,  tx_rate: 51311882548, tx_rate: 538044, cur_rate: 524301, sent_32bytes: 30636, start: 3877531590, end: 3877643846, time_interval_ns: 152846
+/  5/cur_rate: 545272 RTT_start: 3877685198 RTT_end: 3877688860 RTT: 3662
+/  5/cur_rate: 545272 RTT_start: 3877797244 RTT_end: 3877799684 RTT: 2440
+/  5/calculate_cur_rate,  tx_rate: 51474315583, tx_rate: 539747, cur_rate: 545272, sent_32bytes: 30774, start: 3877684440, end: 3877796896, time_interval_ns: 153050
+/  5/cur_rate: 545272 RTT_start: 3877837278 RTT_end: 3877840846 RTT: 3568
+/  5/cur_rate: 545272 RTT_start: 3877951210 RTT_end: 3877953700 RTT: 2490
+/  5/calculate_cur_rate,  tx_rate: 53003702116, tx_rate: 555784, cur_rate: 545272, sent_32bytes: 31878, start: 3877836942, end: 3877950862, time_interval_ns: 153966
+/  5/cur_rate: 545272 RTT_start: 3877992506 RTT_end: 3877995012 RTT: 2506
+/  5/cur_rate: 545272 RTT_start: 3878104390 RTT_end: 3878106908 RTT: 2518
+/  5/calculate_cur_rate,  tx_rate: 52346318537, tx_rate: 548890, cur_rate: 545272, sent_32bytes: 31326, start: 3877992182, end: 3878104062, time_interval_ns: 153200
+/  5/cur_rate: 545272 RTT_start: 3878145112 RTT_end: 3878147606 RTT: 2494
+/  5/cur_rate: 566243 RTT_start: 3878257652 RTT_end: 3878260166 RTT: 2514
+/  5/calculate_cur_rate,  tx_rate: 52554963983, tx_rate: 551078, cur_rate: 566243, sent_32bytes: 31464, start: 3878144792, end: 3878257326, time_interval_ns: 153264
+/  5/cur_rate: 566243 RTT_start: 3878298300 RTT_end: 3878300832 RTT: 2532
+/  5/cur_rate: 566243 RTT_start: 3878410870 RTT_end: 3878413380 RTT: 2510
+/  5/calculate_cur_rate,  tx_rate: 53847330835, tx_rate: 564630, cur_rate: 566243, sent_32bytes: 32223, start: 3878297974, end: 3878410520, time_interval_ns: 153194
+/  5/cur_rate: 566243 RTT_start: 3878451538 RTT_end: 3878454032 RTT: 2494
+/  5/cur_rate: 566243 RTT_start: 3878563756 RTT_end: 3878566234 RTT: 2478
+/  5/calculate_cur_rate,  tx_rate: 53839568834, tx_rate: 564548, cur_rate: 566243, sent_32bytes: 32154, start: 3878451190, end: 3878563408, time_interval_ns: 152888
+/  5/cur_rate: 566243 RTT_start: 3878604428 RTT_end: 3878606942 RTT: 2514
+/  5/cur_rate: 566243 RTT_start: 3878716570 RTT_end: 3878719022 RTT: 2452
+/  5/calculate_cur_rate,  tx_rate: 53865640582, tx_rate: 564822, cur_rate: 566243, sent_32bytes: 32154, start: 3878604078, end: 3878716222, time_interval_ns: 152814
+/  5/cur_rate: 587214 RTT_start: 3878757242 RTT_end: 3878759662 RTT: 2420
+/  5/cur_rate: 587214 RTT_start: 3878869718 RTT_end: 3878872230 RTT: 2512
+/  5/calculate_cur_rate,  tx_rate: 54202444374, tx_rate: 568353, cur_rate: 587214, sent_32bytes: 32430, start: 3878756894, end: 3878869390, time_interval_ns: 153168
+/  5/cur_rate: 587214 RTT_start: 3878910188 RTT_end: 3878912676 RTT: 2488
+/  5/cur_rate: 587214 RTT_start: 3879022726 RTT_end: 3879025220 RTT: 2494
+/  5/calculate_cur_rate,  tx_rate: 55875352922, tx_rate: 585895, cur_rate: 587214, sent_32bytes: 33396, start: 3878909840, end: 3879022398, time_interval_ns: 153008
+/  5/cur_rate: 587214 RTT_start: 3879063196 RTT_end: 3879065622 RTT: 2426
+/  5/cur_rate: 587214 RTT_start: 3879175832 RTT_end: 3879178258 RTT: 2426
+/  5/calculate_cur_rate,  tx_rate: 55840317692, tx_rate: 585528, cur_rate: 587214, sent_32bytes: 33396, start: 3879062846, end: 3879175502, time_interval_ns: 153104
+/  5/cur_rate: 587214 RTT_start: 3879216274 RTT_end: 3879218626 RTT: 2352
+/  5/cur_rate: 608185 RTT_start: 3879328876 RTT_end: 3879331402 RTT: 2526
+/  5/calculate_cur_rate,  tx_rate: 55860749568, tx_rate: 585742, cur_rate: 608185, sent_32bytes: 33396, start: 3879215952, end: 3879328550, time_interval_ns: 153048
+/  5/cur_rate: 608185 RTT_start: 3879369346 RTT_end: 3879371772 RTT: 2426
+/  5/cur_rate: 608185 RTT_start: 3879482182 RTT_end: 3879484694 RTT: 2512
+/  5/calculate_cur_rate,  tx_rate: 57382822998, tx_rate: 601702, cur_rate: 608185, sent_32bytes: 34362, start: 3879368998, end: 3879481848, time_interval_ns: 153298
+/  5/cur_rate: 608185 RTT_start: 3879522830 RTT_end: 3879525360 RTT: 2530
+/  5/calculate_cur_rate,  tx_rate: 43691300990, tx_rate: 458136, cur_rate: 608185, sent_32bytes: 26082, start: 3879522502, end: 3879634670, time_interval_ns: 152822
+/  5/cur_rate: 608185 RTT_start: 3879636274 RTT_end: 3879640126 RTT: 3852
+/  5/cur_rate: 608185 RTT_start: 3879749318 RTT_end: 3879751802 RTT: 2484
+/  5/calculate_cur_rate,  tx_rate: 75710361960, tx_rate: 793880, cur_rate: 608185, sent_32bytes: 33810, start: 3879638982, end: 3879748992, time_interval_ns: 114322
+/  5/cur_rate: 608185 RTT_start: 3879790334 RTT_end: 3879792828 RTT: 2494
+/  5/cur_rate: 629156 RTT_start: 3879903230 RTT_end: 3879905752 RTT: 2522
+/  5/calculate_cur_rate,  tx_rate: 57154648820, tx_rate: 599309, cur_rate: 629156, sent_32bytes: 34362, start: 3879790008, end: 3879902902, time_interval_ns: 153910
+/  5/cur_rate: 629156 RTT_start: 3879943906 RTT_end: 3879946382 RTT: 2476
+/  5/cur_rate: 629156 RTT_start: 3880056546 RTT_end: 3880058896 RTT: 2350
+/  5/calculate_cur_rate,  tx_rate: 59688132762, tx_rate: 625875, cur_rate: 629156, sent_32bytes: 35742, start: 3879943558, end: 3880056198, time_interval_ns: 153296
+/  5/cur_rate: 629156 RTT_start: 3880097372 RTT_end: 3880099870 RTT: 2498
+/  5/cur_rate: 629156 RTT_start: 3880210090 RTT_end: 3880212444 RTT: 2354
+/  5/calculate_cur_rate,  tx_rate: 59352365076, tx_rate: 622354, cur_rate: 629156, sent_32bytes: 35604, start: 3880097046, end: 3880209766, time_interval_ns: 153568
+/  5/cur_rate: 629156 RTT_start: 3880250370 RTT_end: 3880252720 RTT: 2350
+/  5/cur_rate: 629156 RTT_start: 3880362950 RTT_end: 3880365444 RTT: 2494
+/  5/calculate_cur_rate,  tx_rate: 59859946616, tx_rate: 627677, cur_rate: 629156, sent_32bytes: 35742, start: 3880250022, end: 3880362622, time_interval_ns: 152856
+/  5/cur_rate: 650127 RTT_start: 3880404084 RTT_end: 3880406534 RTT: 2450
+/  5/cur_rate: 650127 RTT_start: 3880515872 RTT_end: 3880518376 RTT: 2504
+/  5/calculate_cur_rate,  tx_rate: 59962953272, tx_rate: 628757, cur_rate: 650127, sent_32bytes: 35811, start: 3880403734, end: 3880515510, time_interval_ns: 152888
+/  5/cur_rate: 650127 RTT_start: 3880556588 RTT_end: 3880559016 RTT: 2428
+/  5/cur_rate: 650127 RTT_start: 3880669358 RTT_end: 3880671832 RTT: 2474
+/  5/calculate_cur_rate,  tx_rate: 61211881188, tx_rate: 641853, cur_rate: 650127, sent_32bytes: 36708, start: 3880556240, end: 3880669030, time_interval_ns: 153520
+/  5/cur_rate: 650127 RTT_start: 3880710080 RTT_end: 3880712430 RTT: 2350
+/  5/cur_rate: 650127 RTT_start: 3880822242 RTT_end: 3880824718 RTT: 2476
+/  5/calculate_cur_rate,  tx_rate: 61243458237, tx_rate: 642184, cur_rate: 650127, sent_32bytes: 36570, start: 3880709758, end: 3880821894, time_interval_ns: 152864
+/  5/cur_rate: 650127 RTT_start: 3880862930 RTT_end: 3880865432 RTT: 2502
+/  5/cur_rate: 671098 RTT_start: 3880975436 RTT_end: 3880977940 RTT: 2504
+/  5/calculate_cur_rate,  tx_rate: 61339738903, tx_rate: 643193, cur_rate: 671098, sent_32bytes: 36708, start: 3880862582, end: 3880975094, time_interval_ns: 153200
+/  5/cur_rate: 671098 RTT_start: 3881016318 RTT_end: 3881018776 RTT: 2458
+/  5/cur_rate: 671098 RTT_start: 3881128614 RTT_end: 3881131146 RTT: 2532
+/  5/calculate_cur_rate,  tx_rate: 63764374118, tx_rate: 668617, cur_rate: 671098, sent_32bytes: 38157, start: 3881015992, end: 3881128286, time_interval_ns: 153192
+/  5/cur_rate: 671098 RTT_start: 3881169332 RTT_end: 3881171698 RTT: 2366
+/  5/cur_rate: 671098 RTT_start: 3881281804 RTT_end: 3881284354 RTT: 2550
+/  5/calculate_cur_rate,  tx_rate: 63879680401, tx_rate: 669826, cur_rate: 671098, sent_32bytes: 38226, start: 3881168982, end: 3881281478, time_interval_ns: 153192
+/  5/cur_rate: 671098 RTT_start: 3881322588 RTT_end: 3881324940 RTT: 2352
+/  5/cur_rate: 671098 RTT_start: 3881435002 RTT_end: 3881437506 RTT: 2504
+/  5/calculate_cur_rate,  tx_rate: 63883016503, tx_rate: 669861, cur_rate: 671098, sent_32bytes: 38226, start: 3881322238, end: 3881434662, time_interval_ns: 153184
+/  5/cur_rate: 692069 RTT_start: 3881475854 RTT_end: 3881478362 RTT: 2508
+/  5/calculate_cur_rate,  tx_rate: 48900078349, tx_rate: 512754, cur_rate: 692069, sent_32bytes: 29256, start: 3881475512, end: 3881587822, time_interval_ns: 153160
+/  5/cur_rate: 692069 RTT_start: 3881588156 RTT_end: 3881592342 RTT: 4186
+/  5/cur_rate: 692069 RTT_start: 3881703358 RTT_end: 3881705866 RTT: 2508
+/  5/calculate_cur_rate,  tx_rate: 86173333333, tx_rate: 903592, cur_rate: 692069, sent_32bytes: 38778, start: 3881592648, end: 3881703022, time_interval_ns: 115200
+/  5/cur_rate: 692069 RTT_start: 3881744086 RTT_end: 3881747456 RTT: 3370
+/  5/cur_rate: 692069 RTT_start: 3881856358 RTT_end: 3881858770 RTT: 2412
+/  5/calculate_cur_rate,  tx_rate: 65688173167, tx_rate: 688790, cur_rate: 692069, sent_32bytes: 39261, start: 3881743758, end: 3881856030, time_interval_ns: 153008
+/  5/cur_rate: 692069 RTT_start: 3881896990 RTT_end: 3881899506 RTT: 2516
+/  5/cur_rate: 692069 RTT_start: 3882009978 RTT_end: 3882012480 RTT: 2502
+/  5/calculate_cur_rate,  tx_rate: 66006898714, tx_rate: 692132, cur_rate: 692069, sent_32bytes: 39468, start: 3881896662, end: 3882009102, time_interval_ns: 153072
+/  5/cur_rate: 713040 RTT_start: 3882050588 RTT_end: 3882053058 RTT: 2470
+/  5/cur_rate: 713040 RTT_start: 3882163028 RTT_end: 3882165534 RTT: 2506
+/  5/calculate_cur_rate,  tx_rate: 66240000000, tx_rate: 694576, cur_rate: 713040, sent_32bytes: 39744, start: 3882050262, end: 3882162702, time_interval_ns: 153600
+/  5/cur_rate: 713040 RTT_start: 3882203500 RTT_end: 3882206002 RTT: 2502
+/  5/cur_rate: 713040 RTT_start: 3882316154 RTT_end: 3882318506 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 68635912439, tx_rate: 719699, cur_rate: 713040, sent_32bytes: 41055, start: 3882203150, end: 3882315830, time_interval_ns: 153128
+/  5/cur_rate: 713040 RTT_start: 3882356574 RTT_end: 3882359002 RTT: 2428
+/  5/cur_rate: 713040 RTT_start: 3882469162 RTT_end: 3882471500 RTT: 2338
+/  5/calculate_cur_rate,  tx_rate: 68805186656, tx_rate: 721474, cur_rate: 713040, sent_32bytes: 41124, start: 3882356248, end: 3882468838, time_interval_ns: 153008
+/  5/cur_rate: 713040 RTT_start: 3882509636 RTT_end: 3882512070 RTT: 2434
+/  5/cur_rate: 734011 RTT_start: 3882622102 RTT_end: 3882624542 RTT: 2440
+/  5/calculate_cur_rate,  tx_rate: 68953078411, tx_rate: 723025, cur_rate: 734011, sent_32bytes: 41193, start: 3882509286, end: 3882621774, time_interval_ns: 152936
+/  5/cur_rate: 734011 RTT_start: 3882663006 RTT_end: 3882665494 RTT: 2488
+/  5/cur_rate: 734011 RTT_start: 3882775212 RTT_end: 3882777732 RTT: 2520
+/  5/calculate_cur_rate,  tx_rate: 70849856284, tx_rate: 742914, cur_rate: 734011, sent_32bytes: 42366, start: 3882662678, end: 3882774854, time_interval_ns: 153080
+/  5/cur_rate: 734011 RTT_start: 3882815874 RTT_end: 3882818352 RTT: 2478
+/  5/cur_rate: 734011 RTT_start: 3882928418 RTT_end: 3882930930 RTT: 2512
+/  5/calculate_cur_rate,  tx_rate: 70893926935, tx_rate: 743376, cur_rate: 734011, sent_32bytes: 42435, start: 3882815526, end: 3882928088, time_interval_ns: 153234
+/  5/cur_rate: 734011 RTT_start: 3882969076 RTT_end: 3882971570 RTT: 2494
+/  5/cur_rate: 734011 RTT_start: 3883081706 RTT_end: 3883084174 RTT: 2468
+/  5/calculate_cur_rate,  tx_rate: 70750949156, tx_rate: 741877, cur_rate: 734011, sent_32bytes: 42366, start: 3882968750, end: 3883081382, time_interval_ns: 153294
+/  5/cur_rate: 754982 RTT_start: 3883121908 RTT_end: 3883124412 RTT: 2504
+/  5/cur_rate: 754982 RTT_start: 3883234536 RTT_end: 3883236950 RTT: 2414
+/  5/calculate_cur_rate,  tx_rate: 71772930107, tx_rate: 752593, cur_rate: 754982, sent_32bytes: 42849, start: 3883121560, end: 3883234216, time_interval_ns: 152834
+/  5/cur_rate: 754982 RTT_start: 3883275340 RTT_end: 3883277686 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 55843965145, tx_rate: 585566, cur_rate: 754982, sent_32bytes: 33396, start: 3883275014, end: 3883387310, time_interval_ns: 153094
+/  5/cur_rate: 754982 RTT_start: 3883388362 RTT_end: 3883392212 RTT: 3850
+/  5/cur_rate: 754982 RTT_start: 3883502540 RTT_end: 3883504998 RTT: 2458
+/  5/calculate_cur_rate,  tx_rate: 96098605525, tx_rate: 1007666, cur_rate: 754982, sent_32bytes: 43125, start: 3883392110, end: 3883502192, time_interval_ns: 114882
+/  5/cur_rate: 754982 RTT_start: 3883543278 RTT_end: 3883545794 RTT: 2516
+/  5/cur_rate: 754982 RTT_start: 3883655640 RTT_end: 3883658014 RTT: 2374
+/  5/calculate_cur_rate,  tx_rate: 73366404137, tx_rate: 769302, cur_rate: 754982, sent_32bytes: 43884, start: 3883542928, end: 3883655318, time_interval_ns: 153126
+/  5/cur_rate: 775953 RTT_start: 3883696468 RTT_end: 3883698902 RTT: 2434
+/  5/cur_rate: 775953 RTT_start: 3883808792 RTT_end: 3883811266 RTT: 2474
+/  5/calculate_cur_rate,  tx_rate: 73698995782, tx_rate: 772789, cur_rate: 775953, sent_32bytes: 44091, start: 3883696118, end: 3883808472, time_interval_ns: 153154
+/  5/cur_rate: 775953 RTT_start: 3883849858 RTT_end: 3883852374 RTT: 2516
+/  5/cur_rate: 775953 RTT_start: 3883962142 RTT_end: 3883964500 RTT: 2358
+/  5/calculate_cur_rate,  tx_rate: 74299800446, tx_rate: 779089, cur_rate: 775953, sent_32bytes: 44505, start: 3883849510, end: 3883961814, time_interval_ns: 153342
+/  5/cur_rate: 775953 RTT_start: 3884002812 RTT_end: 3884005234 RTT: 2422
+/  5/cur_rate: 775953 RTT_start: 3884115436 RTT_end: 3884117872 RTT: 2436
+/  5/calculate_cur_rate,  tx_rate: 74437323870, tx_rate: 780531, cur_rate: 775953, sent_32bytes: 44574, start: 3884002464, end: 3884115110, time_interval_ns: 153296
+/  5/cur_rate: 775953 RTT_start: 3884156070 RTT_end: 3884158582 RTT: 2512
+/  5/cur_rate: 796924 RTT_start: 3884268410 RTT_end: 3884270868 RTT: 2458
+/  5/calculate_cur_rate,  tx_rate: 74489251529, tx_rate: 781076, cur_rate: 796924, sent_32bytes: 44505, start: 3884155704, end: 3884268062, time_interval_ns: 152952
+/  5/cur_rate: 796924 RTT_start: 3884309130 RTT_end: 3884311612 RTT: 2482
+/  5/cur_rate: 796924 RTT_start: 3884421520 RTT_end: 3884423914 RTT: 2394
+/  5/calculate_cur_rate,  tx_rate: 75783930623, tx_rate: 794652, cur_rate: 796924, sent_32bytes: 45333, start: 3884308782, end: 3884421198, time_interval_ns: 153136
+/  5/cur_rate: 796924 RTT_start: 3884462342 RTT_end: 3884464750 RTT: 2408
+/  5/cur_rate: 796924 RTT_start: 3884574776 RTT_end: 3884577254 RTT: 2478
+/  5/calculate_cur_rate,  tx_rate: 75609333402, tx_rate: 792821, cur_rate: 796924, sent_32bytes: 45264, start: 3884462016, end: 3884574454, time_interval_ns: 153256
+/  5/cur_rate: 796924 RTT_start: 3884615150 RTT_end: 3884617664 RTT: 2514
+/  5/cur_rate: 796924 RTT_start: 3884727586 RTT_end: 3884730080 RTT: 2494
+/  5/calculate_cur_rate,  tx_rate: 75958529688, tx_rate: 796482, cur_rate: 796924, sent_32bytes: 45333, start: 3884614822, end: 3884727238, time_interval_ns: 152784
+/  5/cur_rate: 817895 RTT_start: 3884768464 RTT_end: 3884770818 RTT: 2354
+/  5/cur_rate: 817895 RTT_start: 3884880874 RTT_end: 3884883246 RTT: 2372
+/  5/calculate_cur_rate,  tx_rate: 75939251604, tx_rate: 796280, cur_rate: 817895, sent_32bytes: 45471, start: 3884768144, end: 3884880526, time_interval_ns: 153288
+/  5/cur_rate: 817895 RTT_start: 3884921472 RTT_end: 3884923924 RTT: 2452
+/  5/cur_rate: 817895 RTT_start: 3885033826 RTT_end: 3885036212 RTT: 2386
+/  5/calculate_cur_rate,  tx_rate: 77029970186, tx_rate: 807717, cur_rate: 817895, sent_32bytes: 46023, start: 3884921152, end: 3885033478, time_interval_ns: 152952
+/  5/cur_rate: 817895 RTT_start: 3885074392 RTT_end: 3885076886 RTT: 2494
+/  5/cur_rate: 817895 RTT_start: 3885187168 RTT_end: 3885190612 RTT: 3444
+/  5/calculate_cur_rate,  tx_rate: 77166553648, tx_rate: 809149, cur_rate: 817895, sent_32bytes: 46230, start: 3885074070, end: 3885186846, time_interval_ns: 153368
+/  5/cur_rate: 817895 RTT_start: 3885227752 RTT_end: 3885230098 RTT: 2346
+/  5/calculate_cur_rate,  tx_rate: 58822987543, tx_rate: 616803, cur_rate: 817895, sent_32bytes: 35121, start: 3885227430, end: 3885339694, time_interval_ns: 152848
+/  5/cur_rate: 838866 RTT_start: 3885340396 RTT_end: 3885344342 RTT: 3946
+/  5/cur_rate: 838866 RTT_start: 3885455044 RTT_end: 3885457506 RTT: 2462
+/  5/calculate_cur_rate,  tx_rate: 96133537348, tx_rate: 1008033, cur_rate: 838866, sent_32bytes: 43194, start: 3885344294, end: 3885454718, time_interval_ns: 115024
+/  5/cur_rate: 838866 RTT_start: 3885495718 RTT_end: 3885499248 RTT: 3530
+/  5/cur_rate: 838866 RTT_start: 3885608054 RTT_end: 3885610480 RTT: 2426
+/  5/calculate_cur_rate,  tx_rate: 79771413633, tx_rate: 836463, cur_rate: 838866, sent_32bytes: 47679, start: 3885495392, end: 3885607728, time_interval_ns: 153010
+/  5/cur_rate: 838866 RTT_start: 3885648640 RTT_end: 3885651148 RTT: 2508
+/  5/cur_rate: 838866 RTT_start: 3885761036 RTT_end: 3885763630 RTT: 2594
+/  5/calculate_cur_rate,  tx_rate: 80016943169, tx_rate: 839038, cur_rate: 838866, sent_32bytes: 47817, start: 3885648296, end: 3885760710, time_interval_ns: 152982
+/  5/cur_rate: 838866 RTT_start: 3885802090 RTT_end: 3885804470 RTT: 2380
+/  5/cur_rate: 859837 RTT_start: 3885914472 RTT_end: 3885916932 RTT: 2460
+/  5/calculate_cur_rate,  tx_rate: 79547862356, tx_rate: 834119, cur_rate: 859837, sent_32bytes: 47679, start: 3885801742, end: 3885914150, time_interval_ns: 153440
+/  5/cur_rate: 859837 RTT_start: 3885955112 RTT_end: 3885957702 RTT: 2590
+/  5/cur_rate: 859837 RTT_start: 3886067736 RTT_end: 3886070134 RTT: 2398
+/  5/calculate_cur_rate,  tx_rate: 81252740369, tx_rate: 851996, cur_rate: 859837, sent_32bytes: 48645, start: 3885954766, end: 3886067414, time_interval_ns: 153264
+/  5/cur_rate: 859837 RTT_start: 3886108462 RTT_end: 3886110888 RTT: 2426
+/  5/cur_rate: 859837 RTT_start: 3886220972 RTT_end: 3886223324 RTT: 2352
+/  5/calculate_cur_rate,  tx_rate: 81051851078, tx_rate: 849890, cur_rate: 859837, sent_32bytes: 48507, start: 3886108134, end: 3886220622, time_interval_ns: 153208
+/  5/cur_rate: 859837 RTT_start: 3886261240 RTT_end: 3886263776 RTT: 2536
+/  5/cur_rate: 859837 RTT_start: 3886373908 RTT_end: 3886376438 RTT: 2530
+/  5/calculate_cur_rate,  tx_rate: 81760669456, tx_rate: 857322, cur_rate: 859837, sent_32bytes: 48852, start: 3886260918, end: 3886373582, time_interval_ns: 152960
+/  5/cur_rate: 880808 RTT_start: 3886415380 RTT_end: 3886417830 RTT: 2450
+/  5/cur_rate: 880808 RTT_start: 3886527634 RTT_end: 3886530016 RTT: 2382
+/  5/calculate_cur_rate,  tx_rate: 81249986987, tx_rate: 851967, cur_rate: 880808, sent_32bytes: 48783, start: 3886415058, end: 3886527286, time_interval_ns: 153704
+/  5/cur_rate: 880808 RTT_start: 3886567894 RTT_end: 3886570392 RTT: 2498
+/  5/cur_rate: 880808 RTT_start: 3886680682 RTT_end: 3886683068 RTT: 2386
+/  5/calculate_cur_rate,  tx_rate: 82983220950, tx_rate: 870142, cur_rate: 880808, sent_32bytes: 49611, start: 3886567568, end: 3886680334, time_interval_ns: 153048
+/  5/cur_rate: 880808 RTT_start: 3886721370 RTT_end: 3886724014 RTT: 2644
+/  5/cur_rate: 880808 RTT_start: 3886834084 RTT_end: 3886836550 RTT: 2466
+/  5/calculate_cur_rate,  tx_rate: 82558197747, tx_rate: 865685, cur_rate: 880808, sent_32bytes: 49473, start: 3886721040, end: 3886833742, time_interval_ns: 153408
+/  5/cur_rate: 880808 RTT_start: 3886874348 RTT_end: 3886876948 RTT: 2600
+/  5/cur_rate: 901779 RTT_start: 3886986772 RTT_end: 3886989196 RTT: 2424
+/  5/calculate_cur_rate,  tx_rate: 82938809723, tx_rate: 869676, cur_rate: 901779, sent_32bytes: 49473, start: 3886874022, end: 3886986446, time_interval_ns: 152704
+/  5/cur_rate: 901779 RTT_start: 3887027484 RTT_end: 3887029992 RTT: 2508
+/  5/cur_rate: 901779 RTT_start: 3887139926 RTT_end: 3887142500 RTT: 2574
+/  5/calculate_cur_rate,  tx_rate: 84328526645, tx_rate: 884248, cur_rate: 901779, sent_32bytes: 50439, start: 3887027150, end: 3887139566, time_interval_ns: 153120
+/  5/cur_rate: 901779 RTT_start: 3887180682 RTT_end: 3887183180 RTT: 2498
+/  5/calculate_cur_rate,  tx_rate: 64239018020, tx_rate: 673594, cur_rate: 901779, sent_32bytes: 38433, start: 3887180334, end: 3887292726, time_interval_ns: 153160
+/  5/cur_rate: 901779 RTT_start: 3887293350 RTT_end: 3887297780 RTT: 4430
+/  5/cur_rate: 901779 RTT_start: 3887407758 RTT_end: 3887410280 RTT: 2522
+/  5/calculate_cur_rate,  tx_rate: 111046875000, tx_rate: 1164410, cur_rate: 901779, sent_32bytes: 49749, start: 3887297302, end: 3887407414, time_interval_ns: 114688
+/  5/cur_rate: 901779 RTT_start: 3887448690 RTT_end: 3887452336 RTT: 3646
+/  5/cur_rate: 922750 RTT_start: 3887562136 RTT_end: 3887564620 RTT: 2484
+/  5/calculate_cur_rate,  tx_rate: 84087046632, tx_rate: 881716, cur_rate: 922750, sent_32bytes: 50715, start: 3887448342, end: 3887561814, time_interval_ns: 154400
+/  5/cur_rate: 922750 RTT_start: 3887602638 RTT_end: 3887605086 RTT: 2448
+/  5/cur_rate: 922750 RTT_start: 3887715080 RTT_end: 3887717624 RTT: 2544
+/  5/calculate_cur_rate,  tx_rate: 87659378596, tx_rate: 919175, cur_rate: 922750, sent_32bytes: 52371, start: 3887602310, end: 3887714758, time_interval_ns: 152944
+/  5/cur_rate: 922750 RTT_start: 3887755656 RTT_end: 3887758156 RTT: 2500
+/  5/cur_rate: 922750 RTT_start: 3887868038 RTT_end: 3887870542 RTT: 2504
+/  5/calculate_cur_rate,  tx_rate: 87885768084, tx_rate: 921549, cur_rate: 922750, sent_32bytes: 52509, start: 3887755334, end: 3887867710, time_interval_ns: 152952
+/  5/cur_rate: 922750 RTT_start: 3887908988 RTT_end: 3887911512 RTT: 2524
+/  5/cur_rate: 922750 RTT_start: 3888021126 RTT_end: 3888024614 RTT: 3488
+/  5/calculate_cur_rate,  tx_rate: 87346153846, tx_rate: 915890, cur_rate: 922750, sent_32bytes: 52233, start: 3887908662, end: 3888020798, time_interval_ns: 153088
+/  5/cur_rate: 943721 RTT_start: 3888061696 RTT_end: 3888064230 RTT: 2534
+/  5/cur_rate: 943721 RTT_start: 3888174584 RTT_end: 3888177174 RTT: 2590
+/  5/calculate_cur_rate,  tx_rate: 88052963561, tx_rate: 923302, cur_rate: 943721, sent_32bytes: 52785, start: 3888061366, end: 3888174262, time_interval_ns: 153464
+/  5/cur_rate: 943721 RTT_start: 3888214966 RTT_end: 3888217438 RTT: 2472
+/  5/cur_rate: 943721 RTT_start: 3888327514 RTT_end: 3888330066 RTT: 2552
+/  5/calculate_cur_rate,  tx_rate: 89184115523, tx_rate: 935163, cur_rate: 943721, sent_32bytes: 53268, start: 3888214638, end: 3888327166, time_interval_ns: 152904
+/  5/cur_rate: 943721 RTT_start: 3888368048 RTT_end: 3888370668 RTT: 2620
+/  5/cur_rate: 943721 RTT_start: 3888480244 RTT_end: 3888482760 RTT: 2516
+/  5/calculate_cur_rate,  tx_rate: 89401374975, tx_rate: 937441, cur_rate: 943721, sent_32bytes: 53337, start: 3888367726, end: 3888479896, time_interval_ns: 152730
+/  5/cur_rate: 943721 RTT_start: 3888520906 RTT_end: 3888523448 RTT: 2542
+/  5/cur_rate: 964692 RTT_start: 3888633354 RTT_end: 3888635870 RTT: 2516
+/  5/calculate_cur_rate,  tx_rate: 89410227940, tx_rate: 937534, cur_rate: 964692, sent_32bytes: 53475, start: 3888520558, end: 3888633006, time_interval_ns: 153110
+/  5/cur_rate: 964692 RTT_start: 3888673966 RTT_end: 3888676488 RTT: 2522
+/  5/cur_rate: 964692 RTT_start: 3888786556 RTT_end: 3888789092 RTT: 2536
+/  5/calculate_cur_rate,  tx_rate: 91201315909, tx_rate: 956315, cur_rate: 964692, sent_32bytes: 54579, start: 3888673638, end: 3888786208, time_interval_ns: 153202
+/  5/cur_rate: 964692 RTT_start: 3888827178 RTT_end: 3888829810 RTT: 2632
+/  5/cur_rate: 964692 RTT_start: 3888940050 RTT_end: 3888942578 RTT: 2528
+/  5/calculate_cur_rate,  tx_rate: 90912739260, tx_rate: 953289, cur_rate: 964692, sent_32bytes: 54510, start: 3888826830, end: 3888939702, time_interval_ns: 153494
+/  5/cur_rate: 964692 RTT_start: 3888980566 RTT_end: 3888983950 RTT: 3384
+/  5/calculate_cur_rate,  tx_rate: 69959636097, tx_rate: 733579, cur_rate: 964692, sent_32bytes: 41814, start: 3888980232, end: 3889092710, time_interval_ns: 153008
+/  5/cur_rate: 964692 RTT_start: 3889093456 RTT_end: 3889097162 RTT: 3706
+/  5/cur_rate: 985663 RTT_start: 3889207586 RTT_end: 3889210128 RTT: 2542
+/  5/calculate_cur_rate,  tx_rate: 120147527242, tx_rate: 1259838, cur_rate: 985663, sent_32bytes: 53751, start: 3889097320, end: 3889207238, time_interval_ns: 114528
+/  5/cur_rate: 985663 RTT_start: 3889248470 RTT_end: 3889251738 RTT: 3268
+/  5/cur_rate: 985663 RTT_start: 3889361466 RTT_end: 3889364052 RTT: 2586
+/  5/calculate_cur_rate,  tx_rate: 92750922796, tx_rate: 972563, cur_rate: 985663, sent_32bytes: 55752, start: 3889248128, end: 3889361118, time_interval_ns: 153880
+/  5/cur_rate: 985663 RTT_start: 3889402356 RTT_end: 3889405060 RTT: 2704
+/  5/cur_rate: 985663 RTT_start: 3889514898 RTT_end: 3889517394 RTT: 2496
+/  5/calculate_cur_rate,  tx_rate: 93136868449, tx_rate: 976610, cur_rate: 985663, sent_32bytes: 55821, start: 3889402030, end: 3889514550, time_interval_ns: 153432
+/  5/cur_rate: 985663 RTT_start: 3889555686 RTT_end: 3889558740 RTT: 3054
+/  5/cur_rate: 985663 RTT_start: 3889667892 RTT_end: 3889670446 RTT: 2554
+/  5/calculate_cur_rate,  tx_rate: 93172595003, tx_rate: 976985, cur_rate: 985663, sent_32bytes: 55683, start: 3889555358, end: 3889667544, time_interval_ns: 152994
+/  5/cur_rate: 1006634 RTT_start: 3889708726 RTT_end: 3889711496 RTT: 2770
+/  5/cur_rate: 1006634 RTT_start: 3889821334 RTT_end: 3889823894 RTT: 2560
+/  5/calculate_cur_rate,  tx_rate: 94177912191, tx_rate: 987526, cur_rate: 1006634, sent_32bytes: 56442, start: 3889708398, end: 3889820968, time_interval_ns: 153424
+/  5/cur_rate: 1006634 RTT_start: 3889862596 RTT_end: 3889865448 RTT: 2852
+/  5/cur_rate: 1006634 RTT_start: 3889975944 RTT_end: 3889979262 RTT: 3318
+/  5/calculate_cur_rate,  tx_rate: 97034849563, tx_rate: 1017484, cur_rate: 1006634, sent_32bytes: 58581, start: 3889862262, end: 3889975518, time_interval_ns: 154550
+/  5/cur_rate: 1006634 RTT_start: 3890016856 RTT_end: 3890020222 RTT: 3366
+/  5/cur_rate: 1006634 RTT_start: 3890130586 RTT_end: 3890133424 RTT: 2838
+/  5/calculate_cur_rate,  tx_rate: 97042399172, tx_rate: 1017563, cur_rate: 1006634, sent_32bytes: 58650, start: 3890016502, end: 3890130238, time_interval_ns: 154720
+/  5/cur_rate: 1006634 RTT_start: 3890171574 RTT_end: 3890174324 RTT: 2750
+/  5/cur_rate: 1027605 RTT_start: 3890285036 RTT_end: 3890287788 RTT: 2752
+/  5/calculate_cur_rate,  tx_rate: 97312548552, tx_rate: 1020396, cur_rate: 1027605, sent_32bytes: 58719, start: 3890171232, end: 3890284710, time_interval_ns: 154472
+/  5/cur_rate: 1027605 RTT_start: 3890325966 RTT_end: 3890329080 RTT: 3114
+/  5/cur_rate: 1027605 RTT_start: 3890439846 RTT_end: 3890443184 RTT: 3338
+/  5/calculate_cur_rate,  tx_rate: 99266794426, tx_rate: 1040887, cur_rate: 1027605, sent_32bytes: 59892, start: 3890325638, end: 3890439166, time_interval_ns: 154456
+/  5/cur_rate: 1027605 RTT_start: 3890480974 RTT_end: 3890484320 RTT: 3346
+/  5/cur_rate: 1027605 RTT_start: 3890594318 RTT_end: 3890598068 RTT: 3750
+/  5/calculate_cur_rate,  tx_rate: 99076923076, tx_rate: 1038896, cur_rate: 1027605, sent_32bytes: 59892, start: 3890480318, end: 3890593918, time_interval_ns: 154752
+/  5/cur_rate: 1027605 RTT_start: 3890635484 RTT_end: 3890638614 RTT: 3130
+/  5/cur_rate: 1027605 RTT_start: 3890749364 RTT_end: 3890752810 RTT: 3446
+/  5/calculate_cur_rate,  tx_rate: 99450201675, tx_rate: 1042810, cur_rate: 1027605, sent_32bytes: 60099, start: 3890634974, end: 3890748622, time_interval_ns: 154704
+/  5/cur_rate: 1048576 RTT_start: 3890790074 RTT_end: 3890793194 RTT: 3120
+/  5/cur_rate: 1048576 RTT_start: 3890903772 RTT_end: 3890907212 RTT: 3440
+/  5/calculate_cur_rate,  tx_rate: 99631358344, tx_rate: 1044710, cur_rate: 1048576, sent_32bytes: 60168, start: 3890789726, end: 3890903222, time_interval_ns: 154600
+/  5/cur_rate: 1048576 RTT_start: 3890944912 RTT_end: 3890949382 RTT: 4470
+/  5/calculate_cur_rate,  tx_rate: 75155735156, tx_rate: 788065, cur_rate: 1048576, sent_32bytes: 45333, start: 3890944038, end: 3891057638, time_interval_ns: 154416
+/  5/cur_rate: 1048576 RTT_start: 3891058872 RTT_end: 3891062242 RTT: 3370
+/  5/calculate_cur_rate,  tx_rate: 101583862945, tx_rate: 1065184, cur_rate: 1048576, sent_32bytes: 45954, start: 3891062176, end: 3891173446, time_interval_ns: 115808
+/  5/cur_rate: 1048576 RTT_start: 3891176392 RTT_end: 3891179742 RTT: 3350
+/  5/calculate_cur_rate,  tx_rate: 101414744335, tx_rate: 1063410, cur_rate: 1048576, sent_32bytes: 46299, start: 3891177918, end: 3891290318, time_interval_ns: 116872
+/  5/cur_rate: 1048576 RTT_start: 3891294786 RTT_end: 3891299270 RTT: 4484
+/  5/calculate_cur_rate,  tx_rate: 96989894823, tx_rate: 1017012, cur_rate: 1048576, sent_32bytes: 44091, start: 3891294790, end: 3891406694, time_interval_ns: 116376
+/  5/cur_rate: 1048576 RTT_start: 3891407910 RTT_end: 3891411238 RTT: 3328
+/  5/calculate_cur_rate,  tx_rate: 101522482060, tx_rate: 1064540, cur_rate: 1048576, sent_32bytes: 46092, start: 3891411510, end: 3891522920, time_interval_ns: 116226
+/  5/cur_rate: 1069547 RTT_start: 3891526106 RTT_end: 3891529460 RTT: 3354
+/  5/calculate_cur_rate,  tx_rate: 101081761869, tx_rate: 1059919, cur_rate: 1069547, sent_32bytes: 46023, start: 3891527390, end: 3891639478, time_interval_ns: 116558
+/  5/cur_rate: 1069547 RTT_start: 3891644354 RTT_end: 3891647860 RTT: 3506
+/  5/calculate_cur_rate,  tx_rate: 87275726954, tx_rate: 915152, cur_rate: 1069547, sent_32bytes: 39675, start: 3891643846, end: 3891755854, time_interval_ns: 116376
+/  5/cur_rate: 1069547 RTT_start: 3891756670 RTT_end: 3891760926 RTT: 4256
+/  5/calculate_cur_rate,  tx_rate: 104233127985, tx_rate: 1092963, cur_rate: 1069547, sent_32bytes: 47058, start: 3891760222, end: 3891871430, time_interval_ns: 115576
+/  5/cur_rate: 1069547 RTT_start: 3891877340 RTT_end: 3891880684 RTT: 3344
+/  5/calculate_cur_rate,  tx_rate: 97820870994, tx_rate: 1025726, cur_rate: 1069547, sent_32bytes: 44643, start: 3891876134, end: 3891988262, time_interval_ns: 116832
+/  5/cur_rate: 1069547 RTT_start: 3891992020 RTT_end: 3891995380 RTT: 3360
+/  5/calculate_cur_rate,  tx_rate: 98021541010, tx_rate: 1027830, cur_rate: 1069547, sent_32bytes: 44367, start: 3891992630, end: 3892104134, time_interval_ns: 115872
+/  5/cur_rate: 1069547 RTT_start: 3892105472 RTT_end: 3892108824 RTT: 3352
+/  5/calculate_cur_rate,  tx_rate: 103535633133, tx_rate: 1085649, cur_rate: 1069547, sent_32bytes: 46989, start: 3892108838, end: 3892220318, time_interval_ns: 116184
+/  5/cur_rate: 1069547 RTT_start: 3892225982 RTT_end: 3892229796 RTT: 3814
+/  5/calculate_cur_rate,  tx_rate: 98484581497, tx_rate: 1032685, cur_rate: 1069547, sent_32bytes: 44712, start: 3892224686, end: 3892336542, time_interval_ns: 116224
+^CInfo: Finished waiting on DOCA PCC
+[?2004h]0;zdp@localhost: /tmp/build/pcc[01;32mzdp@localhost[00m:[01;34m/tmp/build/pcc[00m$ ./doca_pcc -d mlx5_0exit[K
+[?2004lexit
+
+Script done on 2024-11-19 17:54:59+08:00 [COMMAND_EXIT_CODE="0"]

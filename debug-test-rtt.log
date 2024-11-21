@@ -1,0 +1,887 @@
+Script started on 2024-11-20 15:28:08+08:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="230" LINES="14"]
+[?2004h]0;zdp@localhost: /tmp/build/pcc[01;32mzdp@localhost[00m:[01;34m/tmp/build/pcc[00m$ exit./doca_pcc -d mlx5_0exit[K./doca_pcc -d mlx5_0exit[K./doca_pcc -d mlx5_0
+[?2004lInfo: Welcome to DOCA Programable Congestion Control (PCC) application
+Info: Starting DOCA PCC
+format 0 - user init: port num = 0, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x1, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x2, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+format 0 - user init: port num = 0x3, algo index = 0, algo slot = 0, algo enable = 0x1, disable event bitmask = 0x20
+/  5/doca_pcc_dev_user_init, disable_event_bitmask=0x20
+Info: Press ctrl + C to exit
+Info: PCC host status Active
+Info: Waiting on DOCA PCC
+Info: PCC host status Active
+Info: Waiting on DOCA PCC
+/  5/rtt_template_algo, new flow BW in MB: 20000 Mb
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/cur_rate: 1048576 RTT_start: 3343490738 RTT_end: 3343495850 RTT: 5112
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3343563230 RTT_end: 3343576394 RTT: 13164
+/  5/calculate_cur_rate,  tx_rate: 142868822678, tx_rate: 1498088, cur_rate: 1048576, sent_32bytes: 90321, start: 3343489270, end: 3343560770, time_interval_ns: 161842
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3343636782 RTT_end: 3343658704 RTT: 21922
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 83872791519, tx_rate: 879469, cur_rate: 1048576, sent_32bytes: 71208, start: 3343633074, end: 3343778114, time_interval_ns: 217344
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3343784112 RTT_end: 3343829386 RTT: 45274
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98312793193, tx_rate: 1030884, cur_rate: 1048576, sent_32bytes: 67620, start: 3343812752, end: 3343954192, time_interval_ns: 176078
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3343957374 RTT_end: 3344031924 RTT: 74550
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101192993623, tx_rate: 1061085, cur_rate: 1048576, sent_32bytes: 69552, start: 3343989208, end: 3344130146, time_interval_ns: 175954
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3344135122 RTT_end: 3344240808 RTT: 105686
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 97662112809, tx_rate: 1024061, cur_rate: 1048576, sent_32bytes: 67689, start: 3344164890, end: 3344307578, time_interval_ns: 177432
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3344310170 RTT_end: 3344447676 RTT: 137506
+/  5/calculate_cur_rate,  tx_rate: 128188365650, tx_rate: 1344152, cur_rate: 1048576, sent_32bytes: 69414, start: 3344342370, end: 3344446202, time_interval_ns: 138624
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 76311232405, tx_rate: 800181, cur_rate: 1048576, sent_32bytes: 52647, start: 3344517346, end: 3344622816, time_interval_ns: 176614
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3344522980 RTT_end: 3344696006 RTT: 173026
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 102540974014, tx_rate: 1075220, cur_rate: 1048576, sent_32bytes: 69828, start: 3344655778, end: 3344797146, time_interval_ns: 174330
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 93582956746, tx_rate: 981288, cur_rate: 1048576, sent_32bytes: 52095, start: 3344831728, end: 3344939654, time_interval_ns: 142508
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3344801754 RTT_end: 3344994568 RTT: 192814
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 104330476033, tx_rate: 1093984, cur_rate: 1048576, sent_32bytes: 69414, start: 3344968842, end: 3345109978, time_interval_ns: 170324
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100010833861, tx_rate: 1048689, cur_rate: 1048576, sent_32bytes: 54234, start: 3345144378, end: 3345248802, time_interval_ns: 138824
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3345112520 RTT_end: 3345320602 RTT: 208082
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99414950454, tx_rate: 1042441, cur_rate: 1048576, sent_32bytes: 68034, start: 3345281354, end: 3345423994, time_interval_ns: 175192
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99934688437, tx_rate: 1047891, cur_rate: 1048576, sent_32bytes: 53889, start: 3345458690, end: 3345562040, time_interval_ns: 138046
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3345426980 RTT_end: 3345647610 RTT: 220630
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99423658477, tx_rate: 1042532, cur_rate: 1048576, sent_32bytes: 67758, start: 3345594570, end: 3345736506, time_interval_ns: 174466
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100022793990, tx_rate: 1048815, cur_rate: 1048576, sent_32bytes: 54303, start: 3345771162, end: 3345875490, time_interval_ns: 138984
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3345739000 RTT_end: 3345975898 RTT: 236898
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99718078554, tx_rate: 1045619, cur_rate: 1048576, sent_32bytes: 68310, start: 3345908170, end: 3346050858, time_interval_ns: 175368
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99505431014, tx_rate: 1043390, cur_rate: 1048576, sent_32bytes: 53820, start: 3346085944, end: 3346189322, time_interval_ns: 138464
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3346052742 RTT_end: 3346304570 RTT: 251828
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98968798895, tx_rate: 1037763, cur_rate: 1048576, sent_32bytes: 67206, start: 3346221978, end: 3346363162, time_interval_ns: 173840
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100422232601, tx_rate: 1053003, cur_rate: 1048576, sent_32bytes: 53751, start: 3346397202, end: 3346500186, time_interval_ns: 137024
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3346364650 RTT_end: 3346630886 RTT: 266236
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99515492957, tx_rate: 1043495, cur_rate: 1048576, sent_32bytes: 67344, start: 3346532434, end: 3346673426, time_interval_ns: 173240
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100053420423, tx_rate: 1049136, cur_rate: 1048576, sent_32bytes: 53613, start: 3346707562, end: 3346810602, time_interval_ns: 137176
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3346675330 RTT_end: 3346956180 RTT: 280850
+/  5/calculate_cur_rate,  tx_rate: 126029191883, tx_rate: 1321511, cur_rate: 1048576, sent_32bytes: 66378, start: 3346842570, end: 3346945434, time_interval_ns: 134832
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79281686285, tx_rate: 831328, cur_rate: 1048576, sent_32bytes: 54303, start: 3347015632, end: 3347120778, time_interval_ns: 175344
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 101563997801, tx_rate: 1064975, cur_rate: 1048576, sent_32bytes: 53406, start: 3347152770, end: 3347255392, time_interval_ns: 134614
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3347017410 RTT_end: 3347331784 RTT: 314374
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99278329813, tx_rate: 1041008, cur_rate: 1048576, sent_32bytes: 67206, start: 3347287650, end: 3347428690, time_interval_ns: 173298
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99663572952, tx_rate: 1045048, cur_rate: 1048576, sent_32bytes: 54027, start: 3347462642, end: 3347567466, time_interval_ns: 138776
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 101134751773, tx_rate: 1060474, cur_rate: 1048576, sent_32bytes: 53475, start: 3347599770, end: 3347702826, time_interval_ns: 135360
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/calculate_cur_rate,  tx_rate: 97881352930, tx_rate: 1026360, cur_rate: 1048576, sent_32bytes: 51819, start: 3347734868, end: 3347838354, time_interval_ns: 135528
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3347871592 RTT_end: 3347910382 RTT: 38790
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98971944534, tx_rate: 1037796, cur_rate: 1048576, sent_32bytes: 67137, start: 3347871582, end: 3348012010, time_interval_ns: 173656
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3348018406 RTT_end: 3348064096 RTT: 45690
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101951434878, tx_rate: 1069038, cur_rate: 1048576, sent_32bytes: 69276, start: 3348045802, end: 3348185962, time_interval_ns: 173952
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3348189534 RTT_end: 3348242368 RTT: 52834
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 43048461, tx_rate: 451, cur_rate: 1048576, sent_32bytes: 16870, start: 3348220296, end: 3448508246, time_interval_ns: 100322284
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3448509548 RTT_end: 3448513008 RTT: 3460
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 121812152218, tx_rate: 1277292, cur_rate: 1048576, sent_32bytes: 67896, start: 3448514038, end: 3448650936, time_interval_ns: 142690
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3448654134 RTT_end: 3448690684 RTT: 36550
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98357740681, tx_rate: 1031355, cur_rate: 1048576, sent_32bytes: 67206, start: 3448685242, end: 3448825856, time_interval_ns: 174920
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3448831634 RTT_end: 3448964382 RTT: 132748
+/  5/calculate_cur_rate,  tx_rate: 127818863520, tx_rate: 1340277, cur_rate: 1048576, sent_32bytes: 68448, start: 3448860160, end: 3448962946, time_interval_ns: 137090
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79221170985, tx_rate: 830694, cur_rate: 1048576, sent_32bytes: 54165, start: 3449033146, end: 3449137978, time_interval_ns: 175032
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3449036920 RTT_end: 3449234792 RTT: 197872
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99443725864, tx_rate: 1042743, cur_rate: 1048576, sent_32bytes: 66792, start: 3449170018, end: 3449309922, time_interval_ns: 171944
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100652156057, tx_rate: 1055414, cur_rate: 1048576, sent_32bytes: 53613, start: 3449343944, end: 3449446282, time_interval_ns: 136360
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3449312652 RTT_end: 3449594422 RTT: 281770
+/  5/calculate_cur_rate,  tx_rate: 124919624402, tx_rate: 1309877, cur_rate: 1048576, sent_32bytes: 66102, start: 3449478858, end: 3449581746, time_interval_ns: 135464
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79726368672, tx_rate: 835991, cur_rate: 1048576, sent_32bytes: 54303, start: 3449651522, end: 3449756112, time_interval_ns: 174366
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 96874144945, tx_rate: 1015799, cur_rate: 1048576, sent_32bytes: 50784, start: 3449788448, end: 3449890314, time_interval_ns: 134202
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 101484128278, tx_rate: 1064138, cur_rate: 1048576, sent_32bytes: 53475, start: 3449922578, end: 3450025208, time_interval_ns: 134894
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/calculate_cur_rate,  tx_rate: 100006898930, tx_rate: 1048648, cur_rate: 1048576, sent_32bytes: 52095, start: 3450058592, end: 3450158562, time_interval_ns: 133354
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3450162422 RTT_end: 3450199138 RTT: 36716
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/cur_rate: 1048576 RTT_start: 3450337620 RTT_end: 3450351312 RTT: 13692
+/  5/calculate_cur_rate,  tx_rate: 121250706190, tx_rate: 1271405, cur_rate: 1048576, sent_32bytes: 81489, start: 3450189762, end: 3450330612, time_interval_ns: 172050
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3450403378 RTT_end: 3450413766 RTT: 10388
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3450546996 RTT_end: 3450552910 RTT: 5914
+/  5/calculate_cur_rate,  tx_rate: 101549904893, tx_rate: 1064827, cur_rate: 1048576, sent_32bytes: 83835, start: 3450401162, end: 3450541954, time_interval_ns: 211342
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3450618520 RTT_end: 3450622980 RTT: 4460
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3450755146 RTT_end: 3450759694 RTT: 4548
+/  5/calculate_cur_rate,  tx_rate: 98818053918, tx_rate: 1036182, cur_rate: 1048576, sent_32bytes: 81213, start: 3450612290, end: 3450752346, time_interval_ns: 210392
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3450826716 RTT_end: 3450831192 RTT: 4476
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3450969920 RTT_end: 3450974380 RTT: 4460
+/  5/calculate_cur_rate,  tx_rate: 98861611077, tx_rate: 1036639, cur_rate: 1048576, sent_32bytes: 81489, start: 3450822472, end: 3450963360, time_interval_ns: 211014
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451035652 RTT_end: 3451040122 RTT: 4470
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451178052 RTT_end: 3451182496 RTT: 4444
+/  5/calculate_cur_rate,  tx_rate: 101076857216, tx_rate: 1059867, cur_rate: 1048576, sent_32bytes: 83007, start: 3451033706, end: 3451173594, time_interval_ns: 210234
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451248366 RTT_end: 3451252864 RTT: 4498
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451386086 RTT_end: 3451390540 RTT: 4454
+/  5/calculate_cur_rate,  tx_rate: 98908315889, tx_rate: 1037128, cur_rate: 1048576, sent_32bytes: 81213, start: 3451242922, end: 3451383794, time_interval_ns: 210200
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451456972 RTT_end: 3451461512 RTT: 4540
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451599176 RTT_end: 3451603626 RTT: 4450
+/  5/calculate_cur_rate,  tx_rate: 99179099346, tx_rate: 1039968, cur_rate: 1048576, sent_32bytes: 81144, start: 3451453480, end: 3451593242, time_interval_ns: 209448
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451665090 RTT_end: 3451669552 RTT: 4462
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451807738 RTT_end: 3451812284 RTT: 4546
+/  5/calculate_cur_rate,  tx_rate: 101456372772, tx_rate: 1063847, cur_rate: 1048576, sent_32bytes: 83283, start: 3451662906, end: 3451803386, time_interval_ns: 210144
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3451879140 RTT_end: 3451883610 RTT: 4470
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452016568 RTT_end: 3452021040 RTT: 4472
+/  5/calculate_cur_rate,  tx_rate: 98833251352, tx_rate: 1036341, cur_rate: 1048576, sent_32bytes: 81627, start: 3451873460, end: 3452014818, time_interval_ns: 211432
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452088086 RTT_end: 3452092540 RTT: 4454
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452229994 RTT_end: 3452234472 RTT: 4478
+/  5/calculate_cur_rate,  tx_rate: 101394205443, tx_rate: 1063195, cur_rate: 1048576, sent_32bytes: 83007, start: 3452084586, end: 3452224394, time_interval_ns: 209576
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452301234 RTT_end: 3452305722 RTT: 4488
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452437880 RTT_end: 3452442334 RTT: 4454
+/  5/calculate_cur_rate,  tx_rate: 99075441717, tx_rate: 1038881, cur_rate: 1048576, sent_32bytes: 81351, start: 3452294030, end: 3452434596, time_interval_ns: 210202
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452509656 RTT_end: 3452514188 RTT: 4532
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452646884 RTT_end: 3452651354 RTT: 4470
+/  5/calculate_cur_rate,  tx_rate: 98001288708, tx_rate: 1027617, cur_rate: 1048576, sent_32bytes: 80799, start: 3452504722, end: 3452645660, time_interval_ns: 211064
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452716990 RTT_end: 3452721450 RTT: 4460
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452859434 RTT_end: 3452863996 RTT: 4562
+/  5/calculate_cur_rate,  tx_rate: 101768110111, tx_rate: 1067115, cur_rate: 1048576, sent_32bytes: 83007, start: 3452714578, end: 3452854466, time_interval_ns: 208806
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3452929868 RTT_end: 3452934342 RTT: 4474
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3453067312 RTT_end: 3453071774 RTT: 4462
+/  5/calculate_cur_rate,  tx_rate: 98756221272, tx_rate: 1035534, cur_rate: 1048576, sent_32bytes: 81075, start: 3452923898, end: 3453064632, time_interval_ns: 210166
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3453137664 RTT_end: 3453142126 RTT: 4462
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3453280654 RTT_end: 3453285128 RTT: 4474
+/  5/calculate_cur_rate,  tx_rate: 98853407887, tx_rate: 1036553, cur_rate: 1048576, sent_32bytes: 80937, start: 3453134130, end: 3453274234, time_interval_ns: 209602
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3453345356 RTT_end: 3453349810 RTT: 4454
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 210933600, tx_rate: 2211, cur_rate: 1048576, sent_32bytes: 37881, start: 3453343882, end: 3499248588, time_interval_ns: 45974354
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3499249726 RTT_end: 3499253182 RTT: 3456
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3499348484 RTT_end: 3499363264 RTT: 14780
+/  5/calculate_cur_rate,  tx_rate: 153622301270, tx_rate: 1610846, cur_rate: 1048576, sent_32bytes: 82662, start: 3499249776, end: 3499386338, time_interval_ns: 137750
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3499461846 RTT_end: 3499503726 RTT: 41880
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 80706947510, tx_rate: 846273, cur_rate: 1048576, sent_32bytes: 67413, start: 3499457818, end: 3499600170, time_interval_ns: 213832
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3499606366 RTT_end: 3499680894 RTT: 74528
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101504355953, tx_rate: 1064350, cur_rate: 1048576, sent_32bytes: 68724, start: 3499633930, end: 3499773496, time_interval_ns: 173326
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3499776788 RTT_end: 3499892250 RTT: 115462
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101461485651, tx_rate: 1063900, cur_rate: 1048576, sent_32bytes: 69276, start: 3499807522, end: 3499948288, time_interval_ns: 174792
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3499954198 RTT_end: 3500113660 RTT: 159462
+/  5/calculate_cur_rate,  tx_rate: 123071695588, tx_rate: 1290500, cur_rate: 1048576, sent_32bytes: 66102, start: 3499982282, end: 3500085786, time_interval_ns: 137498
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 80039778651, tx_rate: 839277, cur_rate: 1048576, sent_32bytes: 54579, start: 3500155128, end: 3500260352, time_interval_ns: 174566
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3500158346 RTT_end: 3500377838 RTT: 219492
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99336269098, tx_rate: 1041616, cur_rate: 1048576, sent_32bytes: 66792, start: 3500292666, end: 3500432482, time_interval_ns: 172130
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100229124176, tx_rate: 1050978, cur_rate: 1048576, sent_32bytes: 53751, start: 3500466866, end: 3500569770, time_interval_ns: 137288
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3500435186 RTT_end: 3500714180 RTT: 278994
+/  5/calculate_cur_rate,  tx_rate: 125389374262, tx_rate: 1314802, cur_rate: 1048576, sent_32bytes: 66378, start: 3500602106, end: 3500705290, time_interval_ns: 135520
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79575755496, tx_rate: 834412, cur_rate: 1048576, sent_32bytes: 54372, start: 3500774986, end: 3500880208, time_interval_ns: 174918
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 97089408039, tx_rate: 1018056, cur_rate: 1048576, sent_32bytes: 51267, start: 3500912538, end: 3501015386, time_interval_ns: 135178
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3500777900 RTT_end: 3501130558 RTT: 352658
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100702022963, tx_rate: 1055937, cur_rate: 1048576, sent_32bytes: 69069, start: 3501047466, end: 3501190970, time_interval_ns: 175584
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100844544186, tx_rate: 1057431, cur_rate: 1048576, sent_32bytes: 51957, start: 3501223306, end: 3501322866, time_interval_ns: 131896
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/calculate_cur_rate,  tx_rate: 97081142685, tx_rate: 1017969, cur_rate: 1048576, sent_32bytes: 50577, start: 3501354026, end: 3501456236, time_interval_ns: 133370
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/calculate_cur_rate,  tx_rate: 101211498787, tx_rate: 1061279, cur_rate: 1048576, sent_32bytes: 52509, start: 3501487362, end: 3501589050, time_interval_ns: 132814
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/calculate_cur_rate,  tx_rate: 101561610802, tx_rate: 1064950, cur_rate: 1048576, sent_32bytes: 52647, start: 3501619786, end: 3501721754, time_interval_ns: 132704
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3501857358 RTT_end: 3501872416 RTT: 15058
+/  5/calculate_cur_rate,  tx_rate: 126373490189, tx_rate: 1325122, cur_rate: 1048576, sent_32bytes: 65964, start: 3501752650, end: 3501855380, time_interval_ns: 133626
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3501927382 RTT_end: 3501938884 RTT: 11502
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502070822 RTT_end: 3502076608 RTT: 5786
+/  5/calculate_cur_rate,  tx_rate: 101566406472, tx_rate: 1065000, cur_rate: 1048576, sent_32bytes: 83559, start: 3501924520, end: 3502065992, time_interval_ns: 210612
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502141976 RTT_end: 3502146956 RTT: 4980
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502279122 RTT_end: 3502283600 RTT: 4478
+/  5/calculate_cur_rate,  tx_rate: 99103505477, tx_rate: 1039175, cur_rate: 1048576, sent_32bytes: 81213, start: 3502135554, end: 3502275778, time_interval_ns: 209786
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502350272 RTT_end: 3502354896 RTT: 4624
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502492010 RTT_end: 3502496516 RTT: 4506
+/  5/calculate_cur_rate,  tx_rate: 98206265721, tx_rate: 1029767, cur_rate: 1048576, sent_32bytes: 80523, start: 3502345768, end: 3502485682, time_interval_ns: 209904
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502556998 RTT_end: 3502561460 RTT: 4462
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502699736 RTT_end: 3502704434 RTT: 4698
+/  5/calculate_cur_rate,  tx_rate: 101322974980, tx_rate: 1062448, cur_rate: 1048576, sent_32bytes: 83145, start: 3502555418, end: 3502695754, time_interval_ns: 210072
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502770228 RTT_end: 3502774720 RTT: 4492
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502907588 RTT_end: 3502912054 RTT: 4466
+/  5/calculate_cur_rate,  tx_rate: 98770320173, tx_rate: 1035681, cur_rate: 1048576, sent_32bytes: 81075, start: 3502765288, end: 3502905890, time_interval_ns: 210136
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3502978006 RTT_end: 3502982504 RTT: 4498
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 107272826, tx_rate: 1124, cur_rate: 1048576, sent_32bytes: 16042, start: 3502975280, end: 3541189136, time_interval_ns: 38283246
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3541190274 RTT_end: 3541193724 RTT: 3450
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3541287952 RTT_end: 3541295444 RTT: 7492
+/  5/calculate_cur_rate,  tx_rate: 152902911495, tx_rate: 1603303, cur_rate: 1048576, sent_32bytes: 82386, start: 3541190514, end: 3541327072, time_interval_ns: 137936
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3541401696 RTT_end: 3541427324 RTT: 25628
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 81027522935, tx_rate: 849635, cur_rate: 1048576, sent_32bytes: 67413, start: 3541398018, end: 3541540058, time_interval_ns: 212986
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3541546002 RTT_end: 3541597508 RTT: 51506
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 94975420439, tx_rate: 995889, cur_rate: 1048576, sent_32bytes: 64239, start: 3541574114, end: 3541713210, time_interval_ns: 173152
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3541713552 RTT_end: 3541785792 RTT: 72240
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101009002388, tx_rate: 1059156, cur_rate: 1048576, sent_32bytes: 68724, start: 3541747610, end: 3541887386, time_interval_ns: 174176
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3541889726 RTT_end: 3541999070 RTT: 109344
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98513573000, tx_rate: 1032989, cur_rate: 1048576, sent_32bytes: 67137, start: 3541921572, end: 3542061850, time_interval_ns: 174464
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3542067246 RTT_end: 3542215720 RTT: 148474
+/  5/calculate_cur_rate,  tx_rate: 128037411585, tx_rate: 1342569, cur_rate: 1048576, sent_32bytes: 68448, start: 3542096002, end: 3542198706, time_interval_ns: 136856
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79569389273, tx_rate: 834345, cur_rate: 1048576, sent_32bytes: 54303, start: 3542268544, end: 3542373416, time_interval_ns: 174710
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3542272714 RTT_end: 3542462972 RTT: 190258
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99361928608, tx_rate: 1041885, cur_rate: 1048576, sent_32bytes: 66654, start: 3542405642, end: 3542545146, time_interval_ns: 171730
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99884489986, tx_rate: 1047364, cur_rate: 1048576, sent_32bytes: 53613, start: 3542579378, end: 3542682554, time_interval_ns: 137408
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3542548408 RTT_end: 3542796874 RTT: 248466
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99381003201, tx_rate: 1042085, cur_rate: 1048576, sent_32bytes: 66930, start: 3542714586, end: 3542854962, time_interval_ns: 172408
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100410628584, tx_rate: 1052881, cur_rate: 1048576, sent_32bytes: 53613, start: 3542888682, end: 3542991650, time_interval_ns: 136688
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3542857922 RTT_end: 3543168516 RTT: 310594
+/  5/calculate_cur_rate,  tx_rate: 14570569, tx_rate: 152, cur_rate: 1048576, sent_32bytes: 5726, start: 3543023986, end: 3643595540, time_interval_ns: 100603890
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3643596842 RTT_end: 3643600298 RTT: 3456
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/cur_rate: 1048576 RTT_start: 3643740428 RTT_end: 3643764780 RTT: 24352
+/  5/calculate_cur_rate,  tx_rate: 148987602081, tx_rate: 1562248, cur_rate: 1048576, sent_32bytes: 82524, start: 3643600724, end: 3643737338, time_interval_ns: 141798
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3643813258 RTT_end: 3643857478 RTT: 44220
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 81038176541, tx_rate: 849746, cur_rate: 1048576, sent_32bytes: 67413, start: 3643808450, end: 3643950296, time_interval_ns: 212958
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3643951586 RTT_end: 3644017590 RTT: 66004
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101088237664, tx_rate: 1059986, cur_rate: 1048576, sent_32bytes: 68586, start: 3643984546, end: 3644123986, time_interval_ns: 173690
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3644127400 RTT_end: 3644225408 RTT: 98008
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98080310851, tx_rate: 1028446, cur_rate: 1048576, sent_32bytes: 66654, start: 3644158002, end: 3644297960, time_interval_ns: 173974
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3644304540 RTT_end: 3644437092 RTT: 132552
+/  5/calculate_cur_rate,  tx_rate: 128091882626, tx_rate: 1343140, cur_rate: 1048576, sent_32bytes: 68310, start: 3644331754, end: 3644434482, time_interval_ns: 136522
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79596650941, tx_rate: 834631, cur_rate: 1048576, sent_32bytes: 54441, start: 3644504098, end: 3644609576, time_interval_ns: 175094
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3644508218 RTT_end: 3644678260 RTT: 170042
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99447196082, tx_rate: 1042779, cur_rate: 1048576, sent_32bytes: 66792, start: 3644641506, end: 3644781514, time_interval_ns: 171938
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100181017784, tx_rate: 1050474, cur_rate: 1048576, sent_32bytes: 53337, start: 3644815416, end: 3644917810, time_interval_ns: 136296
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3644784822 RTT_end: 3645006976 RTT: 222154
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99430949188, tx_rate: 1042609, cur_rate: 1048576, sent_32bytes: 67206, start: 3644950050, end: 3645090842, time_interval_ns: 173032
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99876384223, tx_rate: 1047279, cur_rate: 1048576, sent_32bytes: 53199, start: 3645124906, end: 3645227200, time_interval_ns: 136358
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3645093630 RTT_end: 3645376194 RTT: 282564
+/  5/calculate_cur_rate,  tx_rate: 125593920810, tx_rate: 1316947, cur_rate: 1048576, sent_32bytes: 66240, start: 3645259642, end: 3645362218, time_interval_ns: 135018
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79708262526, tx_rate: 835801, cur_rate: 1048576, sent_32bytes: 54234, start: 3645431650, end: 3645536402, time_interval_ns: 174184
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 97128406055, tx_rate: 1018465, cur_rate: 1048576, sent_32bytes: 51129, start: 3645568680, end: 3645671162, time_interval_ns: 134760
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3645434282 RTT_end: 3645787628 RTT: 353346
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 98710825236, tx_rate: 1035058, cur_rate: 1048576, sent_32bytes: 67620, start: 3645703394, end: 3645846530, time_interval_ns: 175368
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 103137354796, tx_rate: 1081473, cur_rate: 1048576, sent_32bytes: 52509, start: 3645875338, end: 3645976864, time_interval_ns: 130334
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3645845940 RTT_end: 3646055892 RTT: 209952
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 98963917349, tx_rate: 1037711, cur_rate: 1048576, sent_32bytes: 67689, start: 3646007770, end: 3646151962, time_interval_ns: 175098
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100713461538, tx_rate: 1056057, cur_rate: 1048576, sent_32bytes: 52371, start: 3646180698, end: 3646285082, time_interval_ns: 133120
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/calculate_cur_rate,  tx_rate: 98661316797, tx_rate: 1034538, cur_rate: 1048576, sent_32bytes: 50715, start: 3646313976, end: 3646416674, time_interval_ns: 131592
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3646450620 RTT_end: 3646467660 RTT: 17040
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3646593274 RTT_end: 3646602954 RTT: 9680
+/  5/calculate_cur_rate,  tx_rate: 124482974449, tx_rate: 1305298, cur_rate: 1048576, sent_32bytes: 83283, start: 3646447290, end: 3646587946, time_interval_ns: 171272
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3646664512 RTT_end: 3646670594 RTT: 6082
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3646801732 RTT_end: 3646806210 RTT: 4478
+/  5/calculate_cur_rate,  tx_rate: 98919205449, tx_rate: 1037243, cur_rate: 1048576, sent_32bytes: 81351, start: 3646657556, end: 3646798480, time_interval_ns: 210534
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3646873004 RTT_end: 3646877446 RTT: 4442
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647011110 RTT_end: 3647015592 RTT: 4482
+/  5/calculate_cur_rate,  tx_rate: 98009857809, tx_rate: 1027707, cur_rate: 1048576, sent_32bytes: 80937, start: 3646868290, end: 3647009886, time_interval_ns: 211406
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647080746 RTT_end: 3647085312 RTT: 4566
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647223302 RTT_end: 3647227792 RTT: 4490
+/  5/calculate_cur_rate,  tx_rate: 102302797270, tx_rate: 1072722, cur_rate: 1048576, sent_32bytes: 83145, start: 3647078160, end: 3647217946, time_interval_ns: 208060
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647294000 RTT_end: 3647298500 RTT: 4500
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647431882 RTT_end: 3647436444 RTT: 4562
+/  5/calculate_cur_rate,  tx_rate: 98818053918, tx_rate: 1036182, cur_rate: 1048576, sent_32bytes: 81213, start: 3647287616, end: 3647428338, time_interval_ns: 210392
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647502342 RTT_end: 3647506804 RTT: 4462
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647645654 RTT_end: 3647650142 RTT: 4488
+/  5/calculate_cur_rate,  tx_rate: 98739307903, tx_rate: 1035356, cur_rate: 1048576, sent_32bytes: 81075, start: 3647497824, end: 3647638540, time_interval_ns: 210202
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647710384 RTT_end: 3647714840 RTT: 4456
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647853202 RTT_end: 3647857662 RTT: 4460
+/  5/calculate_cur_rate,  tx_rate: 101589799302, tx_rate: 1065246, cur_rate: 1048576, sent_32bytes: 83283, start: 3647708050, end: 3647848408, time_interval_ns: 209868
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3647923918 RTT_end: 3647928364 RTT: 4446
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3648060598 RTT_end: 3648065082 RTT: 4484
+/  5/calculate_cur_rate,  tx_rate: 98709253992, tx_rate: 1035041, cur_rate: 1048576, sent_32bytes: 81075, start: 3647918082, end: 3648058674, time_interval_ns: 210266
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3648131318 RTT_end: 3648135884 RTT: 4566
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3648274316 RTT_end: 3648278796 RTT: 4480
+/  5/calculate_cur_rate,  tx_rate: 98704638289, tx_rate: 1034993, cur_rate: 1048576, sent_32bytes: 80799, start: 3648128352, end: 3648268234, time_interval_ns: 209560
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3648338926 RTT_end: 3648343384 RTT: 4458
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3648482000 RTT_end: 3648486564 RTT: 4564
+/  5/calculate_cur_rate,  tx_rate: 101537547148, tx_rate: 1064698, cur_rate: 1048576, sent_32bytes: 83283, start: 3648337906, end: 3648478210, time_interval_ns: 209976
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3648552784 RTT_end: 3648557264 RTT: 4480
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3648689790 RTT_end: 3648694248 RTT: 4458
+/  5/calculate_cur_rate,  tx_rate: 98741186880, tx_rate: 1035376, cur_rate: 1048576, sent_32bytes: 81075, start: 3648547858, end: 3648688408, time_interval_ns: 210198
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3648760500 RTT_end: 3648764956 RTT: 4456
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 1599848659, tx_rate: 16775, cur_rate: 1048576, sent_32bytes: 49024, start: 3648758018, end: 3656532990, time_interval_ns: 7844582
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3656534126 RTT_end: 3656537586 RTT: 3460
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3656634052 RTT_end: 3656645260 RTT: 11208
+/  5/calculate_cur_rate,  tx_rate: 153644460525, tx_rate: 1611078, cur_rate: 1048576, sent_32bytes: 82938, start: 3656534258, end: 3656671180, time_interval_ns: 138190
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3656747610 RTT_end: 3656779290 RTT: 31680
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 80849475436, tx_rate: 847768, cur_rate: 1048576, sent_32bytes: 67551, start: 3656742642, end: 3656885072, time_interval_ns: 213892
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3656886268 RTT_end: 3656945540 RTT: 59272
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101573506997, tx_rate: 1065075, cur_rate: 1048576, sent_32bytes: 68724, start: 3656919008, end: 3657058280, time_interval_ns: 173208
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3657062614 RTT_end: 3657156240 RTT: 93626
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98154739899, tx_rate: 1029227, cur_rate: 1048576, sent_32bytes: 66792, start: 3657092282, end: 3657232482, time_interval_ns: 174202
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3657234042 RTT_end: 3657360316 RTT: 126274
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101441602952, tx_rate: 1063692, cur_rate: 1048576, sent_32bytes: 69138, start: 3657266506, end: 3657406960, time_interval_ns: 174478
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3657411442 RTT_end: 3657571482 RTT: 160040
+/  5/calculate_cur_rate,  tx_rate: 123771513656, tx_rate: 1297838, cur_rate: 1048576, sent_32bytes: 66240, start: 3657440794, end: 3657543966, time_interval_ns: 137006
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 72390123117, tx_rate: 759065, cur_rate: 1048576, sent_32bytes: 49335, start: 3657613546, end: 3657718434, time_interval_ns: 174468
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3657615496 RTT_end: 3657815104 RTT: 199608
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 102845963948, tx_rate: 1078418, cur_rate: 1048576, sent_32bytes: 69000, start: 3657750418, end: 3657890186, time_interval_ns: 171752
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100398785897, tx_rate: 1052757, cur_rate: 1048576, sent_32bytes: 53751, start: 3657924184, end: 3658027242, time_interval_ns: 137056
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3657893174 RTT_end: 3658135086 RTT: 241912
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99082161361, tx_rate: 1038951, cur_rate: 1048576, sent_32bytes: 66930, start: 3658059690, end: 3658200170, time_interval_ns: 172928
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100481199484, tx_rate: 1053621, cur_rate: 1048576, sent_32bytes: 53613, start: 3658234128, end: 3658336762, time_interval_ns: 136592
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 96716969948, tx_rate: 1014150, cur_rate: 1048576, sent_32bytes: 50991, start: 3658369098, end: 3658471730, time_interval_ns: 134968
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3658203660 RTT_end: 3658504806 RTT: 301146
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 102366437720, tx_rate: 1073389, cur_rate: 1048576, sent_32bytes: 68931, start: 3658504460, end: 3658644114, time_interval_ns: 172384
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 95474829773, tx_rate: 1001126, cur_rate: 1048576, sent_32bytes: 51267, start: 3658678464, end: 3658781578, time_interval_ns: 137464
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3658648036 RTT_end: 3658934206 RTT: 286170
+/  5/calculate_cur_rate,  tx_rate: 128127212044, tx_rate: 1343511, cur_rate: 1048576, sent_32bytes: 67482, start: 3658813562, end: 3658916408, time_interval_ns: 134830
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79071446218, tx_rate: 829124, cur_rate: 1048576, sent_32bytes: 52509, start: 3658984744, end: 3659086410, time_interval_ns: 170002
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3658988108 RTT_end: 3659149676 RTT: 161568
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 97913457498, tx_rate: 1026697, cur_rate: 1048576, sent_32bytes: 65550, start: 3659117370, end: 3659257794, time_interval_ns: 171384
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3659259082 RTT_end: 3659321638 RTT: 62556
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/cur_rate: 1048576 RTT_start: 3659433112 RTT_end: 3659451554 RTT: 18442
+/  5/calculate_cur_rate,  tx_rate: 124724197542, tx_rate: 1307828, cur_rate: 1048576, sent_32bytes: 83421, start: 3659288754, end: 3659429018, time_interval_ns: 171224
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3659504802 RTT_end: 3659519450 RTT: 14648
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 4833076308, tx_rate: 50678, cur_rate: 1048576, sent_32bytes: 34327, start: 3659499096, end: 3661247262, time_interval_ns: 1818244
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3661248400 RTT_end: 3661251850 RTT: 3450
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3661347778 RTT_end: 3661359862 RTT: 12084
+/  5/calculate_cur_rate,  tx_rate: 153575557677, tx_rate: 1610356, cur_rate: 1048576, sent_32bytes: 82938, start: 3661248450, end: 3661385514, time_interval_ns: 138252
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3661461072 RTT_end: 3661494780 RTT: 33708
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 80867296446, tx_rate: 847955, cur_rate: 1048576, sent_32bytes: 67413, start: 3661456650, end: 3661598922, time_interval_ns: 213408
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3661605144 RTT_end: 3661666836 RTT: 61692
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101437638376, tx_rate: 1063650, cur_rate: 1048576, sent_32bytes: 68724, start: 3661633026, end: 3661772362, time_interval_ns: 173440
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3661775460 RTT_end: 3661869426 RTT: 93966
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101131314981, tx_rate: 1060438, cur_rate: 1048576, sent_32bytes: 69000, start: 3661806746, end: 3661947026, time_interval_ns: 174664
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3661953246 RTT_end: 3662081608 RTT: 128362
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 28141951, tx_rate: 295, cur_rate: 1048576, sent_32bytes: 11039, start: 3661980930, end: 3762365932, time_interval_ns: 100418906
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3762367234 RTT_end: 3762370688 RTT: 3454
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 122190442577, tx_rate: 1281259, cur_rate: 1048576, sent_32bytes: 67620, start: 3762371080, end: 3762507602, time_interval_ns: 141670
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3762510596 RTT_end: 3762550220 RTT: 39624
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101202002956, tx_rate: 1061179, cur_rate: 1048576, sent_32bytes: 69000, start: 3762541608, end: 3762682144, time_interval_ns: 174542
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3762687816 RTT_end: 3762760170 RTT: 72354
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98439544496, tx_rate: 1032213, cur_rate: 1048576, sent_32bytes: 66792, start: 3762716170, end: 3762855842, time_interval_ns: 173698
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3762858696 RTT_end: 3762963658 RTT: 104962
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101412541254, tx_rate: 1063387, cur_rate: 1048576, sent_32bytes: 69138, start: 3762890072, end: 3763030370, time_interval_ns: 174528
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3763036308 RTT_end: 3763176762 RTT: 140454
+/  5/calculate_cur_rate,  tx_rate: 123965144160, tx_rate: 1299868, cur_rate: 1048576, sent_32bytes: 66240, start: 3763064322, end: 3763167162, time_interval_ns: 136792
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79663320038, tx_rate: 835330, cur_rate: 1048576, sent_32bytes: 54303, start: 3763236730, end: 3763341666, time_interval_ns: 174504
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3763240444 RTT_end: 3763420680 RTT: 180236
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99432567246, tx_rate: 1042626, cur_rate: 1048576, sent_32bytes: 66654, start: 3763373538, end: 3763513274, time_interval_ns: 171608
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99952213633, tx_rate: 1048074, cur_rate: 1048576, sent_32bytes: 53337, start: 3763547610, end: 3763649882, time_interval_ns: 136608
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3763515800 RTT_end: 3763750052 RTT: 234252
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99282051282, tx_rate: 1041047, cur_rate: 1048576, sent_32bytes: 66792, start: 3763682218, end: 3763822106, time_interval_ns: 172224
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99840449833, tx_rate: 1046902, cur_rate: 1048576, sent_32bytes: 53268, start: 3763856160, end: 3763958690, time_interval_ns: 136584
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3763823792 RTT_end: 3764117982 RTT: 294190
+/  5/calculate_cur_rate,  tx_rate: 125208002841, tx_rate: 1312901, cur_rate: 1048576, sent_32bytes: 66102, start: 3763990864, end: 3764093842, time_interval_ns: 135152
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 80050177482, tx_rate: 839386, cur_rate: 1048576, sent_32bytes: 54441, start: 3764163234, end: 3764267944, time_interval_ns: 174102
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 101321381398, tx_rate: 1062431, cur_rate: 1048576, sent_32bytes: 53337, start: 3764300176, end: 3764402706, time_interval_ns: 134762
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 93643365190, tx_rate: 981921, cur_rate: 1048576, sent_32bytes: 49680, start: 3764434578, end: 3764538520, time_interval_ns: 135814
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3764672840 RTT_end: 3764691238 RTT: 18398
+/  5/calculate_cur_rate,  tx_rate: 133429874257, tx_rate: 1399113, cur_rate: 1048576, sent_32bytes: 67896, start: 3764567472, end: 3764668786, time_interval_ns: 130266
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3764743644 RTT_end: 3764758218 RTT: 14574
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3764881042 RTT_end: 3764888646 RTT: 7604
+/  5/calculate_cur_rate,  tx_rate: 98935869151, tx_rate: 1037417, cur_rate: 1048576, sent_32bytes: 81282, start: 3764738402, end: 3764879106, time_interval_ns: 210320
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3764952622 RTT_end: 3764958470 RTT: 5848
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3765094382 RTT_end: 3765098970 RTT: 4588
+/  5/calculate_cur_rate,  tx_rate: 101380887059, tx_rate: 1063055, cur_rate: 1048576, sent_32bytes: 83145, start: 3764949236, end: 3765089058, time_interval_ns: 209952
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3765165896 RTT_end: 3765170372 RTT: 4476
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3765302684 RTT_end: 3765307178 RTT: 4494
+/  5/calculate_cur_rate,  tx_rate: 99187787305, tx_rate: 1040059, cur_rate: 1048576, sent_32bytes: 81420, start: 3765159114, end: 3765299200, time_interval_ns: 210142
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3765374008 RTT_end: 3765379256 RTT: 5248
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 83588556649, tx_rate: 876489, cur_rate: 1048576, sent_32bytes: 69690, start: 3765371162, end: 3765512634, time_interval_ns: 213434
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3765517894 RTT_end: 3765549644 RTT: 31750
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98011579818, tx_rate: 1027725, cur_rate: 1048576, sent_32bytes: 66654, start: 3765546962, end: 3765686730, time_interval_ns: 174096
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3765689568 RTT_end: 3765752398 RTT: 62830
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101813319192, tx_rate: 1067590, cur_rate: 1048576, sent_32bytes: 69000, start: 3765720730, end: 3765860224, time_interval_ns: 173494
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3765866010 RTT_end: 3765960378 RTT: 94368
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98241365074, tx_rate: 1030135, cur_rate: 1048576, sent_32bytes: 66930, start: 3765894522, end: 3766034632, time_interval_ns: 174408
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3766038224 RTT_end: 3766166702 RTT: 128478
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101454395377, tx_rate: 1063826, cur_rate: 1048576, sent_32bytes: 69138, start: 3766068698, end: 3766209088, time_interval_ns: 174456
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3766215368 RTT_end: 3766376194 RTT: 160826
+/  5/calculate_cur_rate,  tx_rate: 123288686833, tx_rate: 1292775, cur_rate: 1048576, sent_32bytes: 66102, start: 3766243074, end: 3766346344, time_interval_ns: 137256
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 80173887097, tx_rate: 840684, cur_rate: 1048576, sent_32bytes: 54579, start: 3766415570, end: 3766520618, time_interval_ns: 174274
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3766419310 RTT_end: 3766621186 RTT: 201876
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99012533655, tx_rate: 1038221, cur_rate: 1048576, sent_32bytes: 66654, start: 3766552952, end: 3766692954, time_interval_ns: 172336
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99736758187, tx_rate: 1045815, cur_rate: 1048576, sent_32bytes: 53268, start: 3766727010, end: 3766829680, time_interval_ns: 136726
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3766695202 RTT_end: 3766953608 RTT: 258406
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99462923618, tx_rate: 1042944, cur_rate: 1048576, sent_32bytes: 66930, start: 3766861690, end: 3767001946, time_interval_ns: 172266
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100346025618, tx_rate: 1052204, cur_rate: 1048576, sent_32bytes: 53613, start: 3767035930, end: 3767138722, time_interval_ns: 136776
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 97241912778, tx_rate: 1019655, cur_rate: 1048576, sent_32bytes: 51267, start: 3767170970, end: 3767273688, time_interval_ns: 134966
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3767004102 RTT_end: 3767322970 RTT: 318868
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 102382822171, tx_rate: 1073561, cur_rate: 1048576, sent_32bytes: 69138, start: 3767306122, end: 3767446562, time_interval_ns: 172874
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 96685327039, tx_rate: 1013819, cur_rate: 1048576, sent_32bytes: 52164, start: 3767480522, end: 3767584680, time_interval_ns: 138118
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 98629268367, tx_rate: 1034202, cur_rate: 1048576, sent_32bytes: 50163, start: 3767613578, end: 3767714882, time_interval_ns: 130202
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 98640959322, tx_rate: 1034325, cur_rate: 1048576, sent_32bytes: 52440, start: 3767745842, end: 3767850978, time_interval_ns: 136096
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/calculate_cur_rate,  tx_rate: 102959513423, tx_rate: 1079608, cur_rate: 1048576, sent_32bytes: 52371, start: 3767879770, end: 3767981194, time_interval_ns: 130216
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3767985506 RTT_end: 3768044572 RTT: 59066
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/cur_rate: 1048576 RTT_start: 3768159832 RTT_end: 3768177676 RTT: 17844
+/  5/calculate_cur_rate,  tx_rate: 121379773394, tx_rate: 1272759, cur_rate: 1048576, sent_32bytes: 81351, start: 3768012026, end: 3768152770, time_interval_ns: 171576
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3768225294 RTT_end: 3768240036 RTT: 14742
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3768368380 RTT_end: 3768379088 RTT: 10708
+/  5/calculate_cur_rate,  tx_rate: 101247797605, tx_rate: 1061660, cur_rate: 1048576, sent_32bytes: 84042, start: 3768222834, end: 3768365266, time_interval_ns: 212496
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3768440314 RTT_end: 3768465436 RTT: 25122
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 81003157419, tx_rate: 849379, cur_rate: 1048576, sent_32bytes: 67344, start: 3768436442, end: 3768578098, time_interval_ns: 212832
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3768584382 RTT_end: 3768638128 RTT: 53746
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101344147465, tx_rate: 1062670, cur_rate: 1048576, sent_32bytes: 68724, start: 3768611922, end: 3768751698, time_interval_ns: 173600
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3768755188 RTT_end: 3768844240 RTT: 89052
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101500940496, tx_rate: 1064314, cur_rate: 1048576, sent_32bytes: 69138, start: 3768785696, end: 3768926074, time_interval_ns: 174376
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3768932672 RTT_end: 3769055812 RTT: 123140
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 97815126050, tx_rate: 1025665, cur_rate: 1048576, sent_32bytes: 66930, start: 3768960138, end: 3769101242, time_interval_ns: 175168
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3769104706 RTT_end: 3769262746 RTT: 158040
+/  5/calculate_cur_rate,  tx_rate: 92908321579, tx_rate: 974214, cur_rate: 1048576, sent_32bytes: 49404, start: 3769134690, end: 3769237370, time_interval_ns: 136128
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 86688, tx_rate: 0, cur_rate: 1048576, sent_32bytes: 34, start: 3769237370, end: 3869642940, time_interval_ns: 100405570
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3869644242 RTT_end: 3869647696 RTT: 3454
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/cur_rate: 1048576 RTT_start: 3869784602 RTT_end: 3869812036 RTT: 27434
+/  5/calculate_cur_rate,  tx_rate: 150128351027, tx_rate: 1574209, cur_rate: 1048576, sent_32bytes: 81420, start: 3869648088, end: 3869781778, time_interval_ns: 138838
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3869857324 RTT_end: 3869887196 RTT: 29872
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 81765529636, tx_rate: 857373, cur_rate: 1048576, sent_32bytes: 68241, start: 3869853234, end: 3869995434, time_interval_ns: 213656
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3870001560 RTT_end: 3870036696 RTT: 35136
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 100429745189, tx_rate: 1053082, cur_rate: 1048576, sent_32bytes: 67896, start: 3870031682, end: 3870168504, time_interval_ns: 173070
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3870171982 RTT_end: 3870233708 RTT: 61726
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98060170900, tx_rate: 1028235, cur_rate: 1048576, sent_32bytes: 66792, start: 3870202866, end: 3870342874, time_interval_ns: 174370
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3870348960 RTT_end: 3870451056 RTT: 102096
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101314206896, tx_rate: 1062356, cur_rate: 1048576, sent_32bytes: 68862, start: 3870376928, end: 3870516874, time_interval_ns: 174000
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3870520112 RTT_end: 3870644408 RTT: 124296
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98407248101, tx_rate: 1031874, cur_rate: 1048576, sent_32bytes: 67206, start: 3870550946, end: 3870691706, time_interval_ns: 174832
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3870698224 RTT_end: 3870828084 RTT: 129860
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 101678202123, tx_rate: 1066173, cur_rate: 1048576, sent_32bytes: 69138, start: 3870725722, end: 3870865778, time_interval_ns: 174072
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3870869598 RTT_end: 3871003082 RTT: 133484
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 98061591885, tx_rate: 1028250, cur_rate: 1048576, sent_32bytes: 67068, start: 3870900264, end: 3871040866, time_interval_ns: 175088
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3871047034 RTT_end: 3871194500 RTT: 147466
+/  5/calculate_cur_rate,  tx_rate: 128016900664, tx_rate: 1342354, cur_rate: 1048576, sent_32bytes: 68172, start: 3871074866, end: 3871177192, time_interval_ns: 136326
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 79589433547, tx_rate: 834555, cur_rate: 1048576, sent_32bytes: 54303, start: 3871247002, end: 3871351858, time_interval_ns: 174666
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3871251272 RTT_end: 3871411884 RTT: 160612
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99372344390, tx_rate: 1041994, cur_rate: 1048576, sent_32bytes: 66654, start: 3871383850, end: 3871523570, time_interval_ns: 171712
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99783465776, tx_rate: 1046305, cur_rate: 1048576, sent_32bytes: 53268, start: 3871557624, end: 3871660232, time_interval_ns: 136662
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3871526250 RTT_end: 3871695164 RTT: 168914
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99179545480, tx_rate: 1039972, cur_rate: 1048576, sent_32bytes: 66792, start: 3871692464, end: 3871832634, time_interval_ns: 172402
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 99753482853, tx_rate: 1045991, cur_rate: 1048576, sent_32bytes: 53199, start: 3871866970, end: 3871969160, time_interval_ns: 136526
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3871833732 RTT_end: 3872009634 RTT: 175902
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 99081525526, tx_rate: 1038945, cur_rate: 1048576, sent_32bytes: 66654, start: 3872001418, end: 3872141376, time_interval_ns: 172216
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 100086271183, tx_rate: 1049480, cur_rate: 1048576, sent_32bytes: 53475, start: 3872175458, end: 3872278154, time_interval_ns: 136778
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3872148056 RTT_end: 3872332214 RTT: 184158
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 102531096487, tx_rate: 1075116, cur_rate: 1048576, sent_32bytes: 69138, start: 3872310114, end: 3872450778, time_interval_ns: 172624
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 96246484215, tx_rate: 1009217, cur_rate: 1048576, sent_32bytes: 51543, start: 3872484554, end: 3872587874, time_interval_ns: 137096
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3872457194 RTT_end: 3872648792 RTT: 191598
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 102692898004, tx_rate: 1076813, cur_rate: 1048576, sent_32bytes: 69000, start: 3872620066, end: 3872759882, time_interval_ns: 172008
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 96000000000, tx_rate: 1006632, cur_rate: 1048576, sent_32bytes: 51405, start: 3872793938, end: 3872896962, time_interval_ns: 137080
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3872765302 RTT_end: 3872984166 RTT: 218864
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 102480145244, tx_rate: 1074582, cur_rate: 1048576, sent_32bytes: 68793, start: 3872929298, end: 3873068810, time_interval_ns: 171848
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 95726256983, tx_rate: 1003762, cur_rate: 1048576, sent_32bytes: 51405, start: 3873103040, end: 3873206282, time_interval_ns: 137472
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3873073926 RTT_end: 3873349108 RTT: 275182
+/  5/calculate_cur_rate,  tx_rate: 129520649404, tx_rate: 1358122, cur_rate: 1048576, sent_32bytes: 68310, start: 3873238544, end: 3873341298, time_interval_ns: 135016
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 76467094021, tx_rate: 801815, cur_rate: 1048576, sent_32bytes: 52095, start: 3873410666, end: 3873515704, time_interval_ns: 174406
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 101437299417, tx_rate: 1063647, cur_rate: 1048576, sent_32bytes: 53337, start: 3873547808, end: 3873650312, time_interval_ns: 134608
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3873416014 RTT_end: 3873702818 RTT: 286804
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/calculate_cur_rate,  tx_rate: 102370327441, tx_rate: 1073430, cur_rate: 1048576, sent_32bytes: 69000, start: 3873682264, end: 3873822862, time_interval_ns: 172550
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 95813073713, tx_rate: 1004672, cur_rate: 1048576, sent_32bytes: 51129, start: 3873856650, end: 3873959472, time_interval_ns: 136610
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3873828704 RTT_end: 3874126454 RTT: 297750
+/  5/calculate_cur_rate,  tx_rate: 129172886474, tx_rate: 1354475, cur_rate: 1048576, sent_32bytes: 68172, start: 3873991808, end: 3874094578, time_interval_ns: 135106
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 4307004818, tx_rate: 45162, cur_rate: 1048576, sent_32bytes: 4036, start: 3874164114, end: 3874334470, time_interval_ns: 239892
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3874169168 RTT_end: 3874420300 RTT: 251132
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 122044736057, tx_rate: 1279731, cur_rate: 1048576, sent_32bytes: 67137, start: 3874335744, end: 3874475296, time_interval_ns: 140826
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3874472682 RTT_end: 3874512484 RTT: 39802
+/  5/rtt_req: 0, rtt_meas_psn:0, rtt_req_to_rtt_sent: 2 
+/  5/cur_rate: 1048576 RTT_start: 3874649130 RTT_end: 3874664430 RTT: 15300
+/  5/calculate_cur_rate,  tx_rate: 85712481730, tx_rate: 898760, cur_rate: 1048576, sent_32bytes: 57270, start: 3874507690, end: 3874646346, time_interval_ns: 171050
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/calculate_cur_rate,  tx_rate: 92440536, tx_rate: 969, cur_rate: 1048576, sent_32bytes: 138, start: 3874646346, end: 3875028516, time_interval_ns: 382170
+/  5/rtt_req: 1, rtt_meas_psn:1, rtt_req_to_rtt_sent: 1 
+/  5/cur_rate: 1048576 RTT_start: 3875029654 RTT_end: 3875033110 RTT: 3456
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+/  5/cur_rate: 1048576 RTT_start: 3875128314 RTT_end: 3875131800 RTT: 3486
+/  5/calculate_cur_rate,  tx_rate: 112791028494, tx_rate: 1182699, cur_rate: 1048576, sent_32bytes: 60582, start: 3875029692, end: 3875166018, time_interval_ns: 137502
+/  5/rtt_req: 0, rtt_meas_psn:1, rtt_req_to_rtt_sent: 0 
+^CInfo: Finished waiting on DOCA PCC
+[?2004h]0;zdp@localhost: /tmp/build/pcc[01;32mzdp@localhost[00m:[01;34m/tmp/build/pcc[00m$ ./doca_pcc -d mlx5_0exit[K
+[?2004lexit
+
+Script done on 2024-11-20 15:28:37+08:00 [COMMAND_EXIT_CODE="0"]

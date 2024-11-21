@@ -49,21 +49,25 @@ typedef struct {
 
 	uint32_t reserved[0];/* Reserved bits */
 #else
-	uint32_t last_rate;
-
+	
 	uint32_t low_rate;
 	uint32_t high_rate;
 	uint32_t min_rtt;
 	uint32_t last_rtt;
-	uint32_t last_rx_time;
-	uint32_t rx_rate;
+
+	uint32_t update_low_rate_time;
+	uint32_t tx_time;
+	uint32_t tx_32byte;
+	uint32_t last_tx_time;
+
 	uint32_t average_rtt;
 
 
 
 
-	uint32_t reserved[1]; /* Reserved bits */
+	uint32_t reserved[0]; /* Reserved bits */
 #endif
 } cc_ctxt_rtt_template_t;
 
 #endif /* RTT_TEMPLATE_CTXT_H_ */
+
