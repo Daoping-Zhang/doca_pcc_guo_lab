@@ -343,7 +343,7 @@ static inline uint32_t new_rate_rtt(doca_pcc_dev_event_t *event,
 		{
 			if(ccctx->flags.low)
 			{
-				ccctx->low_rate = ccctx->low_rate+ccctx->cur_rate;
+				ccctx->low_rate = (ccctx->low_rate+ccctx->cur_rate)/2;
 				ccctx->update_low_rate_time = doca_pcc_dev_get_timestamp(event);
 				 ccctx->cur_rate = ccctx->high_rate;
 			}
