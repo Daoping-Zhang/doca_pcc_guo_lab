@@ -412,7 +412,7 @@ static inline uint32_t new_rate_rtt(doca_pcc_dev_event_t *event,
 		if(rtt <= ccctx->min_rtt+ RECOVERY_RTT && ccctx->high_rate != DOCA_PCC_DEV_MAX_RATE)
 		{
 			ccctx->flags.state_count++;
-			if(ccctx->flags.state_count >=2 )
+			if(ccctx->flags.state_count >=4 )
 			{
 				ccctx->high_rate = DOCA_PCC_DEV_MAX_RATE;
 				ccctx->cur_rate = DOCA_PCC_DEV_MAX_RATE;
@@ -433,8 +433,9 @@ static inline uint32_t new_rate_rtt(doca_pcc_dev_event_t *event,
 		//rtt_times = 0;
 		if(rtt < ccctx->min_rtt + BURST_RTT)
 		{
+			//doca_pcc_dev_printf("%s,  STATE: %u, rtt: %u, last_rtt: %u, rtt_diff: %d,low_rate: %u, high_rate: %u, cur_rate: %u, max_rate: %u  \n", __func__,ccctx->flags.state, rtt, ccctx->last_rtt,new_rtt_diff, ccctx->low_rate, ccctx->high_rate, ccctx->cur_rate, DOCA_PCC_DEV_MAX_RATE);
 			ccctx->high_rate = (ccctx->low_rate+ccctx->high_rate)/2;
-			ccctx->low_rate = ccctx->low_rate - ccctx->low_rate/100;
+			ccctx->low_rate = ccctx->low_rate;
 			
 			ccctx->cur_rate = (ccctx->low_rate+ccctx->high_rate)/2;
 			ccctx->flags.state = 1;
