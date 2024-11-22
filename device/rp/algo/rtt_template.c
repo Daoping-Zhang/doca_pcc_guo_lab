@@ -289,13 +289,12 @@ uint32_t calculate_cur_rate(doca_pcc_dev_event_t *event, cc_ctxt_rtt_template_t 
 		{
 			doca_pcc_dev_printf("update low_rate because of rx_rate\n");
 			ccctx->low_rate = tx_rate;
-			ccctx->high_rate = DOCA_PCC_DEV_MAX_RATE;
-			ccctx->cur_rate = DOCA_PCC_DEV_MAX_RATE;
 			ccctx->flags.state = 1;
 			ccctx->flags.state_count = 0;
 			ccctx->flags.high = 1;
 			ccctx->flags.low = 1;
 			ccctx->flags.rtt_count = 0;	
+			ccctx->update_low_rate_time = doca_pcc_dev_get_roce_first_timestamp(event);
 
 		}
 
