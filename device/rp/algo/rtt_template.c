@@ -285,10 +285,18 @@ uint32_t calculate_cur_rate(doca_pcc_dev_event_t *event, cc_ctxt_rtt_template_t 
 
 	}
 
-    if(tx_rate < ccctx->low_rate - ccctx->low_rate/5 && ccctx->update_low_rate_time < doca_pcc_dev_get_roce_first_timestamp(event))
+    if(tx_rate < ccctx->low_rate/2 && ccctx->update_low_rate_time < doca_pcc_dev_get_roce_first_timestamp(event))
 		{
-			//doca_pcc_dev_printf("update low_rate because of rx_rate\n");
+			doca_pcc_dev_printf("update low_rate because of rx_rate\n");
 			ccctx->low_rate = tx_rate;
+			ccctx->high_rate = DOCA_PCC_DEV_MAX_RATE;
+			ccctx->cur_rate = DOCA_PCC_DEV_MAX_RATE;
+			ccctx->flags.state = 1;
+			ccctx->flags.state_count = 0;
+			ccctx->flags.high = 1;
+			ccctx->flags.low = 1;
+			ccctx->flags.rtt_count = 0;	
+
 		}
 
 
@@ -717,10 +725,10 @@ static inline void rtt_template_handle_roce_rtt(doca_pcc_dev_event_t *event,
 	}
 	*/
 
-	cur_rate = DOCA_PCC_DEV_MAX_RATE;
+	//cur_rate = DOCA_PCC_DEV_MAX_RATE;
 	if(rtt>5000)
 	{
-		doca_pcc_dev_printf("high RTT: %d\n", rtt);
+		//doca_pcc_dev_printf("high RTT: %d\n", rtt);
 	}
 	
 	//doca_pcc_dev_printf(" rtt_meas_psn:%u, rtt_req_to_rtt_sent: %u \n",ccctx->rtt_meas_psn, ccctx->rtt_req_to_rtt_sent);
