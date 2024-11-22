@@ -364,28 +364,10 @@ static inline uint32_t new_rate_rtt(doca_pcc_dev_event_t *event,
 
 			if(ccctx->low_rate  >= ccctx->high_rate - ccctx->high_rate/20 || ccctx->high_rate - ccctx->low_rate<=DOCA_PCC_DEV_MAX_RATE/100)
             {
-                if(ccctx->average_rtt <= ccctx->min_rtt +  (LOW_RTT + HIGH_RTT)/2)
-            	{
+               
 				ccctx->flags.state_count = 0;
 				ccctx->flags.state = 2;
 
-                }else if(ccctx->average_rtt > ccctx->min_rtt + HIGH_RTT)
-                {
-
-                    ccctx->flags.state_count =ccctx->flags.state_count+3;
-
-                }else
-        		{
-            		ccctx->flags.state_count++;
-                }
-                if(ccctx->flags.state_count >= 5)
-           		 {
-                    ccctx->cur_rate = ccctx->low_rate - ccctx->low_rate/20;
-                   	ccctx->low_rate = ccctx->cur_rate;
-              		ccctx->flags.state_count = 0;
-                }
-
-                ccctx->flags.rtt_count = PER_RTT;
 
             }
 		}
